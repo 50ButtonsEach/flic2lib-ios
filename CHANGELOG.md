@@ -4,3 +4,6 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.0.0
+
+* Initial version
