@@ -3,7 +3,7 @@
 //  flic2lib
 //
 //  Created by Anton Meier on 2019-04-10.
-//  Copyright © 2019 Shortcut Labs. All rights reserved.
+//  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

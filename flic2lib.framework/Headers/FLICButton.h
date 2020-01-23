@@ -3,7 +3,7 @@
 //  flic2lib
 //
 //  Created by Anton Meier on 2019-04-11.
-//  Copyright © 2019 Shortcut Labs. All rights reserved.
+//  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -51,8 +51,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @property nickname
  *
  *  @discussion     With this property you can read out the display name that the user may change in for example the Flic app. This value can also be changed from third party apps
- *                  integrating this framework. The purpose of this is to provide more human readable name that the user can use to identify its Flic's across apps.
- *                  For example "Kitchen Flic" or "Bedroom Lights".
+ *                  integrating this framework (including your app). The purpose of this is to provide more human readable name that the user can use to identify its Flic's across apps.
+ *                  For example "Kitchen Flic" or "Bedroom Lights". The nickname has a maximum length limit of 23 bytes. Keep in mind that this is the length in bytes, and not the
+ *                  number of UTF8 characters (which may be up to 4 bytes long). If you write anything longer than 23 bytes then the nickname will automatically be truncated to at
+ *                  most 23 bytes. When truncating the string, the framework will always cut between UTF8 character, so you don't have to worry about writing half an emoji, for example.
  *
  */
 @property(nonatomic, readwrite, strong, nullable) NSString *nickname;
@@ -127,14 +129,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) BOOL isReady;
 
 /*!
- *  @property batteryLevel
+ *  @property batteryVoltage
  *
- *  @discussion     This will be the last know battery sample taken on the Flic. To convert this sample into voltage you can use the following formula:
- *                  float voltage = ((batterylevel * 3.6) / 1024);
- *                  It is a good idea to consider changing the battery once the voltage goes below 2.65V.
+ *  @discussion     This will be the last know battery sample taken on the Flic. If this value is 0 then you should assume that no sample has yet been taken. It is important to know that
+ *                  the voltage may fluctuate depending on many different factors, such as temperature and workload. For example, heavy usage of the LED will temporarily lower the voltage,
+ *                  but it is likely to recover shortly after. Therefore we do not recomend to exactly translate this value into a battery percentage, instead consider showing a
+ *                  "change the battery soon"-status in your app once the voltage goes below 2.65V.
  *
  */
-@property(nonatomic, readonly) uint32_t batterylevel;
+@property(nonatomic, readonly) float batteryVoltage;
 
 /*!
  *  @property isUnpaired

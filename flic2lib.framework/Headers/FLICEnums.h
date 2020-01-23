@@ -3,7 +3,7 @@
 //  fliclib
 //
 //  Created by Anton Meier on 2019-04-18.
-//  Copyright © 2019 Shortcut Labs. All rights reserved.
+//  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
 #ifndef FLICEnums_h
@@ -11,6 +11,40 @@
 
 extern NSString * const FLICErrorDomain;
 extern NSString * const FLICButtonScannerErrorDomain;
+
+/*!
+ * @enum FLICManagerState
+ *
+ * @discussion      Represents the the different states that a Flic manager can be in at any given time. These states are mostly translated values of Apple's CoreBluetooth CBManagerState enums.
+ *
+ */
+typedef NS_ENUM(NSInteger, FLICManagerState)
+{
+    /**
+     * State is unknown, update imminent.
+     */
+    FLICManagerStateUnknown = 0,
+    /**
+     * The bluetooth connection with the system service was momentaryly lost, update imminent.
+     */
+    FLICManagerStateResetting,
+    /**
+     * The Flic manager can not be used on this platform.
+     */
+    FLICManagerStateUnsupported,
+    /**
+     * The application is not authorized to use Bluetooth Low Energy.
+     */
+    FLICManagerStateUnauthorized,
+    /**
+     * Bluetooth is currently powered off.
+     */
+    FLICManagerStatePoweredOff,
+    /**
+     * Bluetooth is currently powered on and available to use.
+     */
+    FLICManagerStatePoweredOn
+};
 
 /*!
  * @enum FLICButtonScannerErrorCode
@@ -168,7 +202,15 @@ typedef NS_ENUM(NSInteger, FLICError)
     /**
      * The pairing on the Flic button has been lost so the app's pairing data is no longer valid. This typically happens if the Flic is factory reset.
      */
-    FLICErrorUnpaired
+    FLICErrorUnpaired,
+    /**
+     * The manager was unable to complete the task since the device is not running on a supported iOS version.
+     */
+    FLICErrorUnsupportedOSVersion,
+    /**
+     * You are trying to use a FLICButton object that has already been forgotten by the manager. Please discard of your references to this object.
+     */
+    FLICErrorAlreadyForgotten,
 };
 
 /*!

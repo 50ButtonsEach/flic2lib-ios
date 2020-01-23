@@ -3,7 +3,7 @@
 //  flic2lib
 //
 //  Created by Anton Meier on 2019-12-10.
-//  Copyright © 2019 Shortcut Labs. All rights reserved.
+//  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
 #import <flic2lib/flic2lib.h>
@@ -41,9 +41,9 @@ static FLICManager *_sharedManager = nil;
         });
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if ([FLICManager sharedManager].delegate && [[FLICManager sharedManager].delegate respondsToSelector:@selector(manager:didUpdateBluetoothState:)])
+            if ([FLICManager sharedManager].delegate && [[FLICManager sharedManager].delegate respondsToSelector:@selector(manager:didUpdateState:)])
             {
-                [[FLICManager sharedManager].delegate manager:[FLICManager sharedManager] didUpdateBluetoothState:5];
+                [[FLICManager sharedManager].delegate manager:[FLICManager sharedManager] didUpdateState:FLICManagerStatePoweredOn];
             }
         });
     });
@@ -64,7 +64,7 @@ static FLICManager *_sharedManager = nil;
 }
 
 - (void)scanForButtonsWithStateChangeHandler:(void (^)(FLICButtonScannerStatusEvent event))stateHandler
-completion:(void (^)(FLICButton *button, NSError * _Nullable error))completion;
+                                  completion:(void (^)(FLICButton * _Nullable button, NSError * _Nullable error))completion;
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         completion(nil, [NSError errorWithDomain:FLICButtonScannerErrorDomain code:FLICButtonScannerErrorCodeUnknown userInfo:@{NSLocalizedDescriptionKey: @"You can not scan for Flic buttons while running on the iOS Simulator."}]);

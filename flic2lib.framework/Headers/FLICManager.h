@@ -3,7 +3,7 @@
 //  flic2lib
 //
 //  Created by Anton Meier on 2019-04-11.
-//  Copyright © 2019 Shortcut Labs. All rights reserved.
+//  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -43,13 +43,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(weak, nonatomic, nullable) id<FLICButtonDelegate> buttonDelegate;
 
 /*!
- *  @property cbState
+ *  @property state
  *
- *  @discussion     This is the manager state of Apple's CoreBluetooth framework. You will only be able to communicate with Flic buttons while the manager is in the
- *                  CBManagerStatePoweredOn state.
+ *  @discussion     This is the state of the Flic manager. This state closely resembles the CBManager state of Apple's CoreBluetooth framework. You will only be able to communicate with
+ *                  Flic buttons while the manager is in the FlicManagerStatePoweredOn state.
  *
  */
-@property(readonly) CBManagerState cbState;
+@property(readonly) FLICManagerState state;
 
 /*!
  *  @method sharedManager
@@ -68,7 +68,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param background             Whether or not you intend to use this application in the background.
  *
  *  @discussion     This configuration method must be called before the manager can be used. It is recommended that this is done as soon as possible after your application has launched
- *                  in order to minimize the delay of any pending click events.
+ *                  in order to minimize the delay of any pending click events. The flic2lib officially only support iOS 12 and up, however, to make it easier for the developer, the framework
+ *                  is built with a target of iOS 9 and contains slices for both arm64 and armv7. This means that you will be able to include, and load, the framework in apps that support iOS 9.
+ *                  However, if you try to configure the manager on a device running iOS 11, or below, then the manager state will switch to FLICManagerStateUnsupported. A good place
+ *                  to handle this would be in the manager:didUpdateSate: method.
  *
  */
 + (instancetype _Nullable)configureWithDelegate:(id<FLICManagerDelegate> _Nullable)delegate
@@ -93,6 +96,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @discussion     This will delete this button from the manager. After a successful call to this method you will no longer be able to communicate with the associated Flic button unless you
  *                  pair it again using the scanForButtonsWithStateChangeHandler:completionHandler:. On completion, the button will no longer be included in the manager's buttons array.
+ *                  After a successfull call to this method, you should discard of any references to that particular Flic button object. If you try to forget a button that is already forgotton, then
+ *                  you will get an error with the FLICErrorAlreadyForgotten code.
  *
  */
 - (void)forgetButton:(FLICButton *)button completion:(void (^)(NSUUID *uuid, NSError * _Nullable error))completion;
@@ -105,11 +110,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param completion           The completion handler will always run and if successful it will return a new FLICButton instance, otherwise it will provide you with an error.
  *
  *  @discussion     This method lets you add new Flic buttons to the manager. The scan flow is automated and the stateHandler will let you know what information you should provide to
- *                  your application end user.
+ *                  your application end user. If you try to scan for buttons while running on an iOS version below the mimimun requirement, then you will get an error with the
+ *                  FLICErrorUnsupportedOSVersion error code.
  *
  */
 - (void)scanForButtonsWithStateChangeHandler:(void (^)(FLICButtonScannerStatusEvent event))stateHandler
-                                  completion:(void (^)(FLICButton *button, NSError * _Nullable error))completion;
+                                  completion:(void (^)(FLICButton * _Nullable button, NSError * _Nullable error))completion;
 
 /*!
  *  @method stopScan
@@ -141,15 +147,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)managerDidRestoreState:(FLICManager *)manager;
 
 /*!
- *  @method manager:didUpdateBluetoothState:
+ *  @method manager:didUpdateState:
  *
  *  @param manager      The manager instance that the event originates from. Since this is intended to be used as a singleton, there should only ever be one manager instance.
- *  @param state           The bluetooth state of Apple's CoreBluetooth framework.
+ *  @param state           The state of the Flic manager singleton.
  *
- *  @discussion     Each time the bluetooth state changes on the iOS device, this method will be called. It will also be called at least one time after the manager has been configured.
+ *  @discussion     Each time the state of the Flic manager changes, you will get this callback. Usually this is related to bluetooth state changes on the iOS device. It is also guaranteed to
+ *                  be called at least once after the manager has been configured.
  *
  */
-- (void)manager:(FLICManager *)manager didUpdateBluetoothState:(CBManagerState)state;
+- (void)manager:(FLICManager *)manager didUpdateState:(FLICManagerState)state;
 
 @end
 
