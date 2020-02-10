@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, FLICManagerState)
      */
     FLICManagerStateUnknown = 0,
     /**
-     * The bluetooth connection with the system service was momentaryly lost, update imminent.
+     * The bluetooth connection with the system service was momentarily lost, update imminent.
      */
     FLICManagerStateResetting,
     /**

@@ -52,6 +52,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(readonly) FLICManagerState state;
 
 /*!
+ *  @property scanning
+ *
+ *  @discussion     Let's you know if a scan is currently running or not. Reading this value will not affect a scan.
+ *
+ */
+@property(nonatomic, readonly) BOOL isScanning;
+
+/*!
  *  @method sharedManager
  *
  *  @discussion     This class method return the singleton manager, assuming that it has been configured first using the configureWithDelegate:buttonDelegate:background: method first,
@@ -96,7 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @discussion     This will delete this button from the manager. After a successful call to this method you will no longer be able to communicate with the associated Flic button unless you
  *                  pair it again using the scanForButtonsWithStateChangeHandler:completionHandler:. On completion, the button will no longer be included in the manager's buttons array.
- *                  After a successfull call to this method, you should discard of any references to that particular Flic button object. If you try to forget a button that is already forgotton, then
+ *                  After a successful call to this method, you should discard of any references to that particular Flic button object. If you try to forget a button that is already forgotten, then
  *                  you will get an error with the FLICErrorAlreadyForgotten code.
  *
  */

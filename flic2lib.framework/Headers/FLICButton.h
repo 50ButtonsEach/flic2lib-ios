@@ -293,6 +293,33 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)button:(FLICButton *)button didUnpairWithError:(NSError * _Nullable)error;
 
+/*!
+ *  @method button:didUpdateBatteryVoltage:
+ *
+ *  @param button       The FLICButton instance that the event originated from.
+ *  @param voltage     Float representation of the latest battery voltage sample.
+ *
+ *  @discussion     This callback will be sent once the Flic button updates its battery voltage with a new value. Typically this will occurs a few seconds
+ *                  after the button connects. If you show a battery indicator in you app, then this would be a good place to refresh your UI. Please
+ *                  see the description for the batteryVoltage property for more information.
+ *
+ */
+- (void)button:(FLICButton *)button didUpdateBatteryVoltage:(float)voltage;
+
+/*!
+ *  @method button:didUpdateNickname:
+ *
+ *  @param button       The FLICButton instance that the event originated from.
+ *  @param nickname   The new nickname that was sent from the Flic.
+ *
+ *  @discussion     If the nickname is updated by another app (including the official Flic app), then you will get this callback letting you know that the
+ *                  name has changed. This may either be in real time (if multiple apps are connected at the same time), or a deayed event that
+ *                  occurs after the button connects (if the nickname was changed while your app was not active). If your app displays this nickname,
+ *                  then this would be a good place to refresh your UI.
+ *
+ */
+- (void)button:(FLICButton *)button didUpdateNickname:(NSString *)nickname;
+
 @end
 
 NS_ASSUME_NONNULL_END

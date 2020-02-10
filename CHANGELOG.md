@@ -4,6 +4,20 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.0.3
+
+### Minor Changes
+
+* Changed the bluetooth connection parameters in order to achieve lower click latency on events that occur while the Flic is connected. This should not affect the Flic battery life.
+* Added a property `isScanning` to FLICManager.
+* Add callback `button:didUpdateNickname:` to FLICButton to let the app know when the nickname has been updated.
+* Add callback `button:didUpdateBatteryVoltage:` to FLICButton to let the app know when the battryVoltage has been updated.
+
+### Bug Fixes
+
+* Fixed a bug that could cause the `scanForButtonsWithStateChangeHandler:completion:` to end up in an infinite loop if `stopScan` was called from within the completion handler.
+* Changed the way that the lib syncs the nickname between different applications.
+
 ## flic2lib-ios 1.0.2
 
 ### Major Changes
