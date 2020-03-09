@@ -116,7 +116,7 @@ typedef NS_ENUM(NSInteger, FLICButtonScannerErrorCode)
      */
     FLICButtonScannerErrorCodeButtonDisconnectedDuringVerification,
     /**
-     * The Flic peripheral did not connect in time.
+     * The Flic peripheral connection was unexpectedly lost.
      */
     FLICButtonScannerErrorCodeConnectionTimeout,
     /**

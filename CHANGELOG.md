@@ -4,6 +4,16 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.0.5
+
+### Significant Changes
+
+* Adjustments made to the framework in order to support API changes made in iOS 13.4. Older versions of the framework will still work on iOS 13.4, but we do recommend updating to this version. If you do not update the framework then there is a risk that the button connection will not be re-set properly if connection is lost during the Bluetooth LE encryption exchange/setup process.
+
+### Minor Changes
+
+* Added human readable descriptions to all flic2lib error codes of the `FLICErrorDomain` and `FLICButtonScannerErrorDomain` error domains. This would be the enums `FLICButtonScannerErrorCode` and `FLICError`. The description can be read using the `NSLocalizedDescriptionKey` key of the error’s userInfo dictionary, which may be helpful for troubleshooting.
+
 ## flic2lib-ios 1.0.4
 
 ### Minor Changes
