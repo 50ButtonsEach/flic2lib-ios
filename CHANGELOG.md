@@ -4,11 +4,25 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.1.0
+
+### Significant Changes
+
+* The framework is now distributed using the new XCFramework packaging format. This means that instead of a single `flic2lib.framework` file, you will need to use a `flic2lib.xcframework` bundle. This bundle is essentially a folder containing framework builds for all supported architectures. The main benefit of this is that the framework will from now on run in the iOS Simulator, by default, with no configuration needed.
+
+	This change switch was necessary due to the fact that Xcode 11.4 now throws a compiler error if any embedded framework is not build for Simulator. This would only generate a warning in previous versions. Thus the previously provided simulator files would no longer work without the use of cumbersome build scripts.
+	
+	Xcode 11 is required in order to use XCFramework bundles.
+
+### Minor Changes
+
+* New property, `latencyMode`, added. This property can be set using the new `FLICLatencyMode` enums. The purpose of this is to allow you to reduce the click latency on events that occur while the Flic is connected. This may be useful if you are developing a foreground application, such as a game, where a lower latency is needed. However, keep in mind that this will affect expected battery life.
+
 ## flic2lib-ios 1.0.5
 
 ### Significant Changes
 
-* Adjustments made to the framework in order to support API changes made in iOS 13.4. Older versions of the framework will still work on iOS 13.4, but we do recommend updating to this version. If you do not update the framework then there is a risk that the button connection will not be re-set properly if connection is lost during the Bluetooth LE encryption exchange/setup process.
+* Adjustments made to the framework in order to support Core Bluetooth API changes indtroduced in iOS 13.4. Older versions of this framework will still work on iOS 13.4, but we do recommend updating. If you do not update the framework then there is a risk that the button connection will not be re-set properly if connection is lost during the Bluetooth LE encryption exchange/setup process. This is particularily important for applications that uses long-term execution in the background.
 
 ### Minor Changes
 

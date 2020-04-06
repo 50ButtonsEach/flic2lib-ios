@@ -16,10 +16,6 @@ Have a look at the repository Wiki for further information:
 
 	The API documentation of the flic2lib.framework.
 
-* [Simulator Support](https://github.com/50ButtonsEach/flic2lib-ios/wiki/Simulator-Support)
-
-	If needed, follow this tutorial on how to run flic2lib in the iOS Simulator.
-
 * [OS Version Compatibility](https://github.com/50ButtonsEach/flic2lib-ios/wiki/OS-Compatibility)
 
 	Deployment information.
