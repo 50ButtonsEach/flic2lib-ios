@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "FLICButton.h"
+#import <flic2lib/FLICButton.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
