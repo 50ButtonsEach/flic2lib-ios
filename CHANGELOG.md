@@ -4,6 +4,16 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.2.0
+
+### Changes
+
+* The XCFramework bundle now adds an empty Mac Catalyst implementation for both Intel and Apple Silicon. This means that while Flic 2 functionality is still not supported on Mac, you will now at least be able to compile and run your project with Mac Catalyst.
+
+* The build for iOS Simulator now includes slices for arm64 (Apple Silicon). Slices for i386 (32 bit simulator) have been removed.
+
+* Frameworks up to date with with iphoneos14.5 sdk.
+
 ## flic2lib-ios 1.1.0
 
 ### Significant Changes
