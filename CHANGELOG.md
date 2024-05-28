@@ -4,6 +4,10 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.4.0
+
+* Removed dependency on NSFileModificationDate, NSFileSystemFreeSize, NSFileSystemSize to avoid requirement to declare API usage reason
+
 ## flic2lib-ios 1.3.0
 
 ### Changes

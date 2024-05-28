@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FLICEnums.h"
+#import <flic2lib/FLICEnums.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
