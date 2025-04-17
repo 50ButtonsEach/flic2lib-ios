@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "Flic2",
+  name: "flic2lib",
   platforms: [
     .macOS(.v11),
     .iOS(.v12),
@@ -10,11 +10,11 @@ let package = Package(
   ],
 
   products: [
-    .library(name: "Flic2", targets: ["Flic2", "Flic2XCFramework"]),
+    .library(name: "flic2lib", targets: ["flic2lib", "Flic2XCFramework"]),
   ],
 
   targets: [
-    .target(name: "Flic2", dependencies: ["Flic2XCFramework"]),
+    .target(name: "flic2lib", dependencies: ["Flic2XCFramework"]),
     .binaryTarget(name: "Flic2XCFramework", path: "flic2lib.xcframework"),
   ]
 )
