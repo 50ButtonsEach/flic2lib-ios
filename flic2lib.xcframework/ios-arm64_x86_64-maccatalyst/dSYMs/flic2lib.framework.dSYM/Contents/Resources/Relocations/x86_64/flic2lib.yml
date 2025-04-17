@@ -1,0 +1,700 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/oskar/Library/Developer/Xcode/DerivedData/fliclib-eaeeayyfuhrfowgsyducfsltfmcv/ArchiveIntermediates/flic2lib/InstallationBuildProductsLocation/Library/Frameworks/flic2lib.framework/Versions/A/flic2lib'
+relocations:
+  - { offset: 0xE290B, size: 0x8, addend: 0x0, symName: _flic2libVersionString, symObjAddr: 0x0, symBinAddr: 0x20BC0, symSize: 0x0 }
+  - { offset: 0xE2940, size: 0x8, addend: 0x0, symName: _flic2libVersionNumber, symObjAddr: 0x30, symBinAddr: 0x20BF0, symSize: 0x0 }
+  - { offset: 0xE297D, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration hexStringFromNSData:]', symObjAddr: 0x0, symBinAddr: 0xEC0, symSize: 0xA8 }
+  - { offset: 0xE2B32, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration hexStringFromNSData:]', symObjAddr: 0x0, symBinAddr: 0xEC0, symSize: 0xA8 }
+  - { offset: 0xE2BE2, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration hexStringFromData:length:]', symObjAddr: 0xA8, symBinAddr: 0xF68, symSize: 0xA6 }
+  - { offset: 0xE2C9C, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration hexStringFromDataWithColonSeparator:length:]', symObjAddr: 0x14E, symBinAddr: 0x100E, symSize: 0xCA }
+  - { offset: 0xE2D62, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration charArrToInteger:length:]', symObjAddr: 0x218, symBinAddr: 0x10D8, symSize: 0x3A }
+  - { offset: 0xE2DE2, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration dataFromHexString:WithLength:]', symObjAddr: 0x252, symBinAddr: 0x1112, symSize: 0x17D }
+  - { offset: 0xE2FED, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration internal_printArr:offset:len:tag:]', symObjAddr: 0x3CF, symBinAddr: 0x128F, symSize: 0x6 }
+  - { offset: 0xE304C, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration internal_returnArr:offset:len:]', symObjAddr: 0x3D5, symBinAddr: 0x1295, symSize: 0x167 }
+  - { offset: 0xE3152, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration internal_returnArrWith0x:offset:len:]', symObjAddr: 0x53C, symBinAddr: 0x13FC, symSize: 0x167 }
+  - { offset: 0xE3258, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration generateUUID]', symObjAddr: 0x6A3, symBinAddr: 0x1563, symSize: 0x32 }
+  - { offset: 0xE3324, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration taskFromPath:method:parameters:headers:delegate:completionHandler:]', symObjAddr: 0x6D5, symBinAddr: 0x1595, symSize: 0x42 }
+  - { offset: 0xE33E1, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration taskFromURL:method:parameters:headers:delegate:completionHandler:]', symObjAddr: 0x717, symBinAddr: 0x15D7, symSize: 0x45 }
+  - { offset: 0xE349E, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration taskFromURLWithoutSSLPinning:method:parameters:headers:delegate:completionHandler:]', symObjAddr: 0x75C, symBinAddr: 0x161C, symSize: 0x42 }
+  - { offset: 0xE355B, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration taskFromPath:orURL:SSLPinning:method:parameters:headers:delegate:completionHandler:]', symObjAddr: 0x79E, symBinAddr: 0x165E, symSize: 0x535 }
+  - { offset: 0xE3A27, size: 0x8, addend: 0x0, symName: '___117+[FLIC2SCLFlicBackendIntegration taskFromPath:orURL:SSLPinning:method:parameters:headers:delegate:completionHandler:]_block_invoke', symObjAddr: 0xCD3, symBinAddr: 0x1B93, symSize: 0x72 }
+  - { offset: 0xE3B30, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32b, symObjAddr: 0xD45, symBinAddr: 0x1C05, symSize: 0x17 }
+  - { offset: 0xE3B59, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0xD5C, symBinAddr: 0x1C1C, symSize: 0xF }
+  - { offset: 0xE3B84, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration notLive_taskFromPath:method:parameters:headers:delegate:completionHandler:]', symObjAddr: 0xD6B, symBinAddr: 0x1C2B, symSize: 0x18 }
+  - { offset: 0xE3C26, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration URLSession:task:didReceiveChallenge:completionHandler:]', symObjAddr: 0xD83, symBinAddr: 0x1C43, symSize: 0xA3 }
+  - { offset: 0xE3D19, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration URLSession:didReceiveChallenge:completionHandler:]', symObjAddr: 0xE26, symBinAddr: 0x1CE6, symSize: 0x2A1 }
+  - { offset: 0xE4035, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration verifyPinnedCertificateForTrust:andDomain:]', symObjAddr: 0x10C7, symBinAddr: 0x1F87, symSize: 0x474 }
+  - { offset: 0xE4488, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration userInfoForFlicErrorCode:]', symObjAddr: 0x153B, symBinAddr: 0x23FB, symSize: 0x475 }
+  - { offset: 0xE44FB, size: 0x8, addend: 0x0, symName: '+[FLIC2SCLFlicBackendIntegration errorWithDomain:code:]', symObjAddr: 0x19B0, symBinAddr: 0x2870, symSize: 0x93 }
+  - { offset: 0xE4800, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer initWithCapacity:]', symObjAddr: 0x0, symBinAddr: 0x2903, symSize: 0xE0 }
+  - { offset: 0xE488B, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer initWithCapacity:]', symObjAddr: 0x0, symBinAddr: 0x2903, symSize: 0xE0 }
+  - { offset: 0xE493E, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer initWithCapacity:andDefaultObject:]', symObjAddr: 0xE0, symBinAddr: 0x29E3, symSize: 0xEB }
+  - { offset: 0xE4A36, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer enqObject:]', symObjAddr: 0x1CB, symBinAddr: 0x2ACE, symSize: 0x59 }
+  - { offset: 0xE4A9E, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer enqObjectAndReturnRemoved:]', symObjAddr: 0x224, symBinAddr: 0x2B27, symSize: 0xD2 }
+  - { offset: 0xE4B75, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer deqObject]', symObjAddr: 0x2F6, symBinAddr: 0x2BF9, symSize: 0xEC }
+  - { offset: 0xE4C1C, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer objectAtIndex:]', symObjAddr: 0x3E2, symBinAddr: 0x2CE5, symSize: 0x69 }
+  - { offset: 0xE4C88, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer removeAllObjects]', symObjAddr: 0x44B, symBinAddr: 0x2D4E, symSize: 0x8C }
+  - { offset: 0xE4D16, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer description]', symObjAddr: 0x4D7, symBinAddr: 0x2DDA, symSize: 0x170 }
+  - { offset: 0xE4E65, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer countByEnumeratingWithState:objects:count:]', symObjAddr: 0x647, symBinAddr: 0x2F4A, symSize: 0x89 }
+  - { offset: 0xE4EE8, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer capacity]', symObjAddr: 0x6D0, symBinAddr: 0x2FD3, symSize: 0xA }
+  - { offset: 0xE4F1D, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer count]', symObjAddr: 0x6DA, symBinAddr: 0x2FDD, symSize: 0xA }
+  - { offset: 0xE4F52, size: 0x8, addend: 0x0, symName: '-[FLIC2SCLCircleBuffer .cxx_destruct]', symObjAddr: 0x6E4, symBinAddr: 0x2FE7, symSize: 0x10 }
+  - { offset: 0xE5019, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate data]', symObjAddr: 0x0, symBinAddr: 0x2FF8, symSize: 0xA }
+  - { offset: 0xE6046, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate data]', symObjAddr: 0x0, symBinAddr: 0x2FF8, symSize: 0xA }
+  - { offset: 0xE607B, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate setData:]', symObjAddr: 0xA, symBinAddr: 0x3002, symSize: 0x11 }
+  - { offset: 0xE60BC, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate ackPos]', symObjAddr: 0x1B, symBinAddr: 0x3013, symSize: 0x9 }
+  - { offset: 0xE60F1, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate setAckPos:]', symObjAddr: 0x24, symBinAddr: 0x301C, symSize: 0x9 }
+  - { offset: 0xE612E, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate sentPos]', symObjAddr: 0x2D, symBinAddr: 0x3025, symSize: 0x9 }
+  - { offset: 0xE6163, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate setSentPos:]', symObjAddr: 0x36, symBinAddr: 0x302E, symSize: 0x9 }
+  - { offset: 0xE61A0, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionFirmwareUpdate .cxx_destruct]', symObjAddr: 0x3F, symBinAddr: 0x3037, symSize: 0x10 }
+  - { offset: 0xE61D3, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionGetHidData combinedData]', symObjAddr: 0x4F, symBinAddr: 0x3047, symSize: 0xA }
+  - { offset: 0xE6208, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionGetHidData setCombinedData:]', symObjAddr: 0x59, symBinAddr: 0x3051, symSize: 0x11 }
+  - { offset: 0xE6249, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionGetHidData completion]', symObjAddr: 0x6A, symBinAddr: 0x3062, symSize: 0x14 }
+  - { offset: 0xE6280, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionGetHidData setCompletion:]', symObjAddr: 0x7E, symBinAddr: 0x3076, symSize: 0xF }
+  - { offset: 0xE62BF, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionGetHidData .cxx_destruct]', symObjAddr: 0x8D, symBinAddr: 0x3085, symSize: 0x28 }
+  - { offset: 0xE62F2, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionSetHidData combinedData]', symObjAddr: 0xB5, symBinAddr: 0x30AD, symSize: 0xA }
+  - { offset: 0xE6327, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionSetHidData setCombinedData:]', symObjAddr: 0xBF, symBinAddr: 0x30B7, symSize: 0x11 }
+  - { offset: 0xE6368, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionSetHidData completion]', symObjAddr: 0xD0, symBinAddr: 0x30C8, symSize: 0x14 }
+  - { offset: 0xE639F, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionSetHidData setCompletion:]', symObjAddr: 0xE4, symBinAddr: 0x30DC, symSize: 0xF }
+  - { offset: 0xE63DE, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionSetHidData .cxx_destruct]', symObjAddr: 0xF3, symBinAddr: 0x30EB, symSize: 0x28 }
+  - { offset: 0xE6411, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent timestamp]', symObjAddr: 0x11B, symBinAddr: 0x3113, symSize: 0xA }
+  - { offset: 0xE6446, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent setTimestamp:]', symObjAddr: 0x125, symBinAddr: 0x311D, symSize: 0xA }
+  - { offset: 0xE6483, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent eventEncoded]', symObjAddr: 0x12F, symBinAddr: 0x3127, symSize: 0xA }
+  - { offset: 0xE64B8, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent setEventEncoded:]', symObjAddr: 0x139, symBinAddr: 0x3131, symSize: 0x9 }
+  - { offset: 0xE64F5, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent wasQueued]', symObjAddr: 0x142, symBinAddr: 0x313A, symSize: 0xA }
+  - { offset: 0xE652A, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent setWasQueued:]', symObjAddr: 0x14C, symBinAddr: 0x3144, symSize: 0x9 }
+  - { offset: 0xE6567, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent wasQueuedLast]', symObjAddr: 0x155, symBinAddr: 0x314D, symSize: 0xA }
+  - { offset: 0xE659C, size: 0x8, addend: 0x0, symName: '-[FLICBTSessionPressEvent setWasQueuedLast:]', symObjAddr: 0x15F, symBinAddr: 0x3157, symSize: 0x9 }
+  - { offset: 0xE65D9, size: 0x8, addend: 0x0, symName: '-[FLICBTSession initWithPersistor:isNew:]', symObjAddr: 0x168, symBinAddr: 0x3160, symSize: 0xFE }
+  - { offset: 0xE66C0, size: 0x8, addend: 0x0, symName: '-[FLICBTSession tx:]', symObjAddr: 0x266, symBinAddr: 0x325E, symSize: 0x5F }
+  - { offset: 0xE6758, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendPacket:length:withConnId:]', symObjAddr: 0x2C5, symBinAddr: 0x32BD, symSize: 0x96 }
+  - { offset: 0xE685A, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendUnsignedPacket:length:opcode:]', symObjAddr: 0x35B, symBinAddr: 0x3353, symSize: 0x73 }
+  - { offset: 0xE690C, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendUnsignedPacket:length:opcode:withConnId:]', symObjAddr: 0x3CE, symBinAddr: 0x33C6, symSize: 0x94 }
+  - { offset: 0xE69BF, size: 0x8, addend: 0x0, symName: '-[FLICBTSession calcSignature:length:isTx:outSignature:changes:]', symObjAddr: 0x462, symBinAddr: 0x345A, symSize: 0x141 }
+  - { offset: 0xE6B34, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendSignedPacket:length:opcode:changes:]', symObjAddr: 0x5A3, symBinAddr: 0x359B, symSize: 0xFC }
+  - { offset: 0xE6C34, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendFullVerify]', symObjAddr: 0x69F, symBinAddr: 0x3697, symSize: 0x8C }
+  - { offset: 0xE6CE5, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendQuickVerify]', symObjAddr: 0x72B, symBinAddr: 0x3723, symSize: 0x110 }
+  - { offset: 0xE6E26, size: 0x8, addend: 0x0, symName: '-[FLICBTSession start]', symObjAddr: 0x83B, symBinAddr: 0x3833, symSize: 0x86 }
+  - { offset: 0xE6E9D, size: 0x8, addend: 0x0, symName: '-[FLICBTSession invalidate]', symObjAddr: 0x8C1, symBinAddr: 0x38B9, symSize: 0x1C9 }
+  - { offset: 0xE70DA, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendInit:maxQueuedEvents:]', symObjAddr: 0xA8A, symBinAddr: 0x3A82, symSize: 0x112 }
+  - { offset: 0xE71F0, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendConnParamsUpdateMin:max:sLatency:sTimeout:changes:]', symObjAddr: 0xB9C, symBinAddr: 0x3B94, symSize: 0x47 }
+  - { offset: 0xE72A9, size: 0x8, addend: 0x0, symName: '-[FLICBTSession afterInitialButtonEventsReceived:]', symObjAddr: 0xBE3, symBinAddr: 0x3BDB, symSize: 0xC6 }
+  - { offset: 0xE73B2, size: 0x8, addend: 0x0, symName: '-[FLICBTSession applyStandardConnectionParameters:]', symObjAddr: 0xCA9, symBinAddr: 0x3CA1, symSize: 0xA6 }
+  - { offset: 0xE742F, size: 0x8, addend: 0x0, symName: '-[FLICBTSession compareSignatureOfBytes:length:changes:]', symObjAddr: 0xD4F, symBinAddr: 0x3D47, symSize: 0x58 }
+  - { offset: 0xE74D4, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendFullVerifyRequest2:]', symObjAddr: 0xDA7, symBinAddr: 0x3D9F, symSize: 0x5D }
+  - { offset: 0xE756E, size: 0x8, addend: 0x0, symName: '-[FLICBTSession save:]', symObjAddr: 0xE04, symBinAddr: 0x3DFC, symSize: 0xD5 }
+  - { offset: 0xE765E, size: 0x8, addend: 0x0, symName: '-[FLICBTSession onData:]', symObjAddr: 0xED9, symBinAddr: 0x3ED1, symSize: 0x47 }
+  - { offset: 0xE76EC, size: 0x8, addend: 0x0, symName: '-[FLICBTSession onData:withChanges:]', symObjAddr: 0xF20, symBinAddr: 0x3F18, symSize: 0x4248 }
+  - { offset: 0xEB0BD, size: 0x8, addend: 0x0, symName: '-[FLICBTSession bootTime]', symObjAddr: 0x5168, symBinAddr: 0x8160, symSize: 0x4D }
+  - { offset: 0xEB14A, size: 0x8, addend: 0x0, symName: '-[FLICBTSession realTime]', symObjAddr: 0x51B5, symBinAddr: 0x81AD, symSize: 0x43 }
+  - { offset: 0xEB1BB, size: 0x8, addend: 0x0, symName: '-[FLICBTSession performFirmwareUpdate:iv:]', symObjAddr: 0x51F8, symBinAddr: 0x81F0, symSize: 0x1BF }
+  - { offset: 0xEB3B1, size: 0x8, addend: 0x0, symName: '-[FLICBTSession firmwareUpdateContinue]', symObjAddr: 0x53B7, symBinAddr: 0x83AF, symSize: 0x4D6 }
+  - { offset: 0xEB860, size: 0x8, addend: 0x0, symName: '-[FLICBTSession printBuf:offset:len:tag:]', symObjAddr: 0x588D, symBinAddr: 0x8885, symSize: 0x168 }
+  - { offset: 0xEB982, size: 0x8, addend: 0x0, symName: '+[FLICBTSession hexStringFromBuf:length:colonSeparated:]', symObjAddr: 0x59F5, symBinAddr: 0x89ED, symSize: 0xE2 }
+  - { offset: 0xEBA5E, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendHidCommand:usageId:duration:]', symObjAddr: 0x5AD7, symBinAddr: 0x8ACF, symSize: 0xB4 }
+  - { offset: 0xEBB54, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setHIDStatus:]', symObjAddr: 0x5B8B, symBinAddr: 0x8B83, symSize: 0xE1 }
+  - { offset: 0xEBC54, size: 0x8, addend: 0x0, symName: '-[FLICBTSession readBatteryLevel]', symObjAddr: 0x5C6C, symBinAddr: 0x8C64, symSize: 0x8F }
+  - { offset: 0xEBD06, size: 0x8, addend: 0x0, symName: '-[FLICBTSession readFirmwareVersion]', symObjAddr: 0x5CFB, symBinAddr: 0x8CF3, symSize: 0x8F }
+  - { offset: 0xEBDB8, size: 0x8, addend: 0x0, symName: '-[FLICBTSession readNickname]', symObjAddr: 0x5D8A, symBinAddr: 0x8D82, symSize: 0x8F }
+  - { offset: 0xEBE6A, size: 0x8, addend: 0x0, symName: '-[FLICBTSession writeNickname:]', symObjAddr: 0x5E19, symBinAddr: 0x8E11, symSize: 0x198 }
+  - { offset: 0xEC01F, size: 0x8, addend: 0x0, symName: '-[FLICBTSession updateToFirmware:]', symObjAddr: 0x5FB1, symBinAddr: 0x8FA9, symSize: 0xFB }
+  - { offset: 0xEC173, size: 0x8, addend: 0x0, symName: '-[FLICBTSession scheduleApiTimer:message:]', symObjAddr: 0x60AC, symBinAddr: 0x90A4, symSize: 0xA7 }
+  - { offset: 0xEC258, size: 0x8, addend: 0x0, symName: '-[FLICBTSession forceDisconnect:]', symObjAddr: 0x6153, symBinAddr: 0x914B, symSize: 0x3A }
+  - { offset: 0xEC2ED, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendBluetoothPairRequest]', symObjAddr: 0x618D, symBinAddr: 0x9185, symSize: 0x1F }
+  - { offset: 0xEC34C, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendAdvSettingsIfNeeded:]', symObjAddr: 0x61AC, symBinAddr: 0x91A4, symSize: 0xE7 }
+  - { offset: 0xEC444, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sendHidConfiguration:completion:]', symObjAddr: 0x6293, symBinAddr: 0x928B, symSize: 0x31E }
+  - { offset: 0xEC793, size: 0x8, addend: 0x0, symName: '___49-[FLICBTSession sendHidConfiguration:completion:]_block_invoke', symObjAddr: 0x65B1, symBinAddr: 0x95A9, symSize: 0x6E }
+  - { offset: 0xEC829, size: 0x8, addend: 0x0, symName: '___49-[FLICBTSession sendHidConfiguration:completion:]_block_invoke_2', symObjAddr: 0x661F, symBinAddr: 0x9617, symSize: 0x16 }
+  - { offset: 0xEC884, size: 0x8, addend: 0x0, symName: '-[FLICBTSession getHidConfigurationWithCompletion:]', symObjAddr: 0x665B, symBinAddr: 0x962F, symSize: 0x250 }
+  - { offset: 0xECABA, size: 0x8, addend: 0x0, symName: '___51-[FLICBTSession getHidConfigurationWithCompletion:]_block_invoke', symObjAddr: 0x68AB, symBinAddr: 0x987F, symSize: 0x6E }
+  - { offset: 0xECB37, size: 0x8, addend: 0x0, symName: '___51-[FLICBTSession getHidConfigurationWithCompletion:]_block_invoke_2', symObjAddr: 0x6919, symBinAddr: 0x98ED, symSize: 0x18 }
+  - { offset: 0xECB99, size: 0x8, addend: 0x0, symName: '-[FLICBTSession parseHidConfigApplyResponse:]', symObjAddr: 0x6931, symBinAddr: 0x9905, symSize: 0x104 }
+  - { offset: 0xECCB7, size: 0x8, addend: 0x0, symName: '___45-[FLICBTSession parseHidConfigApplyResponse:]_block_invoke', symObjAddr: 0x6A35, symBinAddr: 0x9A09, symSize: 0x16 }
+  - { offset: 0xECD12, size: 0x8, addend: 0x0, symName: '-[FLICBTSession parseHidConfigGetDataInd:len:]', symObjAddr: 0x6A4B, symBinAddr: 0x9A1F, symSize: 0x128 }
+  - { offset: 0xECE5A, size: 0x8, addend: 0x0, symName: '-[FLICBTSession parseHidConfigGetResponse:]', symObjAddr: 0x6B73, symBinAddr: 0x9B47, symSize: 0x155 }
+  - { offset: 0xECFE1, size: 0x8, addend: 0x0, symName: '___43-[FLICBTSession parseHidConfigGetResponse:]_block_invoke', symObjAddr: 0x6CC8, symBinAddr: 0x9C9C, symSize: 0x24 }
+  - { offset: 0xED04D, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40b, symObjAddr: 0x6CEC, symBinAddr: 0x9CC0, symSize: 0x30 }
+  - { offset: 0xED082, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0x6D1C, symBinAddr: 0x9CF0, symSize: 0x25 }
+  - { offset: 0xED0B9, size: 0x8, addend: 0x0, symName: '-[FLICBTSession forceButtonValidationOfAppCredentials]', symObjAddr: 0x6D41, symBinAddr: 0x9D15, symSize: 0xA }
+  - { offset: 0xED0EE, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setForceButtonValidationOfAppCredentials:]', symObjAddr: 0x6D4B, symBinAddr: 0x9D1F, symSize: 0x9 }
+  - { offset: 0xED12B, size: 0x8, addend: 0x0, symName: '-[FLICBTSession persistor]', symObjAddr: 0x6D54, symBinAddr: 0x9D28, symSize: 0xA }
+  - { offset: 0xED160, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setPersistor:]', symObjAddr: 0x6D5E, symBinAddr: 0x9D32, symSize: 0x11 }
+  - { offset: 0xED1A1, size: 0x8, addend: 0x0, symName: '-[FLICBTSession txHandler]', symObjAddr: 0x6D6F, symBinAddr: 0x9D43, symSize: 0xA }
+  - { offset: 0xED1D6, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setTxHandler:]', symObjAddr: 0x6D79, symBinAddr: 0x9D4D, symSize: 0xF }
+  - { offset: 0xED215, size: 0x8, addend: 0x0, symName: '-[FLICBTSession sessionEventHandler]', symObjAddr: 0x6D88, symBinAddr: 0x9D5C, symSize: 0xA }
+  - { offset: 0xED24A, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setSessionEventHandler:]', symObjAddr: 0x6D92, symBinAddr: 0x9D66, symSize: 0xF }
+  - { offset: 0xED289, size: 0x8, addend: 0x0, symName: '-[FLICBTSession dataStoreHandler]', symObjAddr: 0x6DA1, symBinAddr: 0x9D75, symSize: 0xA }
+  - { offset: 0xED2BE, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setDataStoreHandler:]', symObjAddr: 0x6DAB, symBinAddr: 0x9D7F, symSize: 0xF }
+  - { offset: 0xED2FD, size: 0x8, addend: 0x0, symName: '-[FLICBTSession tmpId]', symObjAddr: 0x6DBA, symBinAddr: 0x9D8E, symSize: 0x9 }
+  - { offset: 0xED332, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setTmpId:]', symObjAddr: 0x6DC3, symBinAddr: 0x9D97, symSize: 0x9 }
+  - { offset: 0xED36F, size: 0x8, addend: 0x0, symName: '-[FLICBTSession preparedFullVerify2Request]', symObjAddr: 0x6DCC, symBinAddr: 0x9DA0, symSize: 0x29 }
+  - { offset: 0xED3A6, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setPreparedFullVerify2Request:]', symObjAddr: 0x6DF5, symBinAddr: 0x9DC9, symSize: 0x20 }
+  - { offset: 0xED3E6, size: 0x8, addend: 0x0, symName: '-[FLICBTSession pendingRxPacket]', symObjAddr: 0x6E15, symBinAddr: 0x9DE9, symSize: 0xA }
+  - { offset: 0xED41B, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setPendingRxPacket:]', symObjAddr: 0x6E1F, symBinAddr: 0x9DF3, symSize: 0x11 }
+  - { offset: 0xED45C, size: 0x8, addend: 0x0, symName: '-[FLICBTSession fullVerifySharedSecret]', symObjAddr: 0x6E30, symBinAddr: 0x9E04, symSize: 0xA }
+  - { offset: 0xED491, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setFullVerifySharedSecret:]', symObjAddr: 0x6E3A, symBinAddr: 0x9E0E, symSize: 0x11 }
+  - { offset: 0xED4D2, size: 0x8, addend: 0x0, symName: '-[FLICBTSession qvClientRandomBytes]', symObjAddr: 0x6E4B, symBinAddr: 0x9E1F, symSize: 0xA }
+  - { offset: 0xED507, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setQvClientRandomBytes:]', symObjAddr: 0x6E55, symBinAddr: 0x9E29, symSize: 0x11 }
+  - { offset: 0xED548, size: 0x8, addend: 0x0, symName: '-[FLICBTSession firmwareUpdate]', symObjAddr: 0x6E66, symBinAddr: 0x9E3A, symSize: 0xA }
+  - { offset: 0xED57D, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setFirmwareUpdate:]', symObjAddr: 0x6E70, symBinAddr: 0x9E44, symSize: 0x11 }
+  - { offset: 0xED5BE, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setHidData]', symObjAddr: 0x6E81, symBinAddr: 0x9E55, symSize: 0xA }
+  - { offset: 0xED5F3, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setSetHidData:]', symObjAddr: 0x6E8B, symBinAddr: 0x9E5F, symSize: 0x11 }
+  - { offset: 0xED634, size: 0x8, addend: 0x0, symName: '-[FLICBTSession getHidData]', symObjAddr: 0x6E9C, symBinAddr: 0x9E70, symSize: 0xA }
+  - { offset: 0xED669, size: 0x8, addend: 0x0, symName: '-[FLICBTSession setGetHidData:]', symObjAddr: 0x6EA6, symBinAddr: 0x9E7A, symSize: 0x11 }
+  - { offset: 0xED6AA, size: 0x8, addend: 0x0, symName: '-[FLICBTSession .cxx_destruct]', symObjAddr: 0x6EB7, symBinAddr: 0x9E8B, symSize: 0x80 }
+  - { offset: 0xEDF80, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData initWithSession:peripheral:rxCharacteristic:txCharacteristic:]', symObjAddr: 0x0, symBinAddr: 0x9F0C, symSize: 0xE8 }
+  - { offset: 0xEDFA4, size: 0x8, addend: 0x0, symName: _FLICButtonScannerErrorDomain, symObjAddr: 0x4080, symBinAddr: 0x2C148, symSize: 0x0 }
+  - { offset: 0xEDFAE, size: 0x8, addend: 0x0, symName: '+[FLICButtonScanner sharedScanner]', symObjAddr: 0x192, symBinAddr: 0xA09E, symSize: 0x63 }
+  - { offset: 0xEDFD8, size: 0x8, addend: 0x0, symName: _sharedScanner.onceToken, symObjAddr: 0x14A90, symBinAddr: 0x38B88, symSize: 0x0 }
+  - { offset: 0xEDFEE, size: 0x8, addend: 0x0, symName: _sharedScanner.sharedScanner, symObjAddr: 0x14A98, symBinAddr: 0x38B90, symSize: 0x0 }
+  - { offset: 0xEE99D, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData initWithSession:peripheral:rxCharacteristic:txCharacteristic:]', symObjAddr: 0x0, symBinAddr: 0x9F0C, symSize: 0xE8 }
+  - { offset: 0xEEABE, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData session]', symObjAddr: 0xE8, symBinAddr: 0x9FF4, symSize: 0xA }
+  - { offset: 0xEEAF3, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData setSession:]', symObjAddr: 0xF2, symBinAddr: 0x9FFE, symSize: 0x11 }
+  - { offset: 0xEEB34, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData peripheral]', symObjAddr: 0x103, symBinAddr: 0xA00F, symSize: 0xA }
+  - { offset: 0xEEB69, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData setPeripheral:]', symObjAddr: 0x10D, symBinAddr: 0xA019, symSize: 0x11 }
+  - { offset: 0xEEBAA, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData rxCharacteristic]', symObjAddr: 0x11E, symBinAddr: 0xA02A, symSize: 0xA }
+  - { offset: 0xEEBDF, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData setRxCharacteristic:]', symObjAddr: 0x128, symBinAddr: 0xA034, symSize: 0x11 }
+  - { offset: 0xEEC20, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData txCharacteristic]', symObjAddr: 0x139, symBinAddr: 0xA045, symSize: 0xA }
+  - { offset: 0xEEC55, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData setTxCharacteristic:]', symObjAddr: 0x143, symBinAddr: 0xA04F, symSize: 0x11 }
+  - { offset: 0xEEC96, size: 0x8, addend: 0x0, symName: '-[FLICButtonScannerCompletionData .cxx_destruct]', symObjAddr: 0x154, symBinAddr: 0xA060, symSize: 0x3E }
+  - { offset: 0xEED09, size: 0x8, addend: 0x0, symName: '___34+[FLICButtonScanner sharedScanner]_block_invoke', symObjAddr: 0x1F5, symBinAddr: 0xA101, symSize: 0x22 }
+  - { offset: 0xEED54, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner init]', symObjAddr: 0x217, symBinAddr: 0xA123, symSize: 0x236 }
+  - { offset: 0xEEEFF, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner btScanStart]', symObjAddr: 0x44D, symBinAddr: 0xA359, symSize: 0x176 }
+  - { offset: 0xEF019, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner btScanStop]', symObjAddr: 0x5C3, symBinAddr: 0xA4CF, symSize: 0x3D }
+  - { offset: 0xEF070, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner startScanFlow]', symObjAddr: 0x600, symBinAddr: 0xA50C, symSize: 0x18C }
+  - { offset: 0xEF1E7, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner longTimerFired]', symObjAddr: 0x78C, symBinAddr: 0xA698, symSize: 0xA7 }
+  - { offset: 0xEF27F, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner stopScanFlow]', symObjAddr: 0x833, symBinAddr: 0xA73F, symSize: 0xC6 }
+  - { offset: 0xEF344, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner done]', symObjAddr: 0x8F9, symBinAddr: 0xA805, symSize: 0x295 }
+  - { offset: 0xEF589, size: 0x8, addend: 0x0, symName: '___25-[FLICButtonScanner done]_block_invoke', symObjAddr: 0xB8E, symBinAddr: 0xAA9A, symSize: 0x7E }
+  - { offset: 0xEF624, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0xC0C, symBinAddr: 0xAB18, symSize: 0x2C }
+  - { offset: 0xEF671, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s, symObjAddr: 0xC38, symBinAddr: 0xAB44, symSize: 0x2C }
+  - { offset: 0xEF6B4, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner stopScan]', symObjAddr: 0xC64, symBinAddr: 0xAB70, symSize: 0x30 }
+  - { offset: 0xEF70F, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner cleanup]', symObjAddr: 0xC94, symBinAddr: 0xABA0, symSize: 0x8C }
+  - { offset: 0xEF80C, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner abortVerify]', symObjAddr: 0xD20, symBinAddr: 0xAC2C, symSize: 0x1A0 }
+  - { offset: 0xEF990, size: 0x8, addend: 0x0, symName: '___32-[FLICButtonScanner abortVerify]_block_invoke', symObjAddr: 0xEC0, symBinAddr: 0xADCC, symSize: 0x7B }
+  - { offset: 0xEFA12, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner translateErrorCode:]', symObjAddr: 0xF59, symBinAddr: 0xAE49, symSize: 0x126 }
+  - { offset: 0xEFB15, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner discoverServices]', symObjAddr: 0x107F, symBinAddr: 0xAF6F, symSize: 0x214 }
+  - { offset: 0xEFC43, size: 0x8, addend: 0x0, symName: '___37-[FLICButtonScanner discoverServices]_block_invoke', symObjAddr: 0x1293, symBinAddr: 0xB183, symSize: 0x4B5 }
+  - { offset: 0xEFEFC, size: 0x8, addend: 0x0, symName: '___37-[FLICButtonScanner discoverServices]_block_invoke_2', symObjAddr: 0x1748, symBinAddr: 0xB638, symSize: 0x2FB }
+  - { offset: 0xF019E, size: 0x8, addend: 0x0, symName: '___37-[FLICButtonScanner discoverServices]_block_invoke_3', symObjAddr: 0x1A43, symBinAddr: 0xB933, symSize: 0xBA }
+  - { offset: 0xF0291, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x1AFD, symBinAddr: 0xB9ED, symSize: 0x12 }
+  - { offset: 0xF02BA, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x1B0F, symBinAddr: 0xB9FF, symSize: 0xE }
+  - { offset: 0xF02D9, size: 0x8, addend: 0x0, symName: '___37-[FLICButtonScanner discoverServices]_block_invoke.155', symObjAddr: 0x1B1D, symBinAddr: 0xBA0D, symSize: 0x2EF }
+  - { offset: 0xF04B0, size: 0x8, addend: 0x0, symName: '___37-[FLICButtonScanner discoverServices]_block_invoke_2.164', symObjAddr: 0x1E0C, symBinAddr: 0xBCFC, symSize: 0xB1 }
+  - { offset: 0xF0551, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40w, symObjAddr: 0x1EBD, symBinAddr: 0xBDAD, symSize: 0x2E }
+  - { offset: 0xF0586, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40w, symObjAddr: 0x1EEB, symBinAddr: 0xBDDB, symSize: 0x22 }
+  - { offset: 0xF05B1, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner rxCharacteristicUpdated:error:]', symObjAddr: 0x1F0D, symBinAddr: 0xBDFD, symSize: 0xAD }
+  - { offset: 0xF0690, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner peripheralDidConnect:]', symObjAddr: 0x1FBA, symBinAddr: 0xBEAA, symSize: 0x5D }
+  - { offset: 0xF06FC, size: 0x8, addend: 0x0, symName: '___42-[FLICButtonScanner peripheralDidConnect:]_block_invoke', symObjAddr: 0x2017, symBinAddr: 0xBF07, symSize: 0x7B }
+  - { offset: 0xF0781, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner peripheral:didDisconnectWithError:]', symObjAddr: 0x2092, symBinAddr: 0xBF82, symSize: 0x10A }
+  - { offset: 0xF089C, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner peripheral:didFailToConnectWithError:]', symObjAddr: 0x219C, symBinAddr: 0xC08C, symSize: 0x10A }
+  - { offset: 0xF09B7, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner peripheral:didUpdateValueForCharacteristic:error:]', symObjAddr: 0x22A6, symBinAddr: 0xC196, symSize: 0x13F }
+  - { offset: 0xF0B2F, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner centralManager:didDiscoverPeripheral:advertisementData:RSSI:]', symObjAddr: 0x23E5, symBinAddr: 0xC2D5, symSize: 0xC02 }
+  - { offset: 0xF142E, size: 0x8, addend: 0x0, symName: '___81-[FLICButtonScanner centralManager:didDiscoverPeripheral:advertisementData:RSSI:]_block_invoke', symObjAddr: 0x2FE7, symBinAddr: 0xCED7, symSize: 0x78 }
+  - { offset: 0xF14B3, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner userInfoForFlicErrorCode:]', symObjAddr: 0x305F, symBinAddr: 0xCF4F, symSize: 0x87 }
+  - { offset: 0xF1526, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner errorWithCode:]', symObjAddr: 0x30E6, symBinAddr: 0xCFD6, symSize: 0x6F }
+  - { offset: 0xF159B, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner scanning]', symObjAddr: 0x3155, symBinAddr: 0xD045, symSize: 0xA }
+  - { offset: 0xF15D0, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setScanning:]', symObjAddr: 0x315F, symBinAddr: 0xD04F, symSize: 0x9 }
+  - { offset: 0xF160D, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner peripheral]', symObjAddr: 0x3168, symBinAddr: 0xD058, symSize: 0xA }
+  - { offset: 0xF1642, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setPeripheral:]', symObjAddr: 0x3172, symBinAddr: 0xD062, symSize: 0x11 }
+  - { offset: 0xF1683, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner cbManager]', symObjAddr: 0x3183, symBinAddr: 0xD073, symSize: 0x16 }
+  - { offset: 0xF16BA, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setCbManager:]', symObjAddr: 0x3199, symBinAddr: 0xD089, symSize: 0x11 }
+  - { offset: 0xF16FB, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner connecting]', symObjAddr: 0x31AA, symBinAddr: 0xD09A, symSize: 0xA }
+  - { offset: 0xF1730, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setConnecting:]', symObjAddr: 0x31B4, symBinAddr: 0xD0A4, symSize: 0x9 }
+  - { offset: 0xF176D, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner hasFoundPrivateButtons]', symObjAddr: 0x31BD, symBinAddr: 0xD0AD, symSize: 0xA }
+  - { offset: 0xF17A2, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setHasFoundPrivateButtons:]', symObjAddr: 0x31C7, symBinAddr: 0xD0B7, symSize: 0x9 }
+  - { offset: 0xF17DF, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner isNew]', symObjAddr: 0x31D0, symBinAddr: 0xD0C0, symSize: 0xA }
+  - { offset: 0xF1814, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setIsNew:]', symObjAddr: 0x31DA, symBinAddr: 0xD0CA, symSize: 0xF }
+  - { offset: 0xF1853, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner stateChangeHandler]', symObjAddr: 0x31E9, symBinAddr: 0xD0D9, symSize: 0xA }
+  - { offset: 0xF1888, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setStateChangeHandler:]', symObjAddr: 0x31F3, symBinAddr: 0xD0E3, symSize: 0xF }
+  - { offset: 0xF18C7, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner completionHandler]', symObjAddr: 0x3202, symBinAddr: 0xD0F2, symSize: 0xA }
+  - { offset: 0xF18FC, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setCompletionHandler:]', symObjAddr: 0x320C, symBinAddr: 0xD0FC, symSize: 0xF }
+  - { offset: 0xF193B, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner error]', symObjAddr: 0x321B, symBinAddr: 0xD10B, symSize: 0xA }
+  - { offset: 0xF1970, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner buttonIsPending]', symObjAddr: 0x3225, symBinAddr: 0xD115, symSize: 0xA }
+  - { offset: 0xF19A5, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setButtonIsPending:]', symObjAddr: 0x322F, symBinAddr: 0xD11F, symSize: 0x9 }
+  - { offset: 0xF19E2, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner errorMap]', symObjAddr: 0x3238, symBinAddr: 0xD128, symSize: 0xA }
+  - { offset: 0xF1A17, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setErrorMap:]', symObjAddr: 0x3242, symBinAddr: 0xD132, symSize: 0x11 }
+  - { offset: 0xF1A58, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner txCharacteristic]', symObjAddr: 0x3253, symBinAddr: 0xD143, symSize: 0xA }
+  - { offset: 0xF1A8D, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setTxCharacteristic:]', symObjAddr: 0x325D, symBinAddr: 0xD14D, symSize: 0x11 }
+  - { offset: 0xF1ACE, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner rxCharacteristic]', symObjAddr: 0x326E, symBinAddr: 0xD15E, symSize: 0xA }
+  - { offset: 0xF1B03, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setRxCharacteristic:]', symObjAddr: 0x3278, symBinAddr: 0xD168, symSize: 0x11 }
+  - { offset: 0xF1B44, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner scanDictionary]', symObjAddr: 0x3289, symBinAddr: 0xD179, symSize: 0x14 }
+  - { offset: 0xF1B7B, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setScanDictionary:]', symObjAddr: 0x329D, symBinAddr: 0xD18D, symSize: 0xF }
+  - { offset: 0xF1BBA, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner longTimer]', symObjAddr: 0x32AC, symBinAddr: 0xD19C, symSize: 0xA }
+  - { offset: 0xF1BEF, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setLongTimer:]', symObjAddr: 0x32B6, symBinAddr: 0xD1A6, symSize: 0x11 }
+  - { offset: 0xF1C30, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner persistor]', symObjAddr: 0x32C7, symBinAddr: 0xD1B7, symSize: 0xA }
+  - { offset: 0xF1C65, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setPersistor:]', symObjAddr: 0x32D1, symBinAddr: 0xD1C1, symSize: 0x11 }
+  - { offset: 0xF1CA6, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner btSession]', symObjAddr: 0x32E2, symBinAddr: 0xD1D2, symSize: 0xA }
+  - { offset: 0xF1CDB, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner setBtSession:]', symObjAddr: 0x32EC, symBinAddr: 0xD1DC, symSize: 0x11 }
+  - { offset: 0xF1D1C, size: 0x8, addend: 0x0, symName: '-[FLICButtonScanner .cxx_destruct]', symObjAddr: 0x32FD, symBinAddr: 0xD1ED, symSize: 0x9F }
+  - { offset: 0xF2312, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage initWithNameSpace:]', symObjAddr: 0x0, symBinAddr: 0xD28C, symSize: 0x2C1 }
+  - { offset: 0xF2388, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage initWithNameSpace:]', symObjAddr: 0x0, symBinAddr: 0xD28C, symSize: 0x2C1 }
+  - { offset: 0xF264D, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage addLogEventWithClass:type:plainText:]', symObjAddr: 0x2C1, symBinAddr: 0xD54D, symSize: 0x350 }
+  - { offset: 0xF2918, size: 0x8, addend: 0x0, symName: ___Block_byref_object_copy_, symObjAddr: 0x611, symBinAddr: 0xD89D, symSize: 0x16 }
+  - { offset: 0xF293D, size: 0x8, addend: 0x0, symName: ___Block_byref_object_dispose_, symObjAddr: 0x627, symBinAddr: 0xD8B3, symSize: 0xF }
+  - { offset: 0xF2968, size: 0x8, addend: 0x0, symName: '___67-[FLICSCLFlicBTLogDataStorage addLogEventWithClass:type:plainText:]_block_invoke', symObjAddr: 0x636, symBinAddr: 0xD8C2, symSize: 0xC2 }
+  - { offset: 0xF2AC0, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40r48r, symObjAddr: 0x6F8, symBinAddr: 0xD984, symSize: 0x42 }
+  - { offset: 0xF2AF5, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40r48r, symObjAddr: 0x73A, symBinAddr: 0xD9C6, symSize: 0x35 }
+  - { offset: 0xF2B20, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage writeMetaWithMessage:buttonList:completion:]', symObjAddr: 0x76F, symBinAddr: 0xD9FB, symSize: 0x206 }
+  - { offset: 0xF2D8F, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage loggingPath]', symObjAddr: 0x975, symBinAddr: 0xDC01, symSize: 0x48 }
+  - { offset: 0xF2DF2, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage clearOldLogFiles]', symObjAddr: 0x9BD, symBinAddr: 0xDC49, symSize: 0x3AA }
+  - { offset: 0xF313D, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage printLogFilesToConsole]', symObjAddr: 0xD67, symBinAddr: 0xDFF3, symSize: 0x6 }
+  - { offset: 0xF316C, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage deviceInfo]', symObjAddr: 0xD6D, symBinAddr: 0xDFF9, symSize: 0x632 }
+  - { offset: 0xF358F, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage SCLBTLoggingPath]', symObjAddr: 0x139F, symBinAddr: 0xE62B, symSize: 0xA }
+  - { offset: 0xF35C4, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage setSCLBTLoggingPath:]', symObjAddr: 0x13A9, symBinAddr: 0xE635, symSize: 0x11 }
+  - { offset: 0xF3605, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage SCLBTLoggingFolder]', symObjAddr: 0x13BA, symBinAddr: 0xE646, symSize: 0xA }
+  - { offset: 0xF363A, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage setSCLBTLoggingFolder:]', symObjAddr: 0x13C4, symBinAddr: 0xE650, symSize: 0x11 }
+  - { offset: 0xF367B, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogDataStorage .cxx_destruct]', symObjAddr: 0x13D5, symBinAddr: 0xE661, symSize: 0x28 }
+  - { offset: 0xF38EB, size: 0x8, addend: 0x0, symName: '+[FLICSCLFlicBTLogEventManager configureWithNamespace:]', symObjAddr: 0x0, symBinAddr: 0xE689, symSize: 0xA8 }
+  - { offset: 0xF390F, size: 0x8, addend: 0x0, symName: _SCLFlicBTLogClassSCLFlicButton, symObjAddr: 0x518, symBinAddr: 0x2C390, symSize: 0x0 }
+  - { offset: 0xF3925, size: 0x8, addend: 0x0, symName: _SCLFlicBTLogClassSCLFlicManager, symObjAddr: 0x520, symBinAddr: 0x2C398, symSize: 0x0 }
+  - { offset: 0xF393B, size: 0x8, addend: 0x0, symName: _SCLFlicBTLogClassBCBCentralManager, symObjAddr: 0x528, symBinAddr: 0x2C3A0, symSize: 0x0 }
+  - { offset: 0xF3951, size: 0x8, addend: 0x0, symName: _SCLFlicBTLogClassBCBPeripheral, symObjAddr: 0x530, symBinAddr: 0x2C3A8, symSize: 0x0 }
+  - { offset: 0xF3967, size: 0x8, addend: 0x0, symName: _FLICBTLogClassFLICButton, symObjAddr: 0x538, symBinAddr: 0x2C3B0, symSize: 0x0 }
+  - { offset: 0xF397D, size: 0x8, addend: 0x0, symName: _FLICBTLogClassFLICManager, symObjAddr: 0x540, symBinAddr: 0x2C3B8, symSize: 0x0 }
+  - { offset: 0xF3993, size: 0x8, addend: 0x0, symName: _FLICBTLogClassFLICButtonScanner, symObjAddr: 0x548, symBinAddr: 0x2C3C0, symSize: 0x0 }
+  - { offset: 0xF39A9, size: 0x8, addend: 0x0, symName: __sharedInstance, symObjAddr: 0x3E90, symBinAddr: 0x38B98, symSize: 0x0 }
+  - { offset: 0xF39F9, size: 0x8, addend: 0x0, symName: '+[FLICSCLFlicBTLogEventManager configureWithNamespace:]', symObjAddr: 0x0, symBinAddr: 0xE689, symSize: 0xA8 }
+  - { offset: 0xF3A23, size: 0x8, addend: 0x0, symName: '_configureWithNamespace:.onceToken', symObjAddr: 0x3E98, symBinAddr: 0x38BA0, symSize: 0x0 }
+  - { offset: 0xF3B35, size: 0x8, addend: 0x0, symName: '___55+[FLICSCLFlicBTLogEventManager configureWithNamespace:]_block_invoke', symObjAddr: 0xA8, symBinAddr: 0xE731, symSize: 0x40 }
+  - { offset: 0xF3B9C, size: 0x8, addend: 0x0, symName: '+[FLICSCLFlicBTLogEventManager sharedInstance]', symObjAddr: 0x106, symBinAddr: 0xE771, symSize: 0x11 }
+  - { offset: 0xF3BCF, size: 0x8, addend: 0x0, symName: '+[FLICSCLFlicBTLogEventManager addLogEventWithClass:type:plainText:]', symObjAddr: 0x117, symBinAddr: 0xE782, symSize: 0x8C }
+  - { offset: 0xF3CBD, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager initWithNameSpace:]', symObjAddr: 0x1A3, symBinAddr: 0xE80E, symSize: 0x82 }
+  - { offset: 0xF3D4D, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager loggingPath]', symObjAddr: 0x225, symBinAddr: 0xE890, symSize: 0x50 }
+  - { offset: 0xF3DB0, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager clearOldLogFiles]', symObjAddr: 0x275, symBinAddr: 0xE8E0, symSize: 0x3D }
+  - { offset: 0xF3E07, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager addLogEventWithClass:type:plainText:]', symObjAddr: 0x2B2, symBinAddr: 0xE91D, symSize: 0x8C }
+  - { offset: 0xF3EF5, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager writeMetaWithMessage:buttonList:completion:]', symObjAddr: 0x33E, symBinAddr: 0xE9A9, symSize: 0x9D }
+  - { offset: 0xF400B, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager dataStorage]', symObjAddr: 0x3DB, symBinAddr: 0xEA46, symSize: 0xA }
+  - { offset: 0xF4040, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager setDataStorage:]', symObjAddr: 0x3E5, symBinAddr: 0xEA50, symSize: 0x11 }
+  - { offset: 0xF4081, size: 0x8, addend: 0x0, symName: '-[FLICSCLFlicBTLogEventManager .cxx_destruct]', symObjAddr: 0x3F6, symBinAddr: 0xEA61, symSize: 0x10 }
+  - { offset: 0xF4244, size: 0x8, addend: 0x0, symName: '-[FLICManagerData initAndRestore:]', symObjAddr: 0x0, symBinAddr: 0xEA71, symSize: 0x356 }
+  - { offset: 0xF44ED, size: 0x8, addend: 0x0, symName: '-[FLICManagerData initAndRestore:]', symObjAddr: 0x0, symBinAddr: 0xEA71, symSize: 0x356 }
+  - { offset: 0xF4842, size: 0x8, addend: 0x0, symName: '-[FLICManagerData allButtonKeys]', symObjAddr: 0x356, symBinAddr: 0xEDC7, symSize: 0x1E9 }
+  - { offset: 0xF495F, size: 0x8, addend: 0x0, symName: '-[FLICManagerData buttonForUuid:]', symObjAddr: 0x53F, symBinAddr: 0xEFB0, symSize: 0x1D3 }
+  - { offset: 0xF4A84, size: 0x8, addend: 0x0, symName: '-[FLICManagerData centralDispatchQueue]', symObjAddr: 0x712, symBinAddr: 0xF183, symSize: 0xA }
+  - { offset: 0xF4AB9, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setCentralDispatchQueue:]', symObjAddr: 0x71C, symBinAddr: 0xF18D, symSize: 0x11 }
+  - { offset: 0xF4AFA, size: 0x8, addend: 0x0, symName: '-[FLICManagerData initState]', symObjAddr: 0x72D, symBinAddr: 0xF19E, symSize: 0xA }
+  - { offset: 0xF4B2F, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setInitState:]', symObjAddr: 0x737, symBinAddr: 0xF1A8, symSize: 0xA }
+  - { offset: 0xF4B6C, size: 0x8, addend: 0x0, symName: '-[FLICManagerData cbManager]', symObjAddr: 0x741, symBinAddr: 0xF1B2, symSize: 0xA }
+  - { offset: 0xF4BA1, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setCbManager:]', symObjAddr: 0x74B, symBinAddr: 0xF1BC, symSize: 0x11 }
+  - { offset: 0xF4BE2, size: 0x8, addend: 0x0, symName: '-[FLICManagerData dataStore]', symObjAddr: 0x75C, symBinAddr: 0xF1CD, symSize: 0xA }
+  - { offset: 0xF4C17, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setDataStore:]', symObjAddr: 0x766, symBinAddr: 0xF1D7, symSize: 0x11 }
+  - { offset: 0xF4C58, size: 0x8, addend: 0x0, symName: '-[FLICManagerData persistor]', symObjAddr: 0x777, symBinAddr: 0xF1E8, symSize: 0xA }
+  - { offset: 0xF4C8D, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setPersistor:]', symObjAddr: 0x781, symBinAddr: 0xF1F2, symSize: 0x11 }
+  - { offset: 0xF4CCE, size: 0x8, addend: 0x0, symName: '-[FLICManagerData buttonList]', symObjAddr: 0x792, symBinAddr: 0xF203, symSize: 0xA }
+  - { offset: 0xF4D03, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setButtonList:]', symObjAddr: 0x79C, symBinAddr: 0xF20D, symSize: 0x11 }
+  - { offset: 0xF4D44, size: 0x8, addend: 0x0, symName: '-[FLICManagerData callbackQueue]', symObjAddr: 0x7AD, symBinAddr: 0xF21E, symSize: 0xA }
+  - { offset: 0xF4D79, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setCallbackQueue:]', symObjAddr: 0x7B7, symBinAddr: 0xF228, symSize: 0x11 }
+  - { offset: 0xF4DBA, size: 0x8, addend: 0x0, symName: '-[FLICManagerData executeAfterStateChangeOn]', symObjAddr: 0x7C8, symBinAddr: 0xF239, symSize: 0xA }
+  - { offset: 0xF4DEF, size: 0x8, addend: 0x0, symName: '-[FLICManagerData setExecuteAfterStateChangeOn:]', symObjAddr: 0x7D2, symBinAddr: 0xF243, symSize: 0x11 }
+  - { offset: 0xF4E30, size: 0x8, addend: 0x0, symName: '-[FLICManagerData .cxx_destruct]', symObjAddr: 0x7E3, symBinAddr: 0xF254, symSize: 0x5F }
+  - { offset: 0xF4E63, size: 0x8, addend: 0x0, symName: _FLICManagerCallbackShorthandDidRestoreState, symObjAddr: 0x842, symBinAddr: 0xF2B3, symSize: 0xAA }
+  - { offset: 0xF4EAA, size: 0x8, addend: 0x0, symName: _FLICManagerCallbackShorthandDidUpdateBluetoothState, symObjAddr: 0x8EC, symBinAddr: 0xF35D, symSize: 0x136 }
+  - { offset: 0xF50DE, size: 0x8, addend: 0x0, symName: '-[FLICDataStore initAndRestore:]', symObjAddr: 0x0, symBinAddr: 0xF493, symSize: 0x9B7 }
+  - { offset: 0xF50F1, size: 0x8, addend: 0x0, symName: '-[FLICDataStore initAndRestore:]', symObjAddr: 0x0, symBinAddr: 0xF493, symSize: 0x9B7 }
+  - { offset: 0xF511B, size: 0x8, addend: 0x0, symName: '_initAndRestore:.stmt_tables_exists', symObjAddr: 0x8CF0, symBinAddr: 0x38BA8, symSize: 0x0 }
+  - { offset: 0xF5131, size: 0x8, addend: 0x0, symName: '_initAndRestore:.stmt_version', symObjAddr: 0x8CF8, symBinAddr: 0x38BB0, symSize: 0x0 }
+  - { offset: 0xF598E, size: 0x8, addend: 0x0, symName: '+[FLICDataStore concatStrings:prefix:suffix:separator:]', symObjAddr: 0x9B7, symBinAddr: 0xFE4A, symSize: 0x2F4 }
+  - { offset: 0xF5C51, size: 0x8, addend: 0x0, symName: '-[FLICDataStore insertQueryFor:bitMap:]', symObjAddr: 0xCAB, symBinAddr: 0x1013E, symSize: 0x18A }
+  - { offset: 0xF5DF4, size: 0x8, addend: 0x0, symName: '-[FLICDataStore updateQueryFor:bitMap:]', symObjAddr: 0xE35, symBinAddr: 0x102C8, symSize: 0xFE }
+  - { offset: 0xF5EEC, size: 0x8, addend: 0x0, symName: '-[FLICDataStore insert:]', symObjAddr: 0xF33, symBinAddr: 0x103C6, symSize: 0x84 }
+  - { offset: 0xF5FCA, size: 0x8, addend: 0x0, symName: '-[FLICDataStore update:bitMap:]', symObjAddr: 0xFB7, symBinAddr: 0x1044A, symSize: 0x8B }
+  - { offset: 0xF60A2, size: 0x8, addend: 0x0, symName: '-[FLICDataStore alter:bitMap:query:isUdate:]', symObjAddr: 0x1042, symBinAddr: 0x104D5, symSize: 0x1EA }
+  - { offset: 0xF6326, size: 0x8, addend: 0x0, symName: '-[FLICDataStore remove:ofClass:]', symObjAddr: 0x122C, symBinAddr: 0x106BF, symSize: 0x213 }
+  - { offset: 0xF653B, size: 0x8, addend: 0x0, symName: '-[FLICDataStore has:ofClass:]', symObjAddr: 0x143F, symBinAddr: 0x108D2, symSize: 0x21E }
+  - { offset: 0xF676F, size: 0x8, addend: 0x0, symName: '-[FLICDataStore elementForIdentifier:ofClass:]', symObjAddr: 0x165D, symBinAddr: 0x10AF0, symSize: 0x244 }
+  - { offset: 0xF6998, size: 0x8, addend: 0x0, symName: '-[FLICDataStore elementCountOfClass:]', symObjAddr: 0x18A1, symBinAddr: 0x10D34, symSize: 0x18F }
+  - { offset: 0xF6B3C, size: 0x8, addend: 0x0, symName: '-[FLICDataStore elementsOfClass:]', symObjAddr: 0x1A30, symBinAddr: 0x10EC3, symSize: 0x1E4 }
+  - { offset: 0xF6CE8, size: 0x8, addend: 0x0, symName: '-[FLICDataStore databasePath]', symObjAddr: 0x1C14, symBinAddr: 0x110A7, symSize: 0xA }
+  - { offset: 0xF6D1D, size: 0x8, addend: 0x0, symName: '-[FLICDataStore setDatabasePath:]', symObjAddr: 0x1C1E, symBinAddr: 0x110B1, symSize: 0x11 }
+  - { offset: 0xF6D5E, size: 0x8, addend: 0x0, symName: '-[FLICDataStore database]', symObjAddr: 0x1C2F, symBinAddr: 0x110C2, symSize: 0xA }
+  - { offset: 0xF6D93, size: 0x8, addend: 0x0, symName: '-[FLICDataStore setDatabase:]', symObjAddr: 0x1C39, symBinAddr: 0x110CC, symSize: 0xA }
+  - { offset: 0xF6DD0, size: 0x8, addend: 0x0, symName: '-[FLICDataStore tableArray]', symObjAddr: 0x1C43, symBinAddr: 0x110D6, symSize: 0xA }
+  - { offset: 0xF6E05, size: 0x8, addend: 0x0, symName: '-[FLICDataStore setTableArray:]', symObjAddr: 0x1C4D, symBinAddr: 0x110E0, symSize: 0x11 }
+  - { offset: 0xF6E46, size: 0x8, addend: 0x0, symName: '-[FLICDataStore .cxx_destruct]', symObjAddr: 0x1C5E, symBinAddr: 0x110F1, symSize: 0x28 }
+  - { offset: 0xF6F21, size: 0x8, addend: 0x0, symName: '-[FLICButton(FLICButtonData) setData:]', symObjAddr: 0x0, symBinAddr: 0x11119, symSize: 0x16 }
+  - { offset: 0xF7038, size: 0x8, addend: 0x0, symName: '-[FLICButton(FLICButtonData) setData:]', symObjAddr: 0x0, symBinAddr: 0x11119, symSize: 0x16 }
+  - { offset: 0xF70E9, size: 0x8, addend: 0x0, symName: '-[FLICButton(FLICButtonData) data]', symObjAddr: 0x16, symBinAddr: 0x1112F, symSize: 0x11 }
+  - { offset: 0xF787A, size: 0x8, addend: 0x0, symName: '-[FLICButton connect]', symObjAddr: 0x0, symBinAddr: 0x11140, symSize: 0x6 }
+  - { offset: 0xF7B01, size: 0x8, addend: 0x0, symName: '-[FLICButton connect]', symObjAddr: 0x0, symBinAddr: 0x11140, symSize: 0x6 }
+  - { offset: 0xF7B30, size: 0x8, addend: 0x0, symName: '-[FLICButton disconnect]', symObjAddr: 0x6, symBinAddr: 0x11146, symSize: 0x6 }
+  - { offset: 0xF7B5F, size: 0x8, addend: 0x0, symName: '-[FLICButton identifier]', symObjAddr: 0xC, symBinAddr: 0x1114C, symSize: 0xA }
+  - { offset: 0xF7B94, size: 0x8, addend: 0x0, symName: '-[FLICButton delegate]', symObjAddr: 0x16, symBinAddr: 0x11156, symSize: 0x16 }
+  - { offset: 0xF7BCB, size: 0x8, addend: 0x0, symName: '-[FLICButton setDelegate:]', symObjAddr: 0x2C, symBinAddr: 0x1116C, symSize: 0x11 }
+  - { offset: 0xF7C0C, size: 0x8, addend: 0x0, symName: '-[FLICButton name]', symObjAddr: 0x3D, symBinAddr: 0x1117D, symSize: 0xA }
+  - { offset: 0xF7C41, size: 0x8, addend: 0x0, symName: '-[FLICButton nickname]', symObjAddr: 0x47, symBinAddr: 0x11187, symSize: 0xA }
+  - { offset: 0xF7C76, size: 0x8, addend: 0x0, symName: '-[FLICButton setNickname:]', symObjAddr: 0x51, symBinAddr: 0x11191, symSize: 0x11 }
+  - { offset: 0xF7CB7, size: 0x8, addend: 0x0, symName: '-[FLICButton bluetoothAddress]', symObjAddr: 0x62, symBinAddr: 0x111A2, symSize: 0xA }
+  - { offset: 0xF7CEC, size: 0x8, addend: 0x0, symName: '-[FLICButton uuid]', symObjAddr: 0x6C, symBinAddr: 0x111AC, symSize: 0xA }
+  - { offset: 0xF7D21, size: 0x8, addend: 0x0, symName: '-[FLICButton serialNumber]', symObjAddr: 0x76, symBinAddr: 0x111B6, symSize: 0xA }
+  - { offset: 0xF7D56, size: 0x8, addend: 0x0, symName: '-[FLICButton triggerMode]', symObjAddr: 0x80, symBinAddr: 0x111C0, symSize: 0xA }
+  - { offset: 0xF7D8B, size: 0x8, addend: 0x0, symName: '-[FLICButton setTriggerMode:]', symObjAddr: 0x8A, symBinAddr: 0x111CA, symSize: 0xA }
+  - { offset: 0xF7DC8, size: 0x8, addend: 0x0, symName: '-[FLICButton state]', symObjAddr: 0x94, symBinAddr: 0x111D4, symSize: 0xA }
+  - { offset: 0xF7DFD, size: 0x8, addend: 0x0, symName: '-[FLICButton pressCount]', symObjAddr: 0x9E, symBinAddr: 0x111DE, symSize: 0x9 }
+  - { offset: 0xF7E32, size: 0x8, addend: 0x0, symName: '-[FLICButton firmwareRevision]', symObjAddr: 0xA7, symBinAddr: 0x111E7, symSize: 0x9 }
+  - { offset: 0xF7E67, size: 0x8, addend: 0x0, symName: '-[FLICButton isReady]', symObjAddr: 0xB0, symBinAddr: 0x111F0, symSize: 0xA }
+  - { offset: 0xF7E9C, size: 0x8, addend: 0x0, symName: '-[FLICButton batteryVoltage]', symObjAddr: 0xBA, symBinAddr: 0x111FA, symSize: 0xB }
+  - { offset: 0xF7ED1, size: 0x8, addend: 0x0, symName: '-[FLICButton isUnpaired]', symObjAddr: 0xC5, symBinAddr: 0x11205, symSize: 0xA }
+  - { offset: 0xF7F06, size: 0x8, addend: 0x0, symName: '-[FLICButton latencyMode]', symObjAddr: 0xCF, symBinAddr: 0x1120F, symSize: 0xA }
+  - { offset: 0xF7F3B, size: 0x8, addend: 0x0, symName: '-[FLICButton setLatencyMode:]', symObjAddr: 0xD9, symBinAddr: 0x11219, symSize: 0xA }
+  - { offset: 0xF7F78, size: 0x8, addend: 0x0, symName: '-[FLICButton .cxx_destruct]', symObjAddr: 0xE3, symBinAddr: 0x11223, symSize: 0x5D }
+  - { offset: 0xF7FFE, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState isRestoring]', symObjAddr: 0x0, symBinAddr: 0x11280, symSize: 0xA }
+  - { offset: 0xF87EF, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState isRestoring]', symObjAddr: 0x0, symBinAddr: 0x11280, symSize: 0xA }
+  - { offset: 0xF8824, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState setIsRestoring:]', symObjAddr: 0xA, symBinAddr: 0x1128A, symSize: 0x9 }
+  - { offset: 0xF8861, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState cbPeripheralState]', symObjAddr: 0x13, symBinAddr: 0x11293, symSize: 0xA }
+  - { offset: 0xF8896, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState setCbPeripheralState:]', symObjAddr: 0x1D, symBinAddr: 0x1129D, symSize: 0xA }
+  - { offset: 0xF88D3, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState bcbPeripheralState]', symObjAddr: 0x27, symBinAddr: 0x112A7, symSize: 0xA }
+  - { offset: 0xF8908, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState setBcbPeripheralState:]', symObjAddr: 0x31, symBinAddr: 0x112B1, symSize: 0xA }
+  - { offset: 0xF8945, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState characteristicsAvailable]', symObjAddr: 0x3B, symBinAddr: 0x112BB, symSize: 0xA }
+  - { offset: 0xF897A, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState setCharacteristicsAvailable:]', symObjAddr: 0x45, symBinAddr: 0x112C5, symSize: 0x9 }
+  - { offset: 0xF89B7, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState characteristicIsNotifying]', symObjAddr: 0x4E, symBinAddr: 0x112CE, symSize: 0xA }
+  - { offset: 0xF89EC, size: 0x8, addend: 0x0, symName: '-[FLICPeripheralInitState setCharacteristicIsNotifying:]', symObjAddr: 0x58, symBinAddr: 0x112D8, symSize: 0x9 }
+  - { offset: 0xF8A29, size: 0x8, addend: 0x0, symName: '-[FLICButtonData initWithPeripheral:cbManager:dataStore:]', symObjAddr: 0x61, symBinAddr: 0x112E1, symSize: 0x1FF }
+  - { offset: 0xF8C84, size: 0x8, addend: 0x0, symName: '-[FLICButtonData restoreComplete]', symObjAddr: 0x260, symBinAddr: 0x114E0, symSize: 0xA }
+  - { offset: 0xF8CB9, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setRestoreComplete:]', symObjAddr: 0x26A, symBinAddr: 0x114EA, symSize: 0x9 }
+  - { offset: 0xF8CF6, size: 0x8, addend: 0x0, symName: '-[FLICButtonData isForgotten]', symObjAddr: 0x273, symBinAddr: 0x114F3, symSize: 0xA }
+  - { offset: 0xF8D2B, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setIsForgotten:]', symObjAddr: 0x27D, symBinAddr: 0x114FD, symSize: 0x9 }
+  - { offset: 0xF8D68, size: 0x8, addend: 0x0, symName: '-[FLICButtonData peripheralInitState]', symObjAddr: 0x286, symBinAddr: 0x11506, symSize: 0xA }
+  - { offset: 0xF8D9D, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setPeripheralInitState:]', symObjAddr: 0x290, symBinAddr: 0x11510, symSize: 0x11 }
+  - { offset: 0xF8DDE, size: 0x8, addend: 0x0, symName: '-[FLICButtonData persistor]', symObjAddr: 0x2A1, symBinAddr: 0x11521, symSize: 0xA }
+  - { offset: 0xF8E13, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setPersistor:]', symObjAddr: 0x2AB, symBinAddr: 0x1152B, symSize: 0x11 }
+  - { offset: 0xF8E54, size: 0x8, addend: 0x0, symName: '-[FLICButtonData cbPeripheral]', symObjAddr: 0x2BC, symBinAddr: 0x1153C, symSize: 0xA }
+  - { offset: 0xF8E89, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setCbPeripheral:]', symObjAddr: 0x2C6, symBinAddr: 0x11546, symSize: 0x11 }
+  - { offset: 0xF8ECA, size: 0x8, addend: 0x0, symName: '-[FLICButtonData cbManager]', symObjAddr: 0x2D7, symBinAddr: 0x11557, symSize: 0xA }
+  - { offset: 0xF8EFF, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setCbManager:]', symObjAddr: 0x2E1, symBinAddr: 0x11561, symSize: 0x11 }
+  - { offset: 0xF8F40, size: 0x8, addend: 0x0, symName: '-[FLICButtonData rxCharacteristic]', symObjAddr: 0x2F2, symBinAddr: 0x11572, symSize: 0xA }
+  - { offset: 0xF8F75, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setRxCharacteristic:]', symObjAddr: 0x2FC, symBinAddr: 0x1157C, symSize: 0x11 }
+  - { offset: 0xF8FB6, size: 0x8, addend: 0x0, symName: '-[FLICButtonData txCharacteristic]', symObjAddr: 0x30D, symBinAddr: 0x1158D, symSize: 0xA }
+  - { offset: 0xF8FEB, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setTxCharacteristic:]', symObjAddr: 0x317, symBinAddr: 0x11597, symSize: 0x11 }
+  - { offset: 0xF902C, size: 0x8, addend: 0x0, symName: '-[FLICButtonData callbackQueue]', symObjAddr: 0x328, symBinAddr: 0x115A8, symSize: 0xA }
+  - { offset: 0xF9061, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setCallbackQueue:]', symObjAddr: 0x332, symBinAddr: 0x115B2, symSize: 0x11 }
+  - { offset: 0xF90A2, size: 0x8, addend: 0x0, symName: '-[FLICButtonData error107buffer]', symObjAddr: 0x343, symBinAddr: 0x115C3, symSize: 0xA }
+  - { offset: 0xF90D7, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setError107buffer:]', symObjAddr: 0x34D, symBinAddr: 0x115CD, symSize: 0x11 }
+  - { offset: 0xF9118, size: 0x8, addend: 0x0, symName: '-[FLICButtonData session]', symObjAddr: 0x35E, symBinAddr: 0x115DE, symSize: 0xA }
+  - { offset: 0xF914D, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setSession:]', symObjAddr: 0x368, symBinAddr: 0x115E8, symSize: 0x11 }
+  - { offset: 0xF918E, size: 0x8, addend: 0x0, symName: '-[FLICButtonData dataStore]', symObjAddr: 0x379, symBinAddr: 0x115F9, symSize: 0xA }
+  - { offset: 0xF91C3, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setDataStore:]', symObjAddr: 0x383, symBinAddr: 0x11603, symSize: 0x11 }
+  - { offset: 0xF9204, size: 0x8, addend: 0x0, symName: '-[FLICButtonData retryDispatchBlock]', symObjAddr: 0x394, symBinAddr: 0x11614, symSize: 0x14 }
+  - { offset: 0xF923B, size: 0x8, addend: 0x0, symName: '-[FLICButtonData setRetryDispatchBlock:]', symObjAddr: 0x3A8, symBinAddr: 0x11628, symSize: 0xF }
+  - { offset: 0xF927A, size: 0x8, addend: 0x0, symName: '-[FLICButtonData .cxx_destruct]', symObjAddr: 0x3B7, symBinAddr: 0x11637, symSize: 0x8B }
+  - { offset: 0xF92AD, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandTrigger, symObjAddr: 0x442, symBinAddr: 0x116C2, symSize: 0x171 }
+  - { offset: 0xF9387, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonDown, symObjAddr: 0x5B3, symBinAddr: 0x11833, symSize: 0x10 }
+  - { offset: 0xF93E7, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonUp, symObjAddr: 0x5C3, symBinAddr: 0x11843, symSize: 0x13 }
+  - { offset: 0xF9447, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonClick, symObjAddr: 0x5D6, symBinAddr: 0x11856, symSize: 0x13 }
+  - { offset: 0xF94A7, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonDoubleClick, symObjAddr: 0x5E9, symBinAddr: 0x11869, symSize: 0x13 }
+  - { offset: 0xF9507, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonHold, symObjAddr: 0x5FC, symBinAddr: 0x1187C, symSize: 0x13 }
+  - { offset: 0xF9567, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandDidConnect, symObjAddr: 0x60F, symBinAddr: 0x1188F, symSize: 0xAD }
+  - { offset: 0xF95AE, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandDidIsReady, symObjAddr: 0x6BC, symBinAddr: 0x1193C, symSize: 0xAD }
+  - { offset: 0xF95F5, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandDidDisconnect, symObjAddr: 0x769, symBinAddr: 0x119E9, symSize: 0x106 }
+  - { offset: 0xF9695, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandDidFailToConnect, symObjAddr: 0x86F, symBinAddr: 0x11AEF, symSize: 0x106 }
+  - { offset: 0xF9735, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandDidModifyBondStatus, symObjAddr: 0x975, symBinAddr: 0x11BF5, symSize: 0x138 }
+  - { offset: 0xF97CC, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandFirmwareComplete, symObjAddr: 0xAAD, symBinAddr: 0x11D2D, symSize: 0x106 }
+  - { offset: 0xF986C, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandFirmwareProgress, symObjAddr: 0xBB3, symBinAddr: 0x11E33, symSize: 0x138 }
+  - { offset: 0xF9903, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandButtonHasBeenUnpaired, symObjAddr: 0xCEB, symBinAddr: 0x11F6B, symSize: 0x106 }
+  - { offset: 0xF99A3, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandNicknameUpdated, symObjAddr: 0xDF1, symBinAddr: 0x12071, symSize: 0x125 }
+  - { offset: 0xF9A43, size: 0x8, addend: 0x0, symName: _FLICButtonCallbackShorthandBatteryVoltageUpdated, symObjAddr: 0xF16, symBinAddr: 0x12196, symSize: 0x13C }
+  - { offset: 0xF9B58, size: 0x8, addend: 0x0, symName: '+[FLICManager sharedManager]', symObjAddr: 0x0, symBinAddr: 0x122D2, symSize: 0x11 }
+  - { offset: 0xF9B72, size: 0x8, addend: 0x0, symName: __sharedManager, symObjAddr: 0x63F8, symBinAddr: 0x38BB8, symSize: 0x0 }
+  - { offset: 0xF9C71, size: 0x8, addend: 0x0, symName: '+[FLICManager configureWithDelegate:buttonDelegate:background:]', symObjAddr: 0x11, symBinAddr: 0x122E3, symSize: 0xCB }
+  - { offset: 0xF9C9B, size: 0x8, addend: 0x0, symName: '_configureWithDelegate:buttonDelegate:background:.onceToken', symObjAddr: 0x6400, symBinAddr: 0x38BC0, symSize: 0x0 }
+  - { offset: 0xF9E2E, size: 0x8, addend: 0x0, symName: '+[FLICManager sharedManager]', symObjAddr: 0x0, symBinAddr: 0x122D2, symSize: 0x11 }
+  - { offset: 0xF9EB0, size: 0x8, addend: 0x0, symName: '___63+[FLICManager configureWithDelegate:buttonDelegate:background:]_block_invoke', symObjAddr: 0xDC, symBinAddr: 0x123AE, symSize: 0xB7 }
+  - { offset: 0xF9FCE, size: 0x8, addend: 0x0, symName: '___63+[FLICManager configureWithDelegate:buttonDelegate:background:]_block_invoke_2', symObjAddr: 0x193, symBinAddr: 0x12465, symSize: 0x15B }
+  - { offset: 0xFA0D9, size: 0x8, addend: 0x0, symName: '___63+[FLICManager configureWithDelegate:buttonDelegate:background:]_block_invoke_3', symObjAddr: 0x2EE, symBinAddr: 0x125C0, symSize: 0x160 }
+  - { offset: 0xFA1EA, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0x44E, symBinAddr: 0x12720, symSize: 0x25 }
+  - { offset: 0xFA22B, size: 0x8, addend: 0x0, symName: '-[FLICManager buttons]', symObjAddr: 0x498, symBinAddr: 0x12745, symSize: 0x14 }
+  - { offset: 0xFA25E, size: 0x8, addend: 0x0, symName: '-[FLICManager forgetButton:completion:]', symObjAddr: 0x4AC, symBinAddr: 0x12759, symSize: 0xAF }
+  - { offset: 0xFA367, size: 0x8, addend: 0x0, symName: '___39-[FLICManager forgetButton:completion:]_block_invoke', symObjAddr: 0x55B, symBinAddr: 0x12808, symSize: 0x42 }
+  - { offset: 0xFA3E4, size: 0x8, addend: 0x0, symName: '-[FLICManager scanForButtonsWithStateChangeHandler:completion:]', symObjAddr: 0x5CD, symBinAddr: 0x1284A, symSize: 0x7C }
+  - { offset: 0xFA486, size: 0x8, addend: 0x0, symName: '___63-[FLICManager scanForButtonsWithStateChangeHandler:completion:]_block_invoke', symObjAddr: 0x649, symBinAddr: 0x128C6, symSize: 0xDC }
+  - { offset: 0xFA51B, size: 0x8, addend: 0x0, symName: '-[FLICManager stopScan]', symObjAddr: 0x74B, symBinAddr: 0x129A2, symSize: 0x6 }
+  - { offset: 0xFA54A, size: 0x8, addend: 0x0, symName: '-[FLICManager prepareBluetoothLogWithMessage:completion:]', symObjAddr: 0x751, symBinAddr: 0x129A8, symSize: 0x7C }
+  - { offset: 0xFA5EC, size: 0x8, addend: 0x0, symName: '___57-[FLICManager prepareBluetoothLogWithMessage:completion:]_block_invoke', symObjAddr: 0x7CD, symBinAddr: 0x12A24, symSize: 0xDC }
+  - { offset: 0xFA681, size: 0x8, addend: 0x0, symName: '-[FLICManager delegate]', symObjAddr: 0x8A9, symBinAddr: 0x12B00, symSize: 0x16 }
+  - { offset: 0xFA6B8, size: 0x8, addend: 0x0, symName: '-[FLICManager setDelegate:]', symObjAddr: 0x8BF, symBinAddr: 0x12B16, symSize: 0x11 }
+  - { offset: 0xFA6F9, size: 0x8, addend: 0x0, symName: '-[FLICManager buttonDelegate]', symObjAddr: 0x8D0, symBinAddr: 0x12B27, symSize: 0x16 }
+  - { offset: 0xFA730, size: 0x8, addend: 0x0, symName: '-[FLICManager setButtonDelegate:]', symObjAddr: 0x8E6, symBinAddr: 0x12B3D, symSize: 0x11 }
+  - { offset: 0xFA771, size: 0x8, addend: 0x0, symName: '-[FLICManager state]', symObjAddr: 0x8F7, symBinAddr: 0x12B4E, symSize: 0xA }
+  - { offset: 0xFA7A6, size: 0x8, addend: 0x0, symName: '-[FLICManager isScanning]', symObjAddr: 0x901, symBinAddr: 0x12B58, symSize: 0xA }
+  - { offset: 0xFA7DB, size: 0x8, addend: 0x0, symName: '-[FLICManager .cxx_destruct]', symObjAddr: 0x90B, symBinAddr: 0x12B62, symSize: 0x24 }
+  - { offset: 0xFAD8E, size: 0x8, addend: 0x0, symName: _curve25519, symObjAddr: 0x0, symBinAddr: 0x12B86, symSize: 0x787 }
+  - { offset: 0xFAD9C, size: 0x8, addend: 0x0, symName: _ed25519_verify, symObjAddr: 0x195E, symBinAddr: 0x144E4, symSize: 0x9F5 }
+  - { offset: 0xFADC4, size: 0x8, addend: 0x0, symName: _ed25519_verify.pubkey_bytes, symObjAddr: 0x2CA0, symBinAddr: 0x20CC0, symSize: 0x0 }
+  - { offset: 0xFB892, size: 0x8, addend: 0x0, symName: _h_init, symObjAddr: 0x2CC0, symBinAddr: 0x20CE0, symSize: 0x0 }
+  - { offset: 0xFB8C1, size: 0x8, addend: 0x0, symName: _k, symObjAddr: 0x2D00, symBinAddr: 0x20D20, symSize: 0x0 }
+  - { offset: 0xFB8E3, size: 0x8, addend: 0x0, symName: _basepoint_mu, symObjAddr: 0x2F80, symBinAddr: 0x20FA0, symSize: 0x0 }
+  - { offset: 0xFB911, size: 0x8, addend: 0x0, symName: _basepoint_order, symObjAddr: 0x2FB0, symBinAddr: 0x20FD0, symSize: 0x0 }
+  - { offset: 0xFB927, size: 0x8, addend: 0x0, symName: _precomp_a, symObjAddr: 0x2FE0, symBinAddr: 0x21000, symSize: 0x0 }
+  - { offset: 0xFB9B4, size: 0x8, addend: 0x0, symName: _precomp_b, symObjAddr: 0x3420, symBinAddr: 0x21440, symSize: 0x0 }
+  - { offset: 0xFBBCD, size: 0x8, addend: 0x0, symName: _curve25519, symObjAddr: 0x0, symBinAddr: 0x12B86, symSize: 0x787 }
+  - { offset: 0xFC2BE, size: 0x8, addend: 0x0, symName: _sqr, symObjAddr: 0x87E, symBinAddr: 0x13404, symSize: 0x54F }
+  - { offset: 0xFC534, size: 0x8, addend: 0x0, symName: _mul, symObjAddr: 0xDCD, symBinAddr: 0x13953, symSize: 0x7A9 }
+  - { offset: 0xFC7AF, size: 0x8, addend: 0x0, symName: _inv, symObjAddr: 0x1576, symBinAddr: 0x140FC, symSize: 0x185 }
+  - { offset: 0xFCB49, size: 0x8, addend: 0x0, symName: _to_bytes, symObjAddr: 0x16FB, symBinAddr: 0x14281, symSize: 0x263 }
+  - { offset: 0xFCD71, size: 0x8, addend: 0x0, symName: _sub, symObjAddr: 0x787, symBinAddr: 0x1330D, symSize: 0x9A }
+  - { offset: 0xFCD9E, size: 0x8, addend: 0x0, symName: _add, symObjAddr: 0x821, symBinAddr: 0x133A7, symSize: 0x5D }
+  - { offset: 0xFCDCB, size: 0x8, addend: 0x0, symName: _sqr_many, symObjAddr: 0x2634, symBinAddr: 0x151BA, symSize: 0x2C }
+  - { offset: 0xFD369, size: 0x8, addend: 0x0, symName: _sha512_update, symObjAddr: 0x2660, symBinAddr: 0x151E6, symSize: 0x2D0 }
+  - { offset: 0xFD4B8, size: 0x8, addend: 0x0, symName: _mul288x288, symObjAddr: 0x2AD8, symBinAddr: 0x1565E, symSize: 0x65 }
+  - { offset: 0xFD5B3, size: 0x8, addend: 0x0, symName: _reduce_once, symObjAddr: 0x2B3D, symBinAddr: 0x156C3, symSize: 0xC8 }
+  - { offset: 0xFD684, size: 0x8, addend: 0x0, symName: _edwards_p1p1_to_p3, symObjAddr: 0x2930, symBinAddr: 0x154B6, symSize: 0x72 }
+  - { offset: 0xFD7A0, size: 0x8, addend: 0x0, symName: _edwards_add_sub, symObjAddr: 0x29A2, symBinAddr: 0x15528, symSize: 0x136 }
+  - { offset: 0xFDA55, size: 0x8, addend: 0x0, symName: _chaskey_generate_subkeys, symObjAddr: 0x2353, symBinAddr: 0x14ED9, symSize: 0x74 }
+  - { offset: 0xFDB31, size: 0x8, addend: 0x0, symName: _chaskey_with_dir_and_packet_counter, symObjAddr: 0x23C7, symBinAddr: 0x14F4D, symSize: 0x132 }
+  - { offset: 0xFDC89, size: 0x8, addend: 0x0, symName: _chaskey_permute, symObjAddr: 0x24F9, symBinAddr: 0x1507F, symSize: 0x4F }
+  - { offset: 0xFDD44, size: 0x8, addend: 0x0, symName: _chaskey_16_bytes, symObjAddr: 0x2548, symBinAddr: 0x150CE, symSize: 0xEC }
+  - { offset: 0xFDF93, size: 0x8, addend: 0x0, symName: '+[NSDate(Intervals) timeInterval:hasPassedSinceDate:now:]', symObjAddr: 0x0, symBinAddr: 0x1578B, symSize: 0x37 }
+  - { offset: 0xFDFA1, size: 0x8, addend: 0x0, symName: '+[NSDate(Intervals) timeInterval:hasPassedSinceDate:now:]', symObjAddr: 0x0, symBinAddr: 0x1578B, symSize: 0x37 }
+  - { offset: 0xFE010, size: 0x8, addend: 0x0, symName: '+[NSDate(Intervals) timeInterval:hasPassedSinceDate:]', symObjAddr: 0x37, symBinAddr: 0x157C2, symSize: 0x75 }
+  - { offset: 0xFE134, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) getSysInfoByName:]', symObjAddr: 0x0, symBinAddr: 0x15837, symSize: 0x82 }
+  - { offset: 0xFE1A1, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) getSysInfoByName:]', symObjAddr: 0x0, symBinAddr: 0x15837, symSize: 0x82 }
+  - { offset: 0xFE2FA, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) platform]', symObjAddr: 0x82, symBinAddr: 0x158B9, symSize: 0x19 }
+  - { offset: 0xFE344, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) hwmodel]', symObjAddr: 0x9B, symBinAddr: 0x158D2, symSize: 0x19 }
+  - { offset: 0xFE38E, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) getSysInfo:]', symObjAddr: 0xB4, symBinAddr: 0x158EB, symSize: 0x65 }
+  - { offset: 0xFE467, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) cpuFrequency]', symObjAddr: 0x119, symBinAddr: 0x15950, symSize: 0x17 }
+  - { offset: 0xFE4B7, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) busFrequency]', symObjAddr: 0x130, symBinAddr: 0x15967, symSize: 0x17 }
+  - { offset: 0xFE507, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) cpuCount]', symObjAddr: 0x147, symBinAddr: 0x1597E, symSize: 0x17 }
+  - { offset: 0xFE557, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) totalMemory]', symObjAddr: 0x15E, symBinAddr: 0x15995, symSize: 0x17 }
+  - { offset: 0xFE5A7, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) userMemory]', symObjAddr: 0x175, symBinAddr: 0x159AC, symSize: 0x17 }
+  - { offset: 0xFE5F7, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) maxSocketBufferSize]', symObjAddr: 0x18C, symBinAddr: 0x159C3, symSize: 0x17 }
+  - { offset: 0xFE647, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) platformType]', symObjAddr: 0x1A3, symBinAddr: 0x159DA, symSize: 0x3B6 }
+  - { offset: 0xFE941, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) platformString]', symObjAddr: 0x559, symBinAddr: 0x15D90, symSize: 0x32 }
+  - { offset: 0xFE98D, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) hasRetinaDisplay]', symObjAddr: 0x58B, symBinAddr: 0x15DC2, symSize: 0x5A }
+  - { offset: 0xFE9EC, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) deviceFamily]', symObjAddr: 0x5E5, symBinAddr: 0x15E1C, symSize: 0xB1 }
+  - { offset: 0xFEAB8, size: 0x8, addend: 0x0, symName: '-[UIDevice(Hardware) macaddress]', symObjAddr: 0x696, symBinAddr: 0x15ECD, symSize: 0x15F }
+  - { offset: 0xFECBD, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral initWithPeripheral:identifier:manager:dataStorage:]', symObjAddr: 0x0, symBinAddr: 0x1602C, symSize: 0x206 }
+  - { offset: 0xFF1D3, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral initWithPeripheral:identifier:manager:dataStorage:]', symObjAddr: 0x0, symBinAddr: 0x1602C, symSize: 0x206 }
+  - { offset: 0xFF396, size: 0x8, addend: 0x0, symName: '+[FLIC2BCBPeripheral hexStringFromNSData:]', symObjAddr: 0x206, symBinAddr: 0x16232, symSize: 0xA8 }
+  - { offset: 0xFF446, size: 0x8, addend: 0x0, symName: '+[FLIC2BCBPeripheral hexStringFromData:length:]', symObjAddr: 0x2AE, symBinAddr: 0x162DA, symSize: 0xA6 }
+  - { offset: 0xFF500, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_resetRealPeripheral:connectIfNecessary:]', symObjAddr: 0x354, symBinAddr: 0x16380, symSize: 0x101 }
+  - { offset: 0xFF5F5, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_connectIfNecessaryForce:]', symObjAddr: 0x455, symBinAddr: 0x16481, symSize: 0x97 }
+  - { offset: 0xFF74D, size: 0x8, addend: 0x0, symName: '___55-[FLIC2BCBPeripheral external_connectIfNecessaryForce:]_block_invoke', symObjAddr: 0x4EC, symBinAddr: 0x16518, symSize: 0x16 }
+  - { offset: 0xFF798, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x502, symBinAddr: 0x1652E, symSize: 0xF }
+  - { offset: 0xFF7CB, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral internal_updateDataStorage]', symObjAddr: 0x520, symBinAddr: 0x16540, symSize: 0x9E }
+  - { offset: 0xFF882, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setAutoConnect:]', symObjAddr: 0x5BE, symBinAddr: 0x165DE, symSize: 0x15 }
+  - { offset: 0xFF8D6, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral autoConnect]', symObjAddr: 0x5D3, symBinAddr: 0x165F3, symSize: 0xA }
+  - { offset: 0xFF90B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral connect]', symObjAddr: 0x5DD, symBinAddr: 0x165FD, symSize: 0x75 }
+  - { offset: 0xFF976, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral cancelConnection]', symObjAddr: 0x652, symBinAddr: 0x16672, symSize: 0xA4 }
+  - { offset: 0xFFA0E, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral cycleConnection]', symObjAddr: 0x6F6, symBinAddr: 0x16716, symSize: 0x86 }
+  - { offset: 0xFFAA7, size: 0x8, addend: 0x0, symName: '___37-[FLIC2BCBPeripheral cycleConnection]_block_invoke', symObjAddr: 0x77C, symBinAddr: 0x1679C, symSize: 0xDE }
+  - { offset: 0xFFB5E, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral readRSSIWithCompletion:]', symObjAddr: 0x85A, symBinAddr: 0x1687A, symSize: 0x36 }
+  - { offset: 0xFFBB9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral discoverServices:completion:]', symObjAddr: 0x890, symBinAddr: 0x168B0, symSize: 0x544 }
+  - { offset: 0xFFF32, size: 0x8, addend: 0x0, symName: '___50-[FLIC2BCBPeripheral discoverServices:completion:]_block_invoke', symObjAddr: 0xDD4, symBinAddr: 0x16DF4, symSize: 0xFB }
+  - { offset: 0xFFFEC, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral readValueForCharacteristic:]', symObjAddr: 0xF24, symBinAddr: 0x16EF0, symSize: 0x1D }
+  - { offset: 0x10003B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral writeValue:forCharacteristic:]', symObjAddr: 0xF41, symBinAddr: 0x16F0D, symSize: 0x211 }
+  - { offset: 0x10023A, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral writeValue:forCharacteristic:completion:]', symObjAddr: 0x1152, symBinAddr: 0x1711E, symSize: 0x49B }
+  - { offset: 0x10060A, size: 0x8, addend: 0x0, symName: '___62-[FLIC2BCBPeripheral writeValue:forCharacteristic:completion:]_block_invoke', symObjAddr: 0x15ED, symBinAddr: 0x175B9, symSize: 0x25 }
+  - { offset: 0x10068B, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s56b, symObjAddr: 0x1612, symBinAddr: 0x175DE, symSize: 0x4B }
+  - { offset: 0x1006D8, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s56s, symObjAddr: 0x165D, symBinAddr: 0x17629, symSize: 0x33 }
+  - { offset: 0x100727, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setNotifyValue:forCharacteristic:completion:]', symObjAddr: 0x1690, symBinAddr: 0x1765C, symSize: 0x138 }
+  - { offset: 0x10087E, size: 0x8, addend: 0x0, symName: '___66-[FLIC2BCBPeripheral setNotifyValue:forCharacteristic:completion:]_block_invoke', symObjAddr: 0x17C8, symBinAddr: 0x17794, symSize: 0xED }
+  - { offset: 0x10094D, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setDelegate:]', symObjAddr: 0x18B5, symBinAddr: 0x17881, symSize: 0x19F }
+  - { offset: 0x100A18, size: 0x8, addend: 0x0, symName: '___34-[FLIC2BCBPeripheral setDelegate:]_block_invoke', symObjAddr: 0x1A54, symBinAddr: 0x17A20, symSize: 0xA2 }
+  - { offset: 0x100AA6, size: 0x8, addend: 0x0, symName: '___34-[FLIC2BCBPeripheral setDelegate:]_block_invoke_2', symObjAddr: 0x1AF6, symBinAddr: 0x17AC2, symSize: 0xDB }
+  - { offset: 0x100B62, size: 0x8, addend: 0x0, symName: '___34-[FLIC2BCBPeripheral setDelegate:]_block_invoke_3', symObjAddr: 0x1BD1, symBinAddr: 0x17B9D, symSize: 0xDB }
+  - { offset: 0x100C1E, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_connectRedirection]', symObjAddr: 0x1CAC, symBinAddr: 0x17C78, symSize: 0x195 }
+  - { offset: 0x100D63, size: 0x8, addend: 0x0, symName: '___49-[FLIC2BCBPeripheral external_connectRedirection]_block_invoke', symObjAddr: 0x1E41, symBinAddr: 0x17E0D, symSize: 0xA2 }
+  - { offset: 0x100DF1, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_cancelConnectionRedirectionWithError:]', symObjAddr: 0x1EE3, symBinAddr: 0x17EAF, symSize: 0x13F }
+  - { offset: 0x100F27, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_didFailToConnectRedirectionWithError:]', symObjAddr: 0x2022, symBinAddr: 0x17FEE, symSize: 0x306 }
+  - { offset: 0x101180, size: 0x8, addend: 0x0, symName: '___68-[FLIC2BCBPeripheral external_didFailToConnectRedirectionWithError:]_block_invoke', symObjAddr: 0x2328, symBinAddr: 0x182F4, symSize: 0x16 }
+  - { offset: 0x1011CE, size: 0x8, addend: 0x0, symName: '___68-[FLIC2BCBPeripheral external_didFailToConnectRedirectionWithError:]_block_invoke_2', symObjAddr: 0x233E, symBinAddr: 0x1830A, symSize: 0x8A }
+  - { offset: 0x101276, size: 0x8, addend: 0x0, symName: '___68-[FLIC2BCBPeripheral external_didFailToConnectRedirectionWithError:]_block_invoke_3', symObjAddr: 0x23C8, symBinAddr: 0x18394, symSize: 0x1E }
+  - { offset: 0x1012C4, size: 0x8, addend: 0x0, symName: '___68-[FLIC2BCBPeripheral external_didFailToConnectRedirectionWithError:]_block_invoke_4', symObjAddr: 0x23E6, symBinAddr: 0x183B2, symSize: 0x1E }
+  - { offset: 0x101312, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral external_monitorPendingConnection]', symObjAddr: 0x2404, symBinAddr: 0x183D0, symSize: 0x86 }
+  - { offset: 0x1013AC, size: 0x8, addend: 0x0, symName: '___55-[FLIC2BCBPeripheral external_monitorPendingConnection]_block_invoke', symObjAddr: 0x248A, symBinAddr: 0x18456, symSize: 0xDE }
+  - { offset: 0x101466, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral internal_clearWriteQueue]', symObjAddr: 0x2568, symBinAddr: 0x18534, symSize: 0x51 }
+  - { offset: 0x1014BE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral internal_resetPendingConnection]', symObjAddr: 0x25B9, symBinAddr: 0x18585, symSize: 0x63 }
+  - { offset: 0x10152B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral internal_guardedPeripheralConnect]', symObjAddr: 0x261C, symBinAddr: 0x185E8, symSize: 0xFB }
+  - { offset: 0x101611, size: 0x8, addend: 0x0, symName: '___55-[FLIC2BCBPeripheral internal_guardedPeripheralConnect]_block_invoke', symObjAddr: 0x2717, symBinAddr: 0x186E3, symSize: 0x161 }
+  - { offset: 0x10174A, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral internal_guardedPeripheralDisconnect]', symObjAddr: 0x2878, symBinAddr: 0x18844, symSize: 0x1B7 }
+  - { offset: 0x1018BB, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheralDidUpdateName:]', symObjAddr: 0x2A2F, symBinAddr: 0x189FB, symSize: 0xF9 }
+  - { offset: 0x10198B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didReadRSSI:error:]', symObjAddr: 0x2B28, symBinAddr: 0x18AF4, symSize: 0x89 }
+  - { offset: 0x101AA0, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didDiscoverServices:]', symObjAddr: 0x2BB1, symBinAddr: 0x18B7D, symSize: 0x4D7 }
+  - { offset: 0x101D8E, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didDiscoverCharacteristicsForService:error:]', symObjAddr: 0x3088, symBinAddr: 0x19054, symSize: 0x597 }
+  - { offset: 0x1021F1, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didUpdateValueForCharacteristic:error:]', symObjAddr: 0x361F, symBinAddr: 0x195EB, symSize: 0x2EF }
+  - { offset: 0x10248C, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didWriteValueForCharacteristic:error:]', symObjAddr: 0x390E, symBinAddr: 0x198DA, symSize: 0x7FA }
+  - { offset: 0x102AF1, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didUpdateNotificationStateForCharacteristic:error:]', symObjAddr: 0x4108, symBinAddr: 0x1A0D4, symSize: 0x155 }
+  - { offset: 0x102CA0, size: 0x8, addend: 0x0, symName: '___83-[FLIC2BCBPeripheral peripheral:didUpdateNotificationStateForCharacteristic:error:]_block_invoke', symObjAddr: 0x425D, symBinAddr: 0x1A229, symSize: 0x49 }
+  - { offset: 0x102D35, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral peripheral:didModifyServices:]', symObjAddr: 0x42A6, symBinAddr: 0x1A272, symSize: 0xA9 }
+  - { offset: 0x102E0A, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral realPeripheral]', symObjAddr: 0x434F, symBinAddr: 0x1A31B, symSize: 0x14 }
+  - { offset: 0x102E41, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setRealPeripheral:]', symObjAddr: 0x4363, symBinAddr: 0x1A32F, symSize: 0xF }
+  - { offset: 0x102E80, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral delegate]', symObjAddr: 0x4372, symBinAddr: 0x1A33E, symSize: 0x16 }
+  - { offset: 0x102EB7, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral identifier]', symObjAddr: 0x4388, symBinAddr: 0x1A354, symSize: 0xA }
+  - { offset: 0x102EEC, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setIdentifier:]', symObjAddr: 0x4392, symBinAddr: 0x1A35E, symSize: 0x11 }
+  - { offset: 0x102F2D, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral name]', symObjAddr: 0x43A3, symBinAddr: 0x1A36F, symSize: 0x14 }
+  - { offset: 0x102F64, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral state]', symObjAddr: 0x43B7, symBinAddr: 0x1A383, symSize: 0xA }
+  - { offset: 0x102F99, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral BCBManager]', symObjAddr: 0x43C1, symBinAddr: 0x1A38D, symSize: 0xA }
+  - { offset: 0x102FCE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral completionBlockRSSI]', symObjAddr: 0x43CB, symBinAddr: 0x1A397, symSize: 0x14 }
+  - { offset: 0x103005, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setCompletionBlockRSSI:]', symObjAddr: 0x43DF, symBinAddr: 0x1A3AB, symSize: 0xF }
+  - { offset: 0x103044, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral completionBlockServiceDiscovery]', symObjAddr: 0x43EE, symBinAddr: 0x1A3BA, symSize: 0x14 }
+  - { offset: 0x10307B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setCompletionBlockServiceDiscovery:]', symObjAddr: 0x4402, symBinAddr: 0x1A3CE, symSize: 0xF }
+  - { offset: 0x1030BA, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral completionBlockNotifyStatus]', symObjAddr: 0x4411, symBinAddr: 0x1A3DD, symSize: 0x14 }
+  - { offset: 0x1030F1, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setCompletionBlockNotifyStatus:]', symObjAddr: 0x4425, symBinAddr: 0x1A3F1, symSize: 0xF }
+  - { offset: 0x103130, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral lastWritenData]', symObjAddr: 0x4434, symBinAddr: 0x1A400, symSize: 0xA }
+  - { offset: 0x103165, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setLastWritenData:]', symObjAddr: 0x443E, symBinAddr: 0x1A40A, symSize: 0x11 }
+  - { offset: 0x1031A6, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral serviceAndCharacteristicsToDiscover]', symObjAddr: 0x444F, symBinAddr: 0x1A41B, symSize: 0x14 }
+  - { offset: 0x1031DD, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setServiceAndCharacteristicsToDiscover:]', symObjAddr: 0x4463, symBinAddr: 0x1A42F, symSize: 0xF }
+  - { offset: 0x10321C, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral characteristicsWriteArray]', symObjAddr: 0x4472, symBinAddr: 0x1A43E, symSize: 0x14 }
+  - { offset: 0x103253, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setCharacteristicsWriteArray:]', symObjAddr: 0x4486, symBinAddr: 0x1A452, symSize: 0xF }
+  - { offset: 0x103292, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral dataStorage]', symObjAddr: 0x4495, symBinAddr: 0x1A461, symSize: 0x16 }
+  - { offset: 0x1032C9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setDataStorage:]', symObjAddr: 0x44AB, symBinAddr: 0x1A477, symSize: 0x11 }
+  - { offset: 0x10330A, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral lastConnectionEvetReceived]', symObjAddr: 0x44BC, symBinAddr: 0x1A488, symSize: 0xD }
+  - { offset: 0x10333F, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral setLastConnectionEvetReceived:]', symObjAddr: 0x44C9, symBinAddr: 0x1A495, symSize: 0x11 }
+  - { offset: 0x103380, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBPeripheral .cxx_destruct]', symObjAddr: 0x44DA, symBinAddr: 0x1A4A6, symSize: 0xA0 }
+  - { offset: 0x103B98, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreButton tableName]', symObjAddr: 0x0, symBinAddr: 0x1A546, symSize: 0xD }
+  - { offset: 0x103BB2, size: 0x8, addend: 0x0, symName: _FLICDataStoreTableButtons, symObjAddr: 0x2BA0, symBinAddr: 0x2C5E8, symSize: 0x0 }
+  - { offset: 0x103F98, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreButton tableName]', symObjAddr: 0x0, symBinAddr: 0x1A546, symSize: 0xD }
+  - { offset: 0x103FCB, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton initWithIdentifier:]', symObjAddr: 0xD, symBinAddr: 0x1A553, symSize: 0x6B }
+  - { offset: 0x10403B, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton initWithStatement:]', symObjAddr: 0x78, symBinAddr: 0x1A5BE, symSize: 0x4B5 }
+  - { offset: 0x10465B, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton identifierString]', symObjAddr: 0x52D, symBinAddr: 0x1AA73, symSize: 0x50 }
+  - { offset: 0x1046BE, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton columnsWithFormat:bitMap:]', symObjAddr: 0x57D, symBinAddr: 0x1AAC3, symSize: 0x983 }
+  - { offset: 0x104D62, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton applyToPreparedStatement:bitMap:]', symObjAddr: 0xF00, symBinAddr: 0x1B446, symSize: 0x7EC }
+  - { offset: 0x105620, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreButton tableCreationQuery]', symObjAddr: 0x16EC, symBinAddr: 0x1BC32, symSize: 0x8A6 }
+  - { offset: 0x105D37, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreButton migrateFromVersion:database:]', symObjAddr: 0x1F92, symBinAddr: 0x1C4D8, symSize: 0xCA }
+  - { offset: 0x105E9D, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton identifier]', symObjAddr: 0x205C, symBinAddr: 0x1C5A2, symSize: 0xA }
+  - { offset: 0x105ED2, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setIdentifier:]', symObjAddr: 0x2066, symBinAddr: 0x1C5AC, symSize: 0x11 }
+  - { offset: 0x105F13, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton uuid]', symObjAddr: 0x2077, symBinAddr: 0x1C5BD, symSize: 0xA }
+  - { offset: 0x105F48, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setUuid:]', symObjAddr: 0x2081, symBinAddr: 0x1C5C7, symSize: 0x11 }
+  - { offset: 0x105F89, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton name]', symObjAddr: 0x2092, symBinAddr: 0x1C5D8, symSize: 0xA }
+  - { offset: 0x105FBE, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setName:]', symObjAddr: 0x209C, symBinAddr: 0x1C5E2, symSize: 0x11 }
+  - { offset: 0x105FFF, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton nickname]', symObjAddr: 0x20AD, symBinAddr: 0x1C5F3, symSize: 0xA }
+  - { offset: 0x106034, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setNickname:]', symObjAddr: 0x20B7, symBinAddr: 0x1C5FD, symSize: 0x11 }
+  - { offset: 0x106075, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton bluetoothAddress]', symObjAddr: 0x20C8, symBinAddr: 0x1C60E, symSize: 0xA }
+  - { offset: 0x1060AA, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setBluetoothAddress:]', symObjAddr: 0x20D2, symBinAddr: 0x1C618, symSize: 0x11 }
+  - { offset: 0x1060EB, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton pairingDataKey]', symObjAddr: 0x20E3, symBinAddr: 0x1C629, symSize: 0xA }
+  - { offset: 0x106120, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setPairingDataKey:]', symObjAddr: 0x20ED, symBinAddr: 0x1C633, symSize: 0x11 }
+  - { offset: 0x106161, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton serialNumber]', symObjAddr: 0x20FE, symBinAddr: 0x1C644, symSize: 0xA }
+  - { offset: 0x106196, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSerialNumber:]', symObjAddr: 0x2108, symBinAddr: 0x1C64E, symSize: 0x11 }
+  - { offset: 0x1061D7, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton triggerMode]', symObjAddr: 0x2119, symBinAddr: 0x1C65F, symSize: 0xA }
+  - { offset: 0x10620C, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setTriggerMode:]', symObjAddr: 0x2123, symBinAddr: 0x1C669, symSize: 0x9 }
+  - { offset: 0x106249, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton bootId]', symObjAddr: 0x212C, symBinAddr: 0x1C672, symSize: 0x9 }
+  - { offset: 0x10627E, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setBootId:]', symObjAddr: 0x2135, symBinAddr: 0x1C67B, symSize: 0x9 }
+  - { offset: 0x1062BB, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton eventCount]', symObjAddr: 0x213E, symBinAddr: 0x1C684, symSize: 0x9 }
+  - { offset: 0x1062F0, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setEventCount:]', symObjAddr: 0x2147, symBinAddr: 0x1C68D, symSize: 0x9 }
+  - { offset: 0x10632D, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton autoDisconnectTime]', symObjAddr: 0x2150, symBinAddr: 0x1C696, symSize: 0xA }
+  - { offset: 0x106362, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setAutoDisconnectTime:]', symObjAddr: 0x215A, symBinAddr: 0x1C6A0, symSize: 0xA }
+  - { offset: 0x10639F, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton batterylevel]', symObjAddr: 0x2164, symBinAddr: 0x1C6AA, symSize: 0x9 }
+  - { offset: 0x1063D4, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setBatterylevel:]', symObjAddr: 0x216D, symBinAddr: 0x1C6B3, symSize: 0x9 }
+  - { offset: 0x106411, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton addressType]', symObjAddr: 0x2176, symBinAddr: 0x1C6BC, symSize: 0xA }
+  - { offset: 0x106446, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setAddressType:]', symObjAddr: 0x2180, symBinAddr: 0x1C6C6, symSize: 0x9 }
+  - { offset: 0x106483, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton pairingDataIdentifier]', symObjAddr: 0x2189, symBinAddr: 0x1C6CF, symSize: 0x9 }
+  - { offset: 0x1064B8, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setPairingDataIdentifier:]', symObjAddr: 0x2192, symBinAddr: 0x1C6D8, symSize: 0x9 }
+  - { offset: 0x1064F5, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton firmwareVersion]', symObjAddr: 0x219B, symBinAddr: 0x1C6E1, symSize: 0x9 }
+  - { offset: 0x10652A, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setFirmwareVersion:]', symObjAddr: 0x21A4, symBinAddr: 0x1C6EA, symSize: 0x9 }
+  - { offset: 0x106567, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionTxCounter]', symObjAddr: 0x21AD, symBinAddr: 0x1C6F3, symSize: 0xA }
+  - { offset: 0x10659C, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionTxCounter:]', symObjAddr: 0x21B7, symBinAddr: 0x1C6FD, symSize: 0xA }
+  - { offset: 0x1065D9, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionRxCounter]', symObjAddr: 0x21C1, symBinAddr: 0x1C707, symSize: 0xA }
+  - { offset: 0x10660E, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionRxCounter:]', symObjAddr: 0x21CB, symBinAddr: 0x1C711, symSize: 0xA }
+  - { offset: 0x10664B, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionState]', symObjAddr: 0x21D5, symBinAddr: 0x1C71B, symSize: 0x9 }
+  - { offset: 0x106680, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionState:]', symObjAddr: 0x21DE, symBinAddr: 0x1C724, symSize: 0x9 }
+  - { offset: 0x1066BD, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionConnId]', symObjAddr: 0x21E7, symBinAddr: 0x1C72D, symSize: 0x9 }
+  - { offset: 0x1066F2, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionConnId:]', symObjAddr: 0x21F0, symBinAddr: 0x1C736, symSize: 0x9 }
+  - { offset: 0x10672F, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionChaskeyKeys]', symObjAddr: 0x21F9, symBinAddr: 0x1C73F, symSize: 0x2C }
+  - { offset: 0x106766, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionChaskeyKeys:]', symObjAddr: 0x2225, symBinAddr: 0x1C76B, symSize: 0x23 }
+  - { offset: 0x1067A6, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionReady]', symObjAddr: 0x2248, symBinAddr: 0x1C78E, symSize: 0xA }
+  - { offset: 0x1067DB, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionReady:]', symObjAddr: 0x2252, symBinAddr: 0x1C798, symSize: 0x9 }
+  - { offset: 0x106818, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionButtonTimestamp]', symObjAddr: 0x225B, symBinAddr: 0x1C7A1, symSize: 0xA }
+  - { offset: 0x10684D, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionButtonTimestamp:]', symObjAddr: 0x2265, symBinAddr: 0x1C7AB, symSize: 0xA }
+  - { offset: 0x10688A, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton sessionPhoneTimestamp]', symObjAddr: 0x226F, symBinAddr: 0x1C7B5, symSize: 0xD }
+  - { offset: 0x1068BF, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setSessionPhoneTimestamp:]', symObjAddr: 0x227C, symBinAddr: 0x1C7C2, symSize: 0xD }
+  - { offset: 0x1068FC, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton lastFirmwareCheck]', symObjAddr: 0x2289, symBinAddr: 0x1C7CF, symSize: 0xE }
+  - { offset: 0x106931, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setLastFirmwareCheck:]', symObjAddr: 0x2297, symBinAddr: 0x1C7DD, symSize: 0xE }
+  - { offset: 0x10696E, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton hidEnabled]', symObjAddr: 0x22A5, symBinAddr: 0x1C7EB, symSize: 0xA }
+  - { offset: 0x1069A3, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setHidEnabled:]', symObjAddr: 0x22AF, symBinAddr: 0x1C7F5, symSize: 0x9 }
+  - { offset: 0x1069E0, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton lastKnownlinkIsEncrypted]', symObjAddr: 0x22B8, symBinAddr: 0x1C7FE, symSize: 0xA }
+  - { offset: 0x106A15, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setLastKnownlinkIsEncrypted:]', symObjAddr: 0x22C2, symBinAddr: 0x1C808, symSize: 0x9 }
+  - { offset: 0x106A52, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton lastKnownHasBondInfo]', symObjAddr: 0x22CB, symBinAddr: 0x1C811, symSize: 0xA }
+  - { offset: 0x106A87, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setLastKnownHasBondInfo:]', symObjAddr: 0x22D5, symBinAddr: 0x1C81B, symSize: 0x9 }
+  - { offset: 0x106AC4, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton hasConfiguredAdvParams]', symObjAddr: 0x22DE, symBinAddr: 0x1C824, symSize: 0xA }
+  - { offset: 0x106AF9, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setHasConfiguredAdvParams:]', symObjAddr: 0x22E8, symBinAddr: 0x1C82E, symSize: 0x9 }
+  - { offset: 0x106B36, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton nicknameTimestampUtcMs]', symObjAddr: 0x22F1, symBinAddr: 0x1C837, symSize: 0xD }
+  - { offset: 0x106B6B, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setNicknameTimestampUtcMs:]', symObjAddr: 0x22FE, symBinAddr: 0x1C844, symSize: 0xD }
+  - { offset: 0x106BA8, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton latencyMode]', symObjAddr: 0x230B, symBinAddr: 0x1C851, symSize: 0xA }
+  - { offset: 0x106BDD, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton setLatencyMode:]', symObjAddr: 0x2315, symBinAddr: 0x1C85B, symSize: 0x9 }
+  - { offset: 0x106C1A, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreButton .cxx_destruct]', symObjAddr: 0x231E, symBinAddr: 0x1C864, symSize: 0x5F }
+  - { offset: 0x106CEB, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager initWithDelegate:queue:options:namespace:]', symObjAddr: 0x0, symBinAddr: 0x1C8C3, symSize: 0x454 }
+  - { offset: 0x106E55, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager initWithDelegate:queue:options:namespace:]', symObjAddr: 0x0, symBinAddr: 0x1C8C3, symSize: 0x454 }
+  - { offset: 0x1071FD, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager isScanning]', symObjAddr: 0x454, symBinAddr: 0x1CD17, symSize: 0x1F }
+  - { offset: 0x107240, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager state]', symObjAddr: 0x473, symBinAddr: 0x1CD36, symSize: 0x22 }
+  - { offset: 0x107283, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager retrievePeripheralsWithIdentifiers:]', symObjAddr: 0x495, symBinAddr: 0x1CD58, symSize: 0x207 }
+  - { offset: 0x1073F8, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager scanForPeripheralsWithServices:options:]', symObjAddr: 0x69C, symBinAddr: 0x1CF5F, symSize: 0x16 }
+  - { offset: 0x107464, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager stopScan]', symObjAddr: 0x6B2, symBinAddr: 0x1CF75, symSize: 0x16 }
+  - { offset: 0x1074A3, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager monitorPendingConnections]', symObjAddr: 0x6C8, symBinAddr: 0x1CF8B, symSize: 0xB6 }
+  - { offset: 0x1075B0, size: 0x8, addend: 0x0, symName: '___51-[FLIC2BCBCentralManager monitorPendingConnections]_block_invoke', symObjAddr: 0x77E, symBinAddr: 0x1D041, symSize: 0x2B2 }
+  - { offset: 0x1077E6, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager forgetPeripheral:]', symObjAddr: 0xA50, symBinAddr: 0x1D2F3, symSize: 0x105 }
+  - { offset: 0x1078EA, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager managerDispatchQueue]', symObjAddr: 0xB55, symBinAddr: 0x1D3F8, symSize: 0xE }
+  - { offset: 0x107921, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager internal_setAutoConnectOnPeripheralFromDatabase:]', symObjAddr: 0xB63, symBinAddr: 0x1D406, symSize: 0x18E }
+  - { offset: 0x107AA8, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager internal_createBCBPeripheral:]', symObjAddr: 0xCF1, symBinAddr: 0x1D594, symSize: 0x13B }
+  - { offset: 0x107C10, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager internal_BCBPeripheralFromCBPeripheral:]', symObjAddr: 0xE2C, symBinAddr: 0x1D6CF, symSize: 0xC0 }
+  - { offset: 0x107CE9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManagerDidUpdateState:]', symObjAddr: 0xEEC, symBinAddr: 0x1D78F, symSize: 0x3B4 }
+  - { offset: 0x107F63, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManager:willRestoreState:]', symObjAddr: 0x12A0, symBinAddr: 0x1DB43, symSize: 0x2CA }
+  - { offset: 0x10817B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager internal_BCBPeripheralFromCBPeripheralOnDiscovery:]', symObjAddr: 0x156A, symBinAddr: 0x1DE0D, symSize: 0xDC }
+  - { offset: 0x10826C, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager keepPeripheral:]', symObjAddr: 0x1646, symBinAddr: 0x1DEE9, symSize: 0x148 }
+  - { offset: 0x1083DE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManager:didDiscoverPeripheral:advertisementData:RSSI:]', symObjAddr: 0x178E, symBinAddr: 0x1E031, symSize: 0x1A1 }
+  - { offset: 0x1085BC, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManager:didConnectPeripheral:]', symObjAddr: 0x192F, symBinAddr: 0x1E1D2, symSize: 0x128 }
+  - { offset: 0x1086F7, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManager:didFailToConnectPeripheral:error:]', symObjAddr: 0x1A57, symBinAddr: 0x1E2FA, symSize: 0x24E }
+  - { offset: 0x108908, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager centralManager:didDisconnectPeripheral:error:]', symObjAddr: 0x1CA5, symBinAddr: 0x1E548, symSize: 0x24E }
+  - { offset: 0x108B19, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager realManager]', symObjAddr: 0x1EF3, symBinAddr: 0x1E796, symSize: 0x14 }
+  - { offset: 0x108B50, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager delegate]', symObjAddr: 0x1F07, symBinAddr: 0x1E7AA, symSize: 0xA }
+  - { offset: 0x108B85, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager setDelegate:]', symObjAddr: 0x1F11, symBinAddr: 0x1E7B4, symSize: 0xA }
+  - { offset: 0x108BC2, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager peripheralDictionary]', symObjAddr: 0x1F1B, symBinAddr: 0x1E7BE, symSize: 0x14 }
+  - { offset: 0x108BF9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager setPeripheralDictionary:]', symObjAddr: 0x1F2F, symBinAddr: 0x1E7D2, symSize: 0xF }
+  - { offset: 0x108C38, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager dataStorage]', symObjAddr: 0x1F3E, symBinAddr: 0x1E7E1, symSize: 0x14 }
+  - { offset: 0x108C6F, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager setDataStorage:]', symObjAddr: 0x1F52, symBinAddr: 0x1E7F5, symSize: 0xF }
+  - { offset: 0x108CAE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager lastConnectionRefresh]', symObjAddr: 0x1F61, symBinAddr: 0x1E804, symSize: 0x14 }
+  - { offset: 0x108CE5, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager setLastConnectionRefresh:]', symObjAddr: 0x1F75, symBinAddr: 0x1E818, symSize: 0xF }
+  - { offset: 0x108D24, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBCentralManager .cxx_destruct]', symObjAddr: 0x1F84, symBinAddr: 0x1E827, symSize: 0x49 }
+  - { offset: 0x108F34, size: 0x8, addend: 0x0, symName: '-[FLICManager(FLICManagerData) setData:]', symObjAddr: 0x0, symBinAddr: 0x1E870, symSize: 0x16 }
+  - { offset: 0x108F9F, size: 0x8, addend: 0x0, symName: '-[FLICManager(FLICManagerData) setData:]', symObjAddr: 0x0, symBinAddr: 0x1E870, symSize: 0x16 }
+  - { offset: 0x109050, size: 0x8, addend: 0x0, symName: '-[FLICManager(FLICManagerData) data]', symObjAddr: 0x16, symBinAddr: 0x1E886, symSize: 0x11 }
+  - { offset: 0x1092B4, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreManager tableName]', symObjAddr: 0x0, symBinAddr: 0x1E897, symSize: 0xD }
+  - { offset: 0x1092CE, size: 0x8, addend: 0x0, symName: _FLICDataStoreTableManagers, symObjAddr: 0x6E8, symBinAddr: 0x2C5F0, symSize: 0x0 }
+  - { offset: 0x109364, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreManager tableName]', symObjAddr: 0x0, symBinAddr: 0x1E897, symSize: 0xD }
+  - { offset: 0x109397, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager initWithIdentifier:]', symObjAddr: 0xD, symBinAddr: 0x1E8A4, symSize: 0x6B }
+  - { offset: 0x109407, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager initWithStatement:]', symObjAddr: 0x78, symBinAddr: 0x1E90F, symSize: 0xCB }
+  - { offset: 0x1094EA, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager identifierString]', symObjAddr: 0x143, symBinAddr: 0x1E9DA, symSize: 0x50 }
+  - { offset: 0x10954D, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager columnsWithFormat:bitMap:]', symObjAddr: 0x193, symBinAddr: 0x1EA2A, symSize: 0xE7 }
+  - { offset: 0x109641, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager applyToPreparedStatement:bitMap:]', symObjAddr: 0x27A, symBinAddr: 0x1EB11, symSize: 0x111 }
+  - { offset: 0x1097A0, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreManager tableCreationQuery]', symObjAddr: 0x38B, symBinAddr: 0x1EC22, symSize: 0x189 }
+  - { offset: 0x1098E3, size: 0x8, addend: 0x0, symName: '+[FLICDataStoreManager migrateFromVersion:database:]', symObjAddr: 0x514, symBinAddr: 0x1EDAB, symSize: 0xB }
+  - { offset: 0x10993B, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager identifier]', symObjAddr: 0x51F, symBinAddr: 0x1EDB6, symSize: 0xA }
+  - { offset: 0x109970, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager setIdentifier:]', symObjAddr: 0x529, symBinAddr: 0x1EDC0, symSize: 0x11 }
+  - { offset: 0x1099B1, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager restorationIdentifier]', symObjAddr: 0x53A, symBinAddr: 0x1EDD1, symSize: 0xA }
+  - { offset: 0x1099E6, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager setRestorationIdentifier:]', symObjAddr: 0x544, symBinAddr: 0x1EDDB, symSize: 0x11 }
+  - { offset: 0x109A27, size: 0x8, addend: 0x0, symName: '-[FLICDataStoreManager .cxx_destruct]', symObjAddr: 0x555, symBinAddr: 0x1EDEC, symSize: 0x28 }
+  - { offset: 0x109AFD, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject initWithCharacteristic:data:completion:]', symObjAddr: 0x0, symBinAddr: 0x1EE14, symSize: 0xD5 }
+  - { offset: 0x109CF7, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject initWithCharacteristic:data:completion:]', symObjAddr: 0x0, symBinAddr: 0x1EE14, symSize: 0xD5 }
+  - { offset: 0x109DE7, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject characteristic]', symObjAddr: 0xD5, symBinAddr: 0x1EEE9, symSize: 0xA }
+  - { offset: 0x109E1C, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject setCharacteristic:]', symObjAddr: 0xDF, symBinAddr: 0x1EEF3, symSize: 0x11 }
+  - { offset: 0x109E5D, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject dataToWrite]', symObjAddr: 0xF0, symBinAddr: 0x1EF04, symSize: 0xA }
+  - { offset: 0x109E92, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject setDataToWrite:]', symObjAddr: 0xFA, symBinAddr: 0x1EF0E, symSize: 0x11 }
+  - { offset: 0x109ED3, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject completionBlockWrite]', symObjAddr: 0x10B, symBinAddr: 0x1EF1F, symSize: 0x14 }
+  - { offset: 0x109F0A, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject setCompletionBlockWrite:]', symObjAddr: 0x11F, symBinAddr: 0x1EF33, symSize: 0xF }
+  - { offset: 0x109F49, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject isWriteWithResponse]', symObjAddr: 0x12E, symBinAddr: 0x1EF42, symSize: 0xA }
+  - { offset: 0x109F7E, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject setIsWriteWithResponse:]', symObjAddr: 0x138, symBinAddr: 0x1EF4C, symSize: 0x9 }
+  - { offset: 0x109FBB, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject .cxx_destruct]', symObjAddr: 0x141, symBinAddr: 0x1EF55, symSize: 0x33 }
+  - { offset: 0x10A05C, size: 0x8, addend: 0x0, symName: _FLICErrorDomain, symObjAddr: 0x40, symBinAddr: 0x2C5F8, symSize: 0x0 }
+  - { offset: 0x10A099, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage initWithNamespace:restore:]', symObjAddr: 0x0, symBinAddr: 0x1EF88, symSize: 0x50E }
+  - { offset: 0x10A0AC, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage initWithNamespace:restore:]', symObjAddr: 0x0, symBinAddr: 0x1EF88, symSize: 0x50E }
+  - { offset: 0x10A0D6, size: 0x8, addend: 0x0, symName: '_initWithNamespace:restore:.stmt_tables_exists', symObjAddr: 0x5EA0, symBinAddr: 0x38BC8, symSize: 0x0 }
+  - { offset: 0x10A0EC, size: 0x8, addend: 0x0, symName: '_initWithNamespace:restore:.stmt_version', symObjAddr: 0x5EA8, symBinAddr: 0x38BD0, symSize: 0x0 }
+  - { offset: 0x10A894, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage storageObjectFromIdentifier:]', symObjAddr: 0x50E, symBinAddr: 0x1F496, symSize: 0x19A }
+  - { offset: 0x10AAC9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage storageObjects]', symObjAddr: 0x6A8, symBinAddr: 0x1F630, symSize: 0x1D7 }
+  - { offset: 0x10ACE0, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage updateStorageObject:]', symObjAddr: 0x87F, symBinAddr: 0x1F807, symSize: 0x19B }
+  - { offset: 0x10AF0B, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage addStorageObject:]', symObjAddr: 0xA1A, symBinAddr: 0x1F9A2, symSize: 0x19B }
+  - { offset: 0x10B108, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage removeStorageObjectWithIdentifier:]', symObjAddr: 0xBB5, symBinAddr: 0x1FB3D, symSize: 0x148 }
+  - { offset: 0x10B2B3, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage objectCount]', symObjAddr: 0xCFD, symBinAddr: 0x1FC85, symSize: 0xD3 }
+  - { offset: 0x10B3C9, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage BCBDBPath]', symObjAddr: 0xDD0, symBinAddr: 0x1FD58, symSize: 0xA }
+  - { offset: 0x10B3FE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage setBCBDBPath:]', symObjAddr: 0xDDA, symBinAddr: 0x1FD62, symSize: 0x11 }
+  - { offset: 0x10B43F, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage BCBDB]', symObjAddr: 0xDEB, symBinAddr: 0x1FD73, symSize: 0xA }
+  - { offset: 0x10B474, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage setBCBDB:]', symObjAddr: 0xDF5, symBinAddr: 0x1FD7D, symSize: 0xA }
+  - { offset: 0x10B4B1, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorage .cxx_destruct]', symObjAddr: 0xDFF, symBinAddr: 0x1FD87, symSize: 0x10 }
+  - { offset: 0x10B576, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject initWithIdentifier:autoConnect:]', symObjAddr: 0x0, symBinAddr: 0x1FD97, symSize: 0x76 }
+  - { offset: 0x10B5D8, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject initWithIdentifier:autoConnect:]', symObjAddr: 0x0, symBinAddr: 0x1FD97, symSize: 0x76 }
+  - { offset: 0x10B658, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject identifier]', symObjAddr: 0x76, symBinAddr: 0x1FE0D, symSize: 0xA }
+  - { offset: 0x10B68D, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject setIdentifier:]', symObjAddr: 0x80, symBinAddr: 0x1FE17, symSize: 0x11 }
+  - { offset: 0x10B6CE, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject autoConnect]', symObjAddr: 0x91, symBinAddr: 0x1FE28, symSize: 0xA }
+  - { offset: 0x10B703, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject setAutoConnect:]', symObjAddr: 0x9B, symBinAddr: 0x1FE32, symSize: 0x9 }
+  - { offset: 0x10B740, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBDataStorageObject .cxx_destruct]', symObjAddr: 0xA4, symBinAddr: 0x1FE3B, symSize: 0x10 }
+...
