@@ -10,7 +10,7 @@ let package = Package(
   ],
 
   products: [
-    .library(name: "Flic2a", targets: ["Flic2a", "Flic2XCFramework"]),
+    .library(name: "Flic2a", targets: ["Flic2b", "Flic2XCFramework"]),
   ],
 
   targets: [
