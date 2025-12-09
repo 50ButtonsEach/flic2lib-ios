@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class FLICButtonEvent;
+
 @protocol FLICButtonDelegate;
 
 /*!
@@ -290,6 +292,17 @@ NS_ASSUME_NONNULL_BEGIN
  *
  */
 - (void)button:(FLICButton *)button didReceiveButtonHold:(BOOL)queued age:(NSInteger)age;
+
+/*!
+ *  @method button:didReceiveButtonEvent:
+ *
+ *  @param button       The FLICButton instance that the event originated from.
+ *  @param event        Information about the event
+ *
+ *  @discussion     A receiver for all push related events. This method is required to receive Flic Duo events.
+ *
+ */
+- (void)button:(FLICButton *)button didReceiveButtonEvent:(FLICButtonEvent *)event;
 
 /*!
  *  @method button:didUnpairWithError:
