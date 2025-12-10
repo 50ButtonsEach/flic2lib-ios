@@ -4,6 +4,10 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.5.0
+
+* Adds support for Flic Duo push and swipe gestures.
+
 ## flic2lib-ios 1.4.0
 
 * Removed dependency on NSFileModificationDate, NSFileSystemFreeSize, NSFileSystemSize to avoid requirement to declare API usage reason
