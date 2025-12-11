@@ -95,7 +95,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the button number.
 - (void)isButtonDown:(void (NS_NOESCAPE ^)(uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onButtonDown(_:));
+	NS_SWIFT_NAME(isButtonDown(_:));
 
 /// Convenience method.
 /// The handler is called if the event is a ButtonUp event.
@@ -103,7 +103,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the button number.
 - (void)isButtonUp:(void (NS_NOESCAPE ^)(uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onButtonUp(_:));
+	NS_SWIFT_NAME(isButtonUp(_:));
 
 /// Convenience method.
 /// The handler is called if the event is a swipe gesture (excluding NoGesture or Unrecognized).
@@ -111,7 +111,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the specific gesture type and button number.
 - (void)isGesture:(void (NS_NOESCAPE ^)(FLICButtonEventGesture gesture, uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onGesture(_:));
+	NS_SWIFT_NAME(isGesture(_:));
 
 /// Convenience method.
 /// The handler is called if the event is a Click or Hold event.
@@ -123,7 +123,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the event type (Click or Hold) and button number.
 - (void)isClickOrHold:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onClickOrHold(_:));
+	NS_SWIFT_NAME(isClickOrHold(_:));
 
 /// Convenience method.
 /// The handler is called if the event is a Click or Double Click event.
@@ -135,7 +135,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the event type (SingleClick or DoubleClick) and button number.
 - (void)isSingleOrDoubleClick:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onSingleOrDoubleClick(_:));
+	NS_SWIFT_NAME(isSingleOrDoubleClick(_:));
 
 /// Convenience method.
 /// The handler is called if the event is a Click or Double Click event.
@@ -148,7 +148,7 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 ///
 /// - Parameter handler: The block to execute, containing the event type and button number.
 - (void)isSingleOrDoubleClickOrHold:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
-	NS_SWIFT_NAME(onSingleOrDoubleClickOrHold(_:));
+	NS_SWIFT_NAME(isSingleOrDoubleClickOrHold(_:));
 @end
 
 
