@@ -1,12 +1,14 @@
 //
 //  FLICButtonEvent.h
-//  fliclib
+//  flic2lib
 //
 //  Created by Oskar Öberg on 2025-06-09.
 //  Copyright © 2025 Shortcut Labs. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSUInteger, FLICButtonEventClass) {
 	FLICButtonEventClassUpOrDown,
@@ -24,195 +26,130 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventType) {
 	FLICButtonEventTypeHold
 };
 
+typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
+	FLICButtonEventGestureNoGesture,
+	FLICButtonEventGestureUnrecognizedGesture,
+	FLICButtonEventGestureLeft,
+	FLICButtonEventGestureRight,
+	FLICButtonEventGestureUp,
+	FLICButtonEventGestureDown
+};
+
+/// Button event class.
+///
+/// Each time the button is interacted with, one or more events will be sent.
+///
+/// Usually an application only needs to listen to one event class.
+///
+/// Since distinguishing between single and double click needs some waiting time after the first
+/// click to detect if a second press will occur or not, single click events will be delayed for the
+/// last two event classes but not for the first two, it is important to pick the right event class
+/// for the use case.
+///
+/// For a particular event class, only the specified button event types may be emitted.
 @interface FLICButtonEvent : NSObject
 
-@property (nonatomic, assign) FLICButtonEventClass eventClass;
-@property (nonatomic, assign) FLICButtonEventType type;
+/// The event class represents the context of the event. The event class determines which
+/// potential types can exist.
+@property (nonatomic, readonly) FLICButtonEventClass eventClass;
 
-/**
- * An event counter that starts at zero when the Flic 2 boots and always increases.
- *
- * This value divided by four indicates roughly how many times the button has been pressed and released.
- *
- * More specific, event_count mod 4 should be 1: down, 2: hold, 3: up, 0: single click timeout.
- */
-@property (nonatomic, assign) uint32_t eventCount;
+/// The event type.
+@property (nonatomic, readonly) FLICButtonEventType type;
 
-/**
- * Which physical button was pressed.
- *
- * For Flic duo, it can be 0 or 1. For Flic 2, always 0.
- */
-@property (nonatomic, assign) uint8_t buttonNumber;
+/// An event counter that starts at zero when the Flic 2 boots and always increases.
+///
+/// This value divided by four indicates roughly how many times the button has been pressed and released.
+///
+/// More specific, event_count mod 4 should be 1: down, 2: hold, 3: up, 0: single click timeout.
+@property (nonatomic, readonly) uint32_t eventCount;
 
-/**
- * Indicates if this button event was queued, i.e. it was pressed some time ago before connection setup completed.
- */
-@property (nonatomic, assign) BOOL wasQueued;
+/// Which physical button was pressed.
+///
+/// For Flic Duo, it can be 0 or 1. For Flic 2, always 0.
+@property (nonatomic, readonly) uint8_t buttonNumber;
 
-/**
- * If this event was queued, this value contains the age of the event, in seconds. If this event was not queued, the value will be zero.
- */
-@property (nonatomic, assign) double age;
+/// Indicates if this button event was queued, i.e. it was pressed some time ago before connection setup completed.
+@property (nonatomic, readonly) BOOL wasQueued;
 
-/**
- * Accelerometer values.
- */
-@property (nonatomic, assign) int8_t x;
-@property (nonatomic, assign) int8_t y;
-@property (nonatomic, assign) int8_t z;
+/// If this event was queued, this value contains the age of the event, in seconds. If this event was not queued, the value will be zero.
+@property (nonatomic, readonly) double age;
 
-/**
- * Gesture, -1 if no gesture.
- */
-@property (nonatomic, assign) int gesture;
+/// The X-axis accelerometer value at the time of the event.
+@property (nonatomic, readonly) int8_t x;
 
-/**
- * Button was held down at least 0.5 seconds.
- */
-@property (nonatomic, assign) BOOL downAtLeastHalfASecond;
+/// The Y-axis accelerometer value at the time of the event.
+@property (nonatomic, readonly) int8_t y;
 
-- (instancetype)initWithEventClass:(FLICButtonEventClass)eventClass eventType:(FLICButtonEventType)eventType eventCount:(uint32_t)eventCount buttonNumber:(uint32_t)buttonNumber wasQueued:(BOOL)wasQueued age:(double)age x:(int8_t)x y:(int8_t)y z:(int8_t)z gesture:(int)gesture downAtLeastHalfASecond:(BOOL)downAtLeastHalfASecond;
+/// The Z-axis accelerometer value at the time of the event.
+@property (nonatomic, readonly) int8_t z;
 
-- (BOOL)isOnWall;
-- (BOOL)isButtonDown;
-- (BOOL)isButtonDownOnButtonNumber:(int)buttonNumber;
+/// Gesture, -1 if no gesture.
+@property (nonatomic, readonly) FLICButtonEventGesture gesture;
 
+/// Button was held down at least 0.5 seconds.
+@property (nonatomic, readonly) BOOL downAtLeastHalfASecond;
+
+/// Convenience method.
+/// The handler is called if the event is a ButtonDown event.
+/// Use this for raw, low-latency interactions.
+///
+/// - Parameter handler: The block to execute, containing the button number.
+- (void)isButtonDown:(void (NS_NOESCAPE ^)(uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onButtonDown(_:));
+
+/// Convenience method.
+/// The handler is called if the event is a ButtonUp event.
+/// Use this for raw, low-latency interactions.
+///
+/// - Parameter handler: The block to execute, containing the button number.
+- (void)isButtonUp:(void (NS_NOESCAPE ^)(uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onButtonUp(_:));
+
+/// Convenience method.
+/// The handler is called if the event is a swipe gesture (excluding NoGesture or Unrecognized).
+/// This is evaluated upon the button release (Up) event.
+///
+/// - Parameter handler: The block to execute, containing the specific gesture type and button number.
+- (void)isGesture:(void (NS_NOESCAPE ^)(FLICButtonEventGesture gesture, uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onGesture(_:));
+
+/// Convenience method.
+/// The handler is called if the event is a Click or Hold event.
+///
+/// Use this method if you do not need to support Double Clicks.
+/// This is faster than `isSingleOrDoubleClick`. Because it does does not need
+/// to wait/listen for a potential second click, "Click" events are fired
+/// immediately upon release.
+///
+/// - Parameter handler: The block to execute, containing the event type (Click or Hold) and button number.
+- (void)isClickOrHold:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onClickOrHold(_:));
+
+/// Convenience method.
+/// The handler is called if the event is a Click or Double Click event.
+///
+/// Use this method if your application requires distinguishing between one and two clicks.
+/// "Single Click" events will be slightly delayed compared to a standard "Click" since
+/// the system must wait for a short timeout period after the first release to ensure
+/// the user is not attempting a Double Click.
+///
+/// - Parameter handler: The block to execute, containing the event type (SingleClick or DoubleClick) and button number.
+- (void)isSingleOrDoubleClick:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onSingleOrDoubleClick(_:));
+
+/// Convenience method.
+/// The handler is called if the event is a Click or Double Click event.
+///
+/// This handles the widest variety of user inputs but incurs the latency trade-offs
+/// associated with double-click detection.
+/// Like `isSingleOrDoubleClick`, reporting a "Single Click" requires waiting for a
+/// timeout to rule out a Double Click. "Hold" events are generally reported as soon
+/// as the hold threshold is met.
+///
+/// - Parameter handler: The block to execute, containing the event type and button number.
+- (void)isSingleOrDoubleClickOrHold:(void (NS_NOESCAPE ^)(FLICButtonEventType eventType, uint8_t buttonNumber))handler
+	NS_SWIFT_NAME(onSingleOrDoubleClickOrHold(_:));
 @end
 
 
-
-/**
- * Button event class.
- *
- * <p>Each time the button is interacted with, one or more events will be sent.</p>
- *
- * <p>Usually an application only needs to listen to one event class.</p>
- *
- * <p>Since distinguishing between single and double click needs some waiting time after the first
- * click to detect if a second press will occur or not, single click events will be delayed for the
- * last two event classes but not for the first two, it is important to pick the right event class
- * for the use case.</p>
- *
- * <p>For a particular event class, only the specified button event types may be emitted.</p>
- */
-enum Flic2EventButtonEventClass {
-    /**
-     * Up or down.
-     *
-     * <p>Triggered on every button down or release.</p>
-     */
-    FLIC2_EVENT_BUTTON_EVENT_CLASS_UP_OR_DOWN,
-    
-    /**
-     * Click or hold.
-     *
-     * <p>Used if you want to distinguish between click and hold.</p>
-     */
-    FLIC2_EVENT_BUTTON_EVENT_CLASS_CLICK_OR_HOLD,
-    
-    /**
-     * Single or double click.
-     *
-     * <p>Used if you want to distinguish between a single click and a double click.</p>
-     */
-    FLIC2_EVENT_BUTTON_EVENT_CLASS_SINGLE_OR_DOUBLE_CLICK,
-    
-    /**
-     * Single or double click or hold.
-     *
-     * <p>Used if you want to distinguish between a single click, a double click and a hold.</p>
-     */
-    FLIC2_EVENT_BUTTON_EVENT_CLASS_SINGLE_OR_DOUBLE_CLICK_OR_HOLD
-};
-
-/**
- * Button event type.
- */
-enum Flic2EventButtonEventType {
-    /**
-     * The button was pressed.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_UP,
-    
-    /**
-     * The button was released.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_DOWN,
-    
-    /**
-     * The button was clicked, and was held for at most 1 seconds between press and release.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_CLICK,
-    
-    /**
-     * The button was clicked once.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_SINGLE_CLICK,
-    
-    /**
-     * The button was clicked twice. The time between the first and second press must be at most 0.5 seconds.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_DOUBLE_CLICK,
-    
-    /**
-     * The button was held for at least 1 second.
-     */
-    FLIC2_EVENT_BUTTON_EVENT_TYPE_HOLD
-};
-
-/**
- * Flic 2 event - button event.
- */
-struct Flic2EventButtonEvent {
-    /**
-     * The button event class for this event.
-     */
-    enum Flic2EventButtonEventClass event_class;
-    
-    /**
-     * The button event type for this event.
-     */
-    enum Flic2EventButtonEventType event_type;
-    
-    /**
-     * An event counter that starts at zero when the Flic 2 boots and always increases.
-     *
-     * <p>This value divided by four indicates roughly how many times the button has been pressed and released.</p>
-     *
-     * <p>More specific, event_count mod 4 should be 1: down, 2: hold, 3: up, 0: single click timeout.</p>
-     */
-    uint32_t event_count;
-
-    /**
-     * Which physical button was pressed.
-     *
-     * <p>For Flic duo, it can be 0 or 1. For Flic 2, always 0.</p>
-     */
-    uint8_t button_number;
-    
-    /**
-     * Indicates if this button event was queued, i.e. it was pressed some time ago before connection setup completed.
-     */
-    bool was_queued;
-    
-    /**
-     * If this event was queued, this value contains the age of the event, in seconds. If this event was not queued, the value will be zero.
-     */
-    double age;
-
-    /**
-     * Accelerometer values.
-     */
-    int8_t x, y, z;
-
-    /**
-     * Gesture recognition.
-     */
-    int gesture;
-
-    /**
-     * Button was held down at least 0.5 seconds.
-     */
-    bool down_at_least_half_a_second;
-};
+NS_ASSUME_NONNULL_END
