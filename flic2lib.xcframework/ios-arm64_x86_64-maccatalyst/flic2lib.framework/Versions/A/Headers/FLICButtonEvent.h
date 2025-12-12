@@ -47,13 +47,33 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 /// for the use case.
 ///
 /// For a particular event class, only the specified button event types may be emitted.
+///
+/// See convenience methods to easy filter out the event class and types that are relevant.
 @interface FLICButtonEvent : NSObject
 
-/// The event class represents the context of the event. The event class determines which
-/// potential types can exist.
+///Button event class.
+///
+///Each time the button is interacted with, one or more events will be sent.
+///
+///Usually an application only needs to listen to one event class.
+///
+///Since distinguishing between single and double click needs some waiting time after the first
+///click to detect if a second press will occur or not, single click events will be delayed for the
+///last two event classes but not for the first two, it is important to pick the right event class
+///for the use case.
+///
+///For a particular event class, only the specified button event types may be emitted.
 @property (nonatomic, readonly) FLICButtonEventClass eventClass;
 
-/// The event type.
+///Button event type within the specified event class.
+///
+///For FLICButtonEventClassUpOrDown, event type will be either FLICButtonEventTypeUp or FLICButtonEventTypeDown.
+///
+///For FLICButtonEventClassClickOrHold, event type will be either FLICButtonEventTypeUpClick or FLICButtonEventTypeHold.
+///
+///For FLICButtonEventClassSingleOrDoubleClick, event type will be either FLICButtonEventTypeUpSingleClick or FLICButtonEventTypeDoubleClick.
+///
+///For FLICButtonEventClassSingleOrDoubleClickOrHold, event type will be either FLICButtonEventTypeSingleClick, FLICButtonEventTypeDoubleClick or FLICButtonEventTypeHold.
 @property (nonatomic, readonly) FLICButtonEventType type;
 
 /// An event counter that starts at zero when the Flic 2 boots and always increases.
