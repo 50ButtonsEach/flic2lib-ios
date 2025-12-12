@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, FLICButtonEventClass) {
+typedef NS_ENUM(uint8_t, FLICButtonEventClass) {
 	FLICButtonEventClassUpOrDown,
 	FLICButtonEventClassClickOrHold,
 	FLICButtonEventClassSingleOrDoubleClick,
 	FLICButtonEventClassSingleOrDoubleClickOrHold
 };
 
-typedef NS_ENUM(NSUInteger, FLICButtonEventType) {
+typedef NS_ENUM(uint8_t, FLICButtonEventType) {
 	FLICButtonEventTypeUp,
 	FLICButtonEventTypeDown,
 	FLICButtonEventTypeClick,
@@ -26,13 +26,13 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventType) {
 	FLICButtonEventTypeHold
 };
 
-typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
-	FLICButtonEventGestureNoGesture,
-	FLICButtonEventGestureUnrecognizedGesture,
-	FLICButtonEventGestureLeft,
-	FLICButtonEventGestureRight,
-	FLICButtonEventGestureUp,
-	FLICButtonEventGestureDown
+typedef NS_ENUM(int8_t, FLICButtonEventGesture) {
+	FLICButtonEventGestureNoGesture = -1,
+	FLICButtonEventGestureUnrecognizedGesture = 0,
+	FLICButtonEventGestureLeft = 1,
+	FLICButtonEventGestureRight = 2,
+	FLICButtonEventGestureUp = 3,
+	FLICButtonEventGestureDown = 4
 };
 
 /// Button event class.
