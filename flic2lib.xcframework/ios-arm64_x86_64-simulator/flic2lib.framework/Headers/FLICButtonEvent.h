@@ -125,6 +125,8 @@ typedef NS_ENUM(NSUInteger, FLICButtonEventGesture) {
 - (void)isButtonUp:(void (NS_NOESCAPE ^)(uint8_t buttonNumber))handler
 	NS_SWIFT_NAME(isButtonUp(_:));
 
+- (void)isButtonUpOrDown:(void (NS_NOESCAPE ^)(FLICButtonEventType type, uint8_t buttonNumber))handler NS_SWIFT_NAME(isButtonUpOrDown(_:));
+
 /// Convenience method.
 /// The handler is called if the event is a swipe gesture (excluding NoGesture or Unrecognized).
 /// This is evaluated upon the button release (Up) event.

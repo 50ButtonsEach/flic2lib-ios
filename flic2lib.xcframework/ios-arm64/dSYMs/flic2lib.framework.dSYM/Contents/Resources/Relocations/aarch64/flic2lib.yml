@@ -751,9 +751,9 @@ relocations:
   - { offset: 0x7C5E3, size: 0x8, addend: 0x0, symName: '-[FLIC2BCBWriteObject .cxx_destruct]', symObjAddr: 0x138, symBinAddr: 0x23EA8, symSize: 0x3C }
   - { offset: 0x7C671, size: 0x8, addend: 0x0, symName: '+[FLICManager sharedManager]', symObjAddr: 0x0, symBinAddr: 0x23EE4, symSize: 0xC }
   - { offset: 0x7C690, size: 0x8, addend: 0x0, symName: _FLICErrorDomain, symObjAddr: 0x34A8, symBinAddr: 0x3C9B8, symSize: 0x0 }
-  - { offset: 0x7C6AB, size: 0x8, addend: 0x0, symName: __sharedManager, symObjAddr: 0xE6B8, symBinAddr: 0x493F0, symSize: 0x0 }
+  - { offset: 0x7C6AB, size: 0x8, addend: 0x0, symName: __sharedManager, symObjAddr: 0xE6B0, symBinAddr: 0x493F0, symSize: 0x0 }
   - { offset: 0x7C78B, size: 0x8, addend: 0x0, symName: '+[FLICManager configureWithDelegate:buttonDelegate:background:]', symObjAddr: 0xC, symBinAddr: 0x23EF0, symSize: 0xE4 }
-  - { offset: 0x7C7B5, size: 0x8, addend: 0x0, symName: '_configureWithDelegate:buttonDelegate:background:.onceToken', symObjAddr: 0xE6C0, symBinAddr: 0x493F8, symSize: 0x0 }
+  - { offset: 0x7C7B5, size: 0x8, addend: 0x0, symName: '_configureWithDelegate:buttonDelegate:background:.onceToken', symObjAddr: 0xE6B8, symBinAddr: 0x493F8, symSize: 0x0 }
   - { offset: 0x7C97F, size: 0x8, addend: 0x0, symName: '+[FLICManager sharedManager]', symObjAddr: 0x0, symBinAddr: 0x23EE4, symSize: 0xC }
   - { offset: 0x7CA5B, size: 0x8, addend: 0x0, symName: '___63+[FLICManager configureWithDelegate:buttonDelegate:background:]_block_invoke', symObjAddr: 0xF0, symBinAddr: 0x23FD4, symSize: 0x48 }
   - { offset: 0x7CAB6, size: 0x8, addend: 0x0, symName: '-[FLICManager initWithDelegate:defaultButtonDelegate:background:restoreState:]', symObjAddr: 0x188, symBinAddr: 0x2401C, symSize: 0x26C }
