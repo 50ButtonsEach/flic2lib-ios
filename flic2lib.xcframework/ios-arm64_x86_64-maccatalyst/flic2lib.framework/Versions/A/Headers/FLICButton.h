@@ -118,6 +118,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
+/// A receiver for all push related events. This method is required to receive Flic Duo events.
+///
+/// - Parameter button: The FLICButton instance that the event originated from.
+/// - Parameter event: Information about the event
+- (void)button:(FLICButton *)button didReceiveButtonEvent:(FLICButtonEvent *)event;
+
 /// The Flic registered a button down event.
 ///
 /// - Parameter button: The FLICButton instance that the event originated from.
@@ -152,12 +158,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter queued: Whether the event is a queued event that happened before the Flic connected or if it is a real time event.
 /// - Parameter age: If the event was queued, then this will let you know the age of the event rounded to the nearest second.
 - (void)button:(FLICButton *)button didReceiveButtonHold:(BOOL)queued age:(NSInteger)age;
-
-/// A receiver for all push related events. This method is required to receive Flic Duo events.
-///
-/// - Parameter button: The FLICButton instance that the event originated from.
-/// - Parameter event: Information about the event
-- (void)button:(FLICButton *)button didReceiveButtonEvent:(FLICButtonEvent *)event;
 
 /// The app no longer has a valid pairing with the Flic button. The isUnpaired property will now be YES and all connection
 /// attempts made will immediately fail. To fix this you need to delete the button from the manager and then re-scan it again.
