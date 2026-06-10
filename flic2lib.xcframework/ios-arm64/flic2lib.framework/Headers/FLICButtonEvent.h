@@ -95,13 +95,13 @@ typedef NS_ENUM(int8_t, FLICButtonEventGesture) {
 @property (nonatomic, readonly) double age;
 
 /// The X-axis accelerometer value at the time of the event.
-@property (nonatomic, readonly) float x;
+@property (nonatomic, readonly) int8_t x;
 
 /// The Y-axis accelerometer value at the time of the event.
-@property (nonatomic, readonly) float y;
+@property (nonatomic, readonly) int8_t y;
 
 /// The Z-axis accelerometer value at the time of the event.
-@property (nonatomic, readonly) float z;
+@property (nonatomic, readonly) int8_t z;
 
 /// Gesture, -1 if no gesture.
 @property (nonatomic, readonly) FLICButtonEventGesture gesture;
