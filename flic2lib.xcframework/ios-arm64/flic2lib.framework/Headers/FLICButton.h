@@ -25,6 +25,8 @@ typedef NS_ENUM(NSInteger, FLICButtonEnableAccelerometerStreamingResult) {
     FLICButtonEnableAccelerometerStreamingResultInvalidConfig,
     FLICButtonEnableAccelerometerStreamingResultBusy,
     FLICButtonEnableAccelerometerStreamingResultNotReady,
+    FLICButtonEnableAccelerometerStreamingResultNotSupported,
+    FLICButtonEnableAccelerometerStreamingResultFirmwareUpdateNeeded,
 };
 
 typedef NS_ENUM(NSInteger, FLICButtonEnableFallDetectionResult) {
@@ -32,11 +34,15 @@ typedef NS_ENUM(NSInteger, FLICButtonEnableFallDetectionResult) {
     FLICButtonEnableFallDetectionResultInvalidConfig,
     FLICButtonEnableFallDetectionResultBusy,
     FLICButtonEnableFallDetectionResultNotReady,
+    FLICButtonEnableFallDetectionResultNotSupported,
+    FLICButtonEnableFallDetectionResultFirmwareUpdateNeeded,
 };
 
-typedef NS_ENUM(NSInteger, FLICButtonSetAdvParametersResult) {
-    FLICButtonSetAdvParametersResultSuccess = 0,
-    FLICButtonSetAdvParametersResultNotConnected,
+typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
+    FLICButtonSetAlwaysReconnectResultSuccess = 0,
+    FLICButtonSetAlwaysReconnectResultNotConnected,
+    FLICButtonSetAlwaysReconnectResultNotSupported,
+    FLICButtonSetAlwaysReconnectResultFirmwareUpdateNeeded,
 };
 
 @interface FLICButtonAccelerometerDataPoint : NSObject
@@ -228,7 +234,7 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAdvParametersResult) {
 /// If set to YES, the button will always try to reconnect regardless if it has anything to report. This can be useful if you want to monitor battery levels even if the button is left unused for a long time but might have negative impact on battery performance.
 /// If set to NO it typically only reconnects if pressed or lost connection.
 /// This setting is persisted on the device
-- (void)setAlwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonSetAdvParametersResult result))completionHandler;
+- (void)setAlwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonSetAlwaysReconnectResult result))completionHandler;
 
 /// Disables fall detection.
 /// - Parameter disableAlwaysReconnect: If YES, also disables always-reconnect advertising.
