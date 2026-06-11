@@ -20,6 +20,12 @@ Have a look at the repository Wiki for further information:
 
 	Deployment information.
 
+## Fall Detection
+
+Please refer to the Fall Detection Documentation:
+
+* [Fall Detection Documentation](https://github.com/50ButtonsEach/flic2-documentation/wiki/Fall-Detection-Documentation)
+
 ## Licence
 
 Any documentation or source code contained in this repository is released under [CC0](LICENCE%20(for%20the%20documentation%20and%20source%20code).txt). The flic2lib binary is released under a [separate license](LICENCE%20(for%20the%20flic2lib%20binary).txt) which allows you to use it almost without restrictions.
