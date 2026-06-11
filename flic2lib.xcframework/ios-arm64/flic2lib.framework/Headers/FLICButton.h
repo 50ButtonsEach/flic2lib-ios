@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, FLICButtonFallDetectionState) {
 };
 
 typedef NS_ENUM(NSInteger, FLICButtonEnableAccelerometerStreamingResult) {
-    FLICButtonEnableAccelerometerStreamingResultOK = 0,
+    FLICButtonEnableAccelerometerStreamingResultSuccess = 0,
     FLICButtonEnableAccelerometerStreamingResultInvalidConfig,
     FLICButtonEnableAccelerometerStreamingResultBusy,
     FLICButtonEnableAccelerometerStreamingResultNotReady,
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, FLICButtonEnableAccelerometerStreamingResult) {
 };
 
 typedef NS_ENUM(NSInteger, FLICButtonEnableFallDetectionResult) {
-    FLICButtonEnableFallDetectionResultOK = 0,
+    FLICButtonEnableFallDetectionResultSuccess = 0,
     FLICButtonEnableFallDetectionResultInvalidConfig,
     FLICButtonEnableFallDetectionResultBusy,
     FLICButtonEnableFallDetectionResultNotReady,
@@ -43,6 +43,13 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
     FLICButtonSetAlwaysReconnectResultNotConnected,
     FLICButtonSetAlwaysReconnectResultNotSupported,
     FLICButtonSetAlwaysReconnectResultFirmwareUpdateNeeded,
+};
+
+typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
+    FLICButtonAccelerometerFullScaleSelectionTwoG = 0,
+    FLICButtonAccelerometerFullScaleSelectionFourG = 1,
+    FLICButtonAccelerometerFullScaleSelectionEightG = 2,
+    FLICButtonAccelerometerFullScaleSelectionSixteenG = 3,
 };
 
 @interface FLICButtonAccelerometerDataPoint : NSObject
@@ -77,7 +84,7 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
 @property (nonatomic, readonly) uint8_t mode;
 @property (nonatomic, readonly) uint8_t outputDataRate;
 @property (nonatomic, readonly) uint8_t bandwidthFilter;
-@property (nonatomic, readonly) uint8_t fullScaleSelection;
+@property (nonatomic, readonly) FLICButtonAccelerometerFullScaleSelection fullScaleSelection;
 @property (nonatomic, readonly) uint8_t filterDatatypeSelection;
 @property (nonatomic, readonly) uint8_t lowNoise;
 @property (nonatomic, readonly) uint8_t highPassRefMode;
@@ -88,7 +95,7 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
                                 mode:(uint8_t)mode
                       outputDataRate:(uint8_t)outputDataRate
                      bandwidthFilter:(uint8_t)bandwidthFilter
-                  fullScaleSelection:(uint8_t)fullScaleSelection
+                  fullScaleSelection:(FLICButtonAccelerometerFullScaleSelection)fullScaleSelection
              filterDatatypeSelection:(uint8_t)filterDatatypeSelection
                             lowNoise:(uint8_t)lowNoise
                      highPassRefMode:(uint8_t)highPassRefMode
@@ -109,13 +116,15 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
 @interface FLICButtonFallDetectionConfig : NSObject
 
 /// The acceleration magnitude threshold, in mg, used to enter the low-G state.
-/// The average acceleration magnitude must remain below this threshold for at least lowGDurationMs before the firmware starts listening for an impact.
+/// The average acceleration magnitude must remain below this threshold for at least lowGDurationMs before the device starts listening for an impact.
 @property (nonatomic, readonly) uint16_t lowGThresholdMg;
 
 /// The minimum duration, in milliseconds, that the average acceleration magnitude must remain below lowGThresholdMg to enter the low-G state.
 @property (nonatomic, readonly) uint16_t lowGDurationMs;
 
 /// The maximum time, in milliseconds, allowed between entering the low-G state and detecting the high-G impact event.
+/// This allows a short transition window between the falling phase and the impact, so falls can still be detected when the impact is delayed or less abrupt.
+/// Increasing this value can also increase the probability of false positives.
 /// If no matching high-G event is detected within this timeout, the fall detection sequence is not considered a fall.
 @property (nonatomic, readonly) uint16_t highGTimeoutMs;
 
@@ -127,11 +136,11 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
 @property (nonatomic, readonly) uint16_t highGTimeWindowMs;
 
 /// The duration, in milliseconds, that accelerometer samples are recorded after a fall has been detected.
-/// When a high-G event is detected within highGTimeoutMs, the firmware sends a fall detection triggered event and continues recording for this duration before streaming the post-event data to the host.
+/// When a high-G event is detected within highGTimeoutMs, the device sends a fall detection triggered event and continues recording for this duration before streaming the post-event data to the host.
 @property (nonatomic, readonly) uint16_t postEventRecordDurationMs;
 
 /// The accelerometer full-scale range selection used while fall detection is active.
-@property (nonatomic, readonly) uint8_t fullScaleSelection;
+@property (nonatomic, readonly) FLICButtonAccelerometerFullScaleSelection fullScaleSelection;
 
 - (instancetype)initWithLowGThresholdMg:(uint16_t)lowGThresholdMg
                          lowGDurationMs:(uint16_t)lowGDurationMs
@@ -139,7 +148,7 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
                        highGThresholdMg:(uint16_t)highGThresholdMg
                       highGTimeWindowMs:(uint16_t)highGTimeWindowMs
               postEventRecordDurationMs:(uint16_t)postEventRecordDurationMs
-                     fullScaleSelection:(uint8_t)fullScaleSelection;
+                     fullScaleSelection:(FLICButtonAccelerometerFullScaleSelection)fullScaleSelection;
 
 @end
 
@@ -227,7 +236,11 @@ typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
 - (void)disableAccelerometerStreaming;
 
 /// Enables fall detection.
-/// - Parameter alwaysReconnect: If YES, also enables always-reconnect advertising. This ensures the button will always reconnect after losing a connection. It might consume more battery if the button is often out of range, but ensures fall detection works even after the button has been disconnected by iOS. If this is set to YES, the library acts as if you would have called setAlwaysReconnect:YES just right before calling this method.
+/// Fall detection continuously monitors the built-in accelerometer for the pattern of a fall: a low-G event, indicating falling, followed by a high-G impact.
+/// When the configured conditions are met, an event is reported through button:didUpdateFallDetection:, where accelerometer data for the fall event is delivered.
+/// See https://github.com/50ButtonsEach/flic2-documentation/wiki/Fall-Detection-Documentation for more information.
+/// - Parameter config: The thresholds and timing used to detect a fall.
+/// - Parameter alwaysReconnect: If YES, also enables always-reconnect advertising. This is recommended for fall detection because a fall can be detected without a button press, while a button press is normally the signal that causes the Duo to advertise and reconnect after a lost connection. See setAlwaysReconnect:completionHandler: for details.
 - (void)enableFallDetectionWithConfig:(FLICButtonFallDetectionConfig *)config alwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonEnableFallDetectionResult result))completionHandler;
 
 /// Sets whether the button should always reconnect when disconnected
