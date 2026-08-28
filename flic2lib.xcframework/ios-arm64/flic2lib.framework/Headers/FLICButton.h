@@ -78,7 +78,7 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 
 @end
 
-@interface FLICButtonAccelerometerConfig : NSObject
+@interface FLICButtonAccelerometerStreamingConfig : NSObject
 
 @property (nonatomic, readonly) uint8_t lowPowerMode;
 @property (nonatomic, readonly) uint8_t mode;
@@ -106,10 +106,14 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 
 @interface FLICButtonBuzzerNote : NSObject
 
-@property (nonatomic, readonly) int hz;
-@property (nonatomic, readonly) float duration;
+/// The note pitch in hz
+@property (nonatomic, readonly) float hz;
+/// The note duration in milliseconds, from 0 to 65535.
+@property (nonatomic, readonly) uint16_t duration;
 
-- (instancetype)initWithHz:(int)hz duration:(float)duration;
+/// The note pitch in hz, 0 indicates silence
+/// The note duration in milliseconds, from 0 to 65535.
+- (instancetype)initWithHz:(float)hz duration:(uint16_t)duration;
 
 @end
 
@@ -226,24 +230,33 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 /// Disconnect a currently connected Flic or cancel a pending connection.
 - (void)disconnect;
 
-/// Playes a series of notes on Flic Duos buzzer. The maximum number of notes is 30
+///Plays a series of notes on Flic Duo's buzzer.
+///The button must be connected and ready. If a previous sequence is already in progress playing, that one will be aborted.
+///Only works on Flic Duo with firmware revision 20 or later.
+/// - Parameter notes At most 30 notes are played. Any notes beyond the first 30 are ignored.
 - (void)playBuzzerSound:(NSArray<FLICButtonBuzzerNote *> *)notes;
 
 /// Enables accelerometer streaming.
-- (void)enableAccelerometerStreamingWithConfig:(FLICButtonAccelerometerConfig *)config completionHandler:(void (^)(FLICButtonEnableAccelerometerStreamingResult result))completionHandler;
+/// Only works on Flic Duo with firmware revision 20 or later.
+///
+/// The completion handler is not called if another call to this method or disableAccelerometerStreaming
+/// occurs before the device responds.
+- (void)enableAccelerometerStreamingWithConfig:(FLICButtonAccelerometerStreamingConfig *)config completionHandler:(void (^)(FLICButtonEnableAccelerometerStreamingResult result))completionHandler;
 
 /// Disables accelerometer streaming.
 - (void)disableAccelerometerStreaming;
 
 /// Enables fall detection.
+/// Only works on Flic Duo with firmware revision 20 or later.
 /// Fall detection continuously monitors the built-in accelerometer for the pattern of a fall: a low-G event, indicating falling, followed by a high-G impact.
 /// When the configured conditions are met, an event is reported through button:didUpdateFallDetection:, where accelerometer data for the fall event is delivered.
 /// See https://github.com/50ButtonsEach/flic2-documentation/wiki/Fall-Detection-Documentation for more information.
 /// - Parameter config: The thresholds and timing used to detect a fall.
-/// - Parameter alwaysReconnect: If YES, also enables always-reconnect advertising. This is recommended for fall detection because a fall can be detected without a button press, while a button press is normally the signal that causes the Duo to advertise and reconnect after a lost connection. See setAlwaysReconnect:completionHandler: for details.
+/// - Parameter alwaysReconnect: If YES, also enables always-reconnect advertising. This is recommended for fall detection because a fall can be detected without a button press, while a button press is normally the signal that causes the Duo to advertise and reconnect after a lost connection. See setAlwaysReconnect:completionHandler: for details. If NO, the always reconnect setting will not be touched.
 - (void)enableFallDetectionWithConfig:(FLICButtonFallDetectionConfig *)config alwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonEnableFallDetectionResult result))completionHandler;
 
 /// Sets whether the button should always reconnect when disconnected
+/// Only works on Flic Duo with firmware revision 20 or later.
 /// If set to YES, the button will always try to reconnect regardless if it has anything to report. This can be useful if you want to monitor battery levels even if the button is left unused for a long time but might have negative impact on battery performance.
 /// If set to NO it typically only reconnects if pressed or lost connection.
 /// This setting is persisted on the device
