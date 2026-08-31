@@ -6,7 +6,7 @@
 //  Copyright © 2020 Shortcut Labs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 #import <flic2lib/FLICEnums.h>
 #import <flic2lib/FLICManager.h>

@@ -13,6 +13,149 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class FLICButtonEvent;
 
+typedef NS_ENUM(NSInteger, FLICButtonFallDetectionState) {
+    FLICButtonFallDetectionStateTriggered,
+    FLICButtonFallDetectionStatePreFallDataCollected,
+    FLICButtonFallDetectionStateCompleted,
+    FLICButtonFallDetectionStateDisabled,
+};
+
+typedef NS_ENUM(NSInteger, FLICButtonEnableAccelerometerStreamingResult) {
+    FLICButtonEnableAccelerometerStreamingResultSuccess = 0,
+    FLICButtonEnableAccelerometerStreamingResultInvalidConfig,
+    FLICButtonEnableAccelerometerStreamingResultBusy,
+    FLICButtonEnableAccelerometerStreamingResultNotReady,
+    FLICButtonEnableAccelerometerStreamingResultNotSupported,
+    FLICButtonEnableAccelerometerStreamingResultFirmwareUpdateNeeded,
+};
+
+typedef NS_ENUM(NSInteger, FLICButtonEnableFallDetectionResult) {
+    FLICButtonEnableFallDetectionResultSuccess = 0,
+    FLICButtonEnableFallDetectionResultInvalidConfig,
+    FLICButtonEnableFallDetectionResultBusy,
+    FLICButtonEnableFallDetectionResultNotReady,
+    FLICButtonEnableFallDetectionResultNotSupported,
+    FLICButtonEnableFallDetectionResultFirmwareUpdateNeeded,
+};
+
+typedef NS_ENUM(NSInteger, FLICButtonSetAlwaysReconnectResult) {
+    FLICButtonSetAlwaysReconnectResultSuccess = 0,
+    FLICButtonSetAlwaysReconnectResultNotConnected,
+    FLICButtonSetAlwaysReconnectResultNotSupported,
+    FLICButtonSetAlwaysReconnectResultFirmwareUpdateNeeded,
+};
+
+typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
+    FLICButtonAccelerometerFullScaleSelectionTwoG = 0,
+    FLICButtonAccelerometerFullScaleSelectionFourG = 1,
+    FLICButtonAccelerometerFullScaleSelectionEightG = 2,
+    FLICButtonAccelerometerFullScaleSelectionSixteenG = 3,
+};
+
+@interface FLICButtonAccelerometerDataPoint : NSObject
+
+@property (nonatomic, readonly) float x;
+@property (nonatomic, readonly) float y;
+@property (nonatomic, readonly) float z;
+
+@end
+
+@interface FLICButtonAccelerometerData : NSObject
+
+@property (nonatomic, readonly, copy) NSArray<FLICButtonAccelerometerDataPoint *> *points;
+
+@end
+
+@interface FLICButtonFallDetectionEvent : NSObject
+
+@property (nonatomic, readonly) FLICButtonFallDetectionState state;
+@property (nonatomic, readonly) uint16_t preFallSampleRate;
+@property (nonatomic, readonly) uint16_t preFallExpectedSampleCount;
+@property (nonatomic, readonly, strong) FLICButtonAccelerometerData *preFallAccelerometerData;
+@property (nonatomic, readonly) uint16_t postFallSampleRate;
+@property (nonatomic, readonly) uint16_t postFallExpectedSampleCount;
+@property (nonatomic, readonly, strong) FLICButtonAccelerometerData *postFallAccelerometerData;
+
+@end
+
+@interface FLICButtonAccelerometerStreamingConfig : NSObject
+
+@property (nonatomic, readonly) uint8_t lowPowerMode;
+@property (nonatomic, readonly) uint8_t mode;
+@property (nonatomic, readonly) uint8_t outputDataRate;
+@property (nonatomic, readonly) uint8_t bandwidthFilter;
+@property (nonatomic, readonly) FLICButtonAccelerometerFullScaleSelection fullScaleSelection;
+@property (nonatomic, readonly) uint8_t filterDatatypeSelection;
+@property (nonatomic, readonly) uint8_t lowNoise;
+@property (nonatomic, readonly) uint8_t highPassRefMode;
+@property (nonatomic, readonly) uint8_t onlyWhilePressed;
+@property (nonatomic, readonly) uint8_t samplesPerBurst;
+
+- (instancetype)initWithLowPowerMode:(uint8_t)lowPowerMode
+                                mode:(uint8_t)mode
+                      outputDataRate:(uint8_t)outputDataRate
+                     bandwidthFilter:(uint8_t)bandwidthFilter
+                  fullScaleSelection:(FLICButtonAccelerometerFullScaleSelection)fullScaleSelection
+             filterDatatypeSelection:(uint8_t)filterDatatypeSelection
+                            lowNoise:(uint8_t)lowNoise
+                     highPassRefMode:(uint8_t)highPassRefMode
+                    onlyWhilePressed:(uint8_t)onlyWhilePressed
+                     samplesPerBurst:(uint8_t)samplesPerBurst;
+
+@end
+
+@interface FLICButtonBuzzerNote : NSObject
+
+/// The note pitch in hz
+@property (nonatomic, readonly) float hz;
+/// The note duration in milliseconds, from 0 to 65535.
+@property (nonatomic, readonly) uint16_t duration;
+
+/// The note pitch in hz, 0 indicates silence
+/// The note duration in milliseconds, from 0 to 65535.
+- (instancetype)initWithHz:(float)hz duration:(uint16_t)duration;
+
+@end
+
+@interface FLICButtonFallDetectionConfig : NSObject
+
+/// The acceleration magnitude threshold, in mg, used to enter the low-G state.
+/// The average acceleration magnitude must remain below this threshold for at least lowGDurationMs before the device starts listening for an impact.
+@property (nonatomic, readonly) uint16_t lowGThresholdMg;
+
+/// The minimum duration, in milliseconds, that the average acceleration magnitude must remain below lowGThresholdMg to enter the low-G state.
+@property (nonatomic, readonly) uint16_t lowGDurationMs;
+
+/// The maximum time, in milliseconds, allowed between entering the low-G state and detecting the high-G impact event.
+/// This allows a short transition window between the falling phase and the impact, so falls can still be detected when the impact is delayed or less abrupt.
+/// Increasing this value can also increase the probability of false positives.
+/// If no matching high-G event is detected within this timeout, the fall detection sequence is not considered a fall.
+@property (nonatomic, readonly) uint16_t highGTimeoutMs;
+
+/// The acceleration magnitude threshold, in mg, used to detect the impact after the low-G state has been entered.
+@property (nonatomic, readonly) uint16_t highGThresholdMg;
+
+/// The high-G smoothing window, in milliseconds, used when evaluating the impact threshold.
+/// The acceleration magnitude must remain at or above highGThresholdMg for this window, which filters out short spikes while still accepting impact-like thuds.
+@property (nonatomic, readonly) uint16_t highGTimeWindowMs;
+
+/// The duration, in milliseconds, that accelerometer samples are recorded after a fall has been detected.
+/// When a high-G event is detected within highGTimeoutMs, the device sends a fall detection triggered event and continues recording for this duration before streaming the post-event data to the host.
+@property (nonatomic, readonly) uint16_t postEventRecordDurationMs;
+
+/// The accelerometer full-scale range selection used while fall detection is active.
+@property (nonatomic, readonly) FLICButtonAccelerometerFullScaleSelection fullScaleSelection;
+
+- (instancetype)initWithLowGThresholdMg:(uint16_t)lowGThresholdMg
+                         lowGDurationMs:(uint16_t)lowGDurationMs
+                         highGTimeoutMs:(uint16_t)highGTimeoutMs
+                       highGThresholdMg:(uint16_t)highGThresholdMg
+                      highGTimeWindowMs:(uint16_t)highGTimeWindowMs
+              postEventRecordDurationMs:(uint16_t)postEventRecordDurationMs
+                     fullScaleSelection:(FLICButtonAccelerometerFullScaleSelection)fullScaleSelection;
+
+@end
+
 @protocol FLICButtonDelegate;
 
 /// An instance of this class represents a physical Flic.
@@ -45,6 +188,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// The serial number is a production identifier that is printed on the backside of the Flic inside the battery hatch.
 /// This serves no other purpose than allowing a user to identify a button by manually looking at it. Can be useful in some cases.
 @property(nonatomic, readonly, strong, nonnull) NSString *serialNumber;
+
+/// Returns YES if this button is a Flic Duo
+@property(nonatomic, readonly) BOOL isFlicDuo;
 
 /// Use this property to let the flic2lib know what type of click events you are interested it. By default you will get Click, Double Click and Hold events.
 /// However, if you for example are only interested in Click events then you can set this property to FLICButtonTriggerModeClick. Doing so will allow the flic2lib to
@@ -87,6 +233,42 @@ NS_ASSUME_NONNULL_BEGIN
 /// Disconnect a currently connected Flic or cancel a pending connection.
 - (void)disconnect;
 
+///Plays a series of notes on Flic Duo's buzzer.
+///The button must be connected and ready. If a previous sequence is already in progress playing, that one will be aborted.
+///Only works on Flic Duo with firmware revision 20 or later.
+/// - Parameter notes At most 30 notes are played. Any notes beyond the first 30 are ignored.
+- (void)playBuzzerSound:(NSArray<FLICButtonBuzzerNote *> *)notes;
+
+/// Enables accelerometer streaming.
+/// Only works on Flic Duo with firmware revision 20 or later.
+///
+/// The completion handler is not called if another call to this method or disableAccelerometerStreaming
+/// occurs before the device responds.
+- (void)enableAccelerometerStreamingWithConfig:(FLICButtonAccelerometerStreamingConfig *)config completionHandler:(void (^)(FLICButtonEnableAccelerometerStreamingResult result))completionHandler;
+
+/// Disables accelerometer streaming.
+- (void)disableAccelerometerStreaming;
+
+/// Enables fall detection.
+/// Only works on Flic Duo with firmware revision 20 or later.
+/// Fall detection continuously monitors the built-in accelerometer for the pattern of a fall: a low-G event, indicating falling, followed by a high-G impact.
+/// When the configured conditions are met, an event is reported through button:didUpdateFallDetection:, where accelerometer data for the fall event is delivered.
+/// See https://github.com/50ButtonsEach/flic2-documentation/wiki/Fall-Detection-Documentation for more information.
+/// - Parameter config: The thresholds and timing used to detect a fall.
+/// - Parameter alwaysReconnect: If YES, also enables always-reconnect advertising. This is recommended for fall detection because a fall can be detected without a button press, while a button press is normally the signal that causes the Duo to advertise and reconnect after a lost connection. See setAlwaysReconnect:completionHandler: for details.
+- (void)enableFallDetectionWithConfig:(FLICButtonFallDetectionConfig *)config alwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonEnableFallDetectionResult result))completionHandler;
+
+/// Sets whether the button should always reconnect when disconnected
+/// Only works on Flic Duo with firmware revision 20 or later.
+/// If set to YES, the button will always try to reconnect regardless if it has anything to report. This can be useful if you want to monitor battery levels even if the button is left unused for a long time but might have negative impact on battery performance.
+/// If set to NO it typically only reconnects if pressed or lost connection.
+/// This setting is persisted on the device
+- (void)setAlwaysReconnect:(BOOL)alwaysReconnect completionHandler:(void (^)(FLICButtonSetAlwaysReconnectResult result))completionHandler;
+
+/// Disables fall detection.
+/// - Parameter disableAlwaysReconnect: If YES, also disables always-reconnect advertising.
+- (void)disableFallDetection:(BOOL)disableAlwaysReconnect;
+
 @end
 
 /// The delegate of a FLICButton instance must adopt the FLICButtonDelegate protocol. All calls to the delegate methods will be on the main dispatch queue.
@@ -123,6 +305,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter button: The FLICButton instance that the event originated from.
 /// - Parameter event: Information about the event
 - (void)button:(FLICButton *)button didReceiveButtonEvent:(FLICButtonEvent *)event;
+
+/// A receiver for accelerometer streaming data.
+///
+/// - Parameter button: The FLICButton instance that the event originated from.
+/// - Parameter accelerometerData: A batch of accelerometer samples.
+- (void)button:(FLICButton *)button didReceiveAccelerometerData:(FLICButtonAccelerometerData *)accelerometerData;
+
+/// A receiver for fall detection state updates.
+///
+/// This callback reports every state transition in the fall detection flow.
+///
+/// - Parameter button: The FLICButton instance that the event originated from.
+/// - Parameter event: Current fall detection state and any samples collected so far.
+- (void)button:(FLICButton *)button didUpdateFallDetection:(FLICButtonFallDetectionEvent *)event;
 
 /// The Flic registered a button down event.
 ///

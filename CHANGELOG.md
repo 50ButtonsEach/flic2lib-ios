@@ -4,6 +4,14 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.6.0
+
+* Adds support for Flic Duo Accelerometer Streaming
+
+* Adds support for Flic Duo Buzzer
+
+* Adds support for Flic Duo Fall Detection
+
 ## flic2lib-ios 1.5.0
 
 * Adds support for Flic Duo push and swipe gestures.
