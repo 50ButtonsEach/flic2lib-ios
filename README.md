@@ -16,10 +16,6 @@ Have a look at the repository Wiki for further information:
 
 	The API documentation of the flic2lib.framework.
 
-* [OS Version Compatibility](https://github.com/50ButtonsEach/flic2lib-ios/wiki/OS-Compatibility)
-
-	Deployment information.
-
 ## Fall Detection
 
 Please refer to the Fall Detection Documentation:
