@@ -24,14 +24,4 @@ Please refer to the Fall Detection Documentation:
 
 ## Licence
 
-IMPORTANT:
-
-Note that this version of the flic2lib binary is currently in pilot phase and released under non-commercial license for evaluation purposes.
-
-Shortly, Fall Detection support will be merged into main branch, with the commercial license.
-
-Note that the API is subject to change during this pilot.
-
-[Full License Here](LICENCE%20(for%20the%20flic2lib%20binary).txt)
-
 Any documentation or source code contained in this repository is released under [CC0](LICENCE%20(for%20the%20documentation%20and%20source%20code).txt).
