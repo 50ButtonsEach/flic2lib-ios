@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class FLICButtonEvent;
+@class FLICButtonEvent, FLICDuoPushTwistNotificationButtonInfo;
 
 typedef NS_ENUM(NSInteger, FLICButtonFallDetectionState) {
     FLICButtonFallDetectionStateTriggered,
@@ -190,7 +190,7 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 @property(nonatomic, readonly, strong, nonnull) NSString *serialNumber;
 
 /// Returns YES if this button is a Flic Duo
-@property(nonatomic, readonly) BOOL isFlicDuo;
+- (BOOL)isFlicDuo;
 
 /// Use this property to let the flic2lib know what type of click events you are interested it. By default you will get Click, Double Click and Hold events.
 /// However, if you for example are only interested in Click events then you can set this property to FLICButtonTriggerModeClick. Doing so will allow the flic2lib to
@@ -245,6 +245,11 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 /// The completion handler is not called if another call to this method or disableAccelerometerStreaming
 /// occurs before the device responds.
 - (void)enableAccelerometerStreamingWithConfig:(FLICButtonAccelerometerStreamingConfig *)config completionHandler:(void (^)(FLICButtonEnableAccelerometerStreamingResult result))completionHandler;
+
+/// Enables or disables push-twist notifications for each Flic Duo button.
+/// Call after buttonIsReady: on every connection; requests made while disconnected,
+/// unpaired, or for a non-Duo button have no effect. Pass NO for both to disable.
+- (void)enableDuoPushTwistForBigButton:(BOOL)bigButton smallButton:(BOOL)smallButton;
 
 /// Disables accelerometer streaming.
 - (void)disableAccelerometerStreaming;
@@ -311,6 +316,11 @@ typedef NS_ENUM(uint8_t, FLICButtonAccelerometerFullScaleSelection) {
 /// - Parameter button: The FLICButton instance that the event originated from.
 /// - Parameter accelerometerData: A batch of accelerometer samples.
 - (void)button:(FLICButton *)button didReceiveAccelerometerData:(FLICButtonAccelerometerData *)accelerometerData;
+
+/// Receives a push-twist notification. buttonInfo contains exactly two elements,
+/// big button first and small button second. Disabled buttons have all flags clear.
+/// angleDiff is the signed change since the previous notification; 65536 is one full turn.
+- (void)button:(FLICButton *)button didReceiveDuoPushTwistNotification:(NSArray<FLICDuoPushTwistNotificationButtonInfo *> *)buttonInfo angleDiff:(int32_t)angleDiff;
 
 /// A receiver for fall detection state updates.
 ///

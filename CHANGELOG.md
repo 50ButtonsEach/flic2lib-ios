@@ -4,6 +4,18 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.7.0
+
+### Changes
+
+* Adds support for Flic Duo push-twist notifications
+* Includes an Apple privacy manifest
+
+### Bug Fixes
+
+* Fixes a crash when renaming a connected button.
+* Fixes issue where the first event after a reconnect got an incorrect value for `age` parameter
+
 ## flic2lib-ios 1.6.0
 
 * Adds support for Flic Duo Accelerometer Streaming
