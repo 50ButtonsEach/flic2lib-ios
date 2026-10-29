@@ -8,8 +8,8 @@ This file documents the changes between different build versions of the `flic2li
 
 ### Changes
 
-* Adds support for Flic Duo push-twist notifications, with independent enablement for the big and small buttons.
-* Includes an Apple privacy manifest.
+* Adds support for Flic Duo push-twist notifications
+* Includes an Apple privacy manifest
 
 ### Bug Fixes
 
