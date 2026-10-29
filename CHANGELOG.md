@@ -14,8 +14,7 @@ This file documents the changes between different build versions of the `flic2li
 ### Bug Fixes
 
 * Fixes a crash when renaming a connected button.
-* Fixes timestamp and queued-event state handling when establishing a new Bluetooth session.
-* Fixes persistence of Bluetooth bonding and encryption state changes.
+* Fixes issue where the first event after a reconnect got an incorrect value for `age` parameter
 
 ## flic2lib-ios 1.6.0
 
