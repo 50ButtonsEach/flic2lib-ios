@@ -4,6 +4,19 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.7.0
+
+### Changes
+
+* Adds support for Flic Duo push-twist notifications, with independent enablement for the big and small buttons.
+* Includes an Apple privacy manifest.
+
+### Bug Fixes
+
+* Fixes a crash when renaming a connected button.
+* Fixes timestamp and queued-event state handling when establishing a new Bluetooth session.
+* Fixes persistence of Bluetooth bonding and encryption state changes.
+
 ## flic2lib-ios 1.6.0
 
 * Adds support for Flic Duo Accelerometer Streaming
