@@ -22,6 +22,7 @@ This file documents the changes between different build versions of the `flic2li
 
 * Fixes a crash when renaming a connected button.
 * Fixes issue where the first event after a reconnect got an incorrect value for `age` parameter
+* Fixes a crash (`EXC_BAD_ACCESS` in `fprintf`) when writing to the Bluetooth diagnostics log failed. This could happen when iOS launched the app in the background before the device had been unlocked after a restart, since files in the app's Library folder can not be opened then.
 
 ## flic2lib-ios 1.6.0
 
