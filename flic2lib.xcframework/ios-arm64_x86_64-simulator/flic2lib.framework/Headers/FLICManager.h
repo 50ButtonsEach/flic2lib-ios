@@ -44,8 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// To disable, set this flag to NO before calling configureWithDelegate:buttonDelegate:background:, on every application launch (including background launches),
 /// since the value is not persisted. Changes made after the manager has been configured are ignored.
 ///
-/// Note that while logging is disabled, no Bluetooth log is recorded. This means it will later not be possible to extract debug logs to investigate issues that
-/// occurred during that time.
+/// Note that while logging is disabled, no Bluetooth log is recorded. This means that prepareBluetoothLogWithMessage:completion: will not be able to provide logs
+/// for investigating issues that occurred during that time.
 @property (class, nonatomic, assign) BOOL bluetoothLoggingEnabled;
 
 /// This class method return the singleton manager, assuming that it has been configured first using the configureWithDelegate:buttonDelegate:background: method first,
@@ -90,6 +90,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Cancel an ongoing button scan. This will result in a scan completion with an error.
 - (void)stopScan;
+
+/// Prepares the Bluetooth diagnostics log so that it can be read out, for example to attach it to a support request. This writes a meta data file to the log folder,
+/// containing the optional message and information about the paired buttons. Any previous meta data file is overwritten. Call this method right before you intend to
+/// read out the log, so that the meta data is up to date.
+///
+/// The completion handler is called on the main queue. Only after a successful completion is it safe to read the contents of the returned folder. If Bluetooth logging
+/// has been disabled using bluetoothLoggingEnabled, then the completion handler will return an error.
+///
+/// - Parameter message: Additional information to include in the log meta data, for example a comment from the end user.
+/// - Parameter completion: Returns the URL of the folder containing the log files, or an error.
+- (void)prepareBluetoothLogWithMessage:(NSString * _Nullable)message
+							completion:(void (^)(NSURL * _Nullable preparedFolder, NSError * _Nullable error))completion;
 
 @end
 
