@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#if __has_include(<flic2lib/FLICButton.h>)
-#import <flic2lib/FLICButton.h>
-#else
+// The packaged framework uses the flat header layout.
+#if __has_include(<flic2lib/Button/FLICButton.h>)
 #import <flic2lib/Button/FLICButton.h>
+#else
+#import <flic2lib/FLICButton.h>
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
@@ -37,6 +38,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Let's you know if a scan is currently running or not. Reading this value will not affect a scan.
 @property(nonatomic, readonly) BOOL isScanning;
+
+/// Controls whether the library writes a Bluetooth diagnostics log to files in the app's Library folder. The default is YES.
+///
+/// To disable, set this flag to NO before calling configureWithDelegate:buttonDelegate:background:, on every application launch (including background launches),
+/// since the value is not persisted. Changes made after the manager has been configured are ignored.
+///
+/// Note that while logging is disabled, no Bluetooth log is recorded. This means it will later not be possible to extract debug logs to investigate issues that
+/// occurred during that time.
+@property (class, nonatomic, assign) BOOL bluetoothLoggingEnabled;
 
 /// This class method return the singleton manager, assuming that it has been configured first using the configureWithDelegate:buttonDelegate:background: method first,
 /// otherwise nil is returned.

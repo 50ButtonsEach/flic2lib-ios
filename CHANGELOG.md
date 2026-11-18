@@ -4,6 +4,12 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.8.0
+
+### Changes
+
+* Adds `FLICManager.bluetoothLoggingEnabled`, which lets you disable the Bluetooth diagnostics log that the library writes to the app's Library folder. Logging is enabled by default. To disable it, set the property to `NO` before calling `configureWithDelegate:buttonDelegate:background:`, on every application launch.
+
 ## flic2lib-ios 1.7.0
 
 ### Changes
