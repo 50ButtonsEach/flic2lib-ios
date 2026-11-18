@@ -4,6 +4,13 @@
 
 This file documents the changes between different build versions of the `flic2lib.framework`
 
+## flic2lib-ios 1.8.0
+
+### Changes
+
+* Adds `FLICManager.bluetoothLoggingEnabled`, which lets you disable the Bluetooth diagnostics log that the library writes to the app's Library folder. Logging is enabled by default. To disable it, set the property to `NO` before calling `configureWithDelegate:buttonDelegate:background:`, on every application launch.
+* Adds `-[FLICManager prepareBluetoothLogWithMessage:completion:]`, which prepares the Bluetooth diagnostics log and returns the folder containing the log files, for example to attach them to a support request.
+
 ## flic2lib-ios 1.7.0
 
 ### Changes
@@ -15,6 +22,7 @@ This file documents the changes between different build versions of the `flic2li
 
 * Fixes a crash when renaming a connected button.
 * Fixes issue where the first event after a reconnect got an incorrect value for `age` parameter
+* Fixes a crash (`EXC_BAD_ACCESS` in `fprintf`) when writing to the Bluetooth diagnostics log failed. This could happen when iOS launched the app in the background before the device had been unlocked after a restart, since files in the app's Library folder can not be opened then.
 
 ## flic2lib-ios 1.6.0
 

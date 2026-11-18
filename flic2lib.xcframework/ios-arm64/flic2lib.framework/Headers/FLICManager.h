@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#if __has_include(<flic2lib/FLICButton.h>)
-#import <flic2lib/FLICButton.h>
-#else
+// The packaged framework uses the flat header layout.
+#if __has_include(<flic2lib/Button/FLICButton.h>)
 #import <flic2lib/Button/FLICButton.h>
+#else
+#import <flic2lib/FLICButton.h>
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
@@ -37,6 +38,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Let's you know if a scan is currently running or not. Reading this value will not affect a scan.
 @property(nonatomic, readonly) BOOL isScanning;
+
+/// Controls whether the library writes a Bluetooth diagnostics log to files in the app's Library folder. The default is YES.
+///
+/// To disable, set this flag to NO before calling configureWithDelegate:buttonDelegate:background:, on every application launch (including background launches),
+/// since the value is not persisted. Changes made after the manager has been configured are ignored.
+///
+/// Note that while logging is disabled, no Bluetooth log is recorded. This means that prepareBluetoothLogWithMessage:completion: will not be able to provide logs
+/// for investigating issues that occurred during that time.
+@property (class, nonatomic, assign) BOOL bluetoothLoggingEnabled;
 
 /// This class method return the singleton manager, assuming that it has been configured first using the configureWithDelegate:buttonDelegate:background: method first,
 /// otherwise nil is returned.
@@ -80,6 +90,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Cancel an ongoing button scan. This will result in a scan completion with an error.
 - (void)stopScan;
+
+/// Prepares the Bluetooth diagnostics log so that it can be read out, for example to attach it to a support request. This writes a meta data file to the log folder,
+/// containing the optional message and information about the paired buttons. Any previous meta data file is overwritten. Call this method right before you intend to
+/// read out the log, so that the meta data is up to date.
+///
+/// The completion handler is called on the main queue. Only after a successful completion is it safe to read the contents of the returned folder. If Bluetooth logging
+/// has been disabled using bluetoothLoggingEnabled, then the completion handler will return an error.
+///
+/// The recommended approach is to zip the contents of the returned folder and upload the archive to your backend, where it can be examined.
+///
+/// - Parameter message: Additional information to include in the log meta data. The intended use is a comment from the end user describing the issue, which
+///                      makes it easier to examine the log.
+/// - Parameter completion: Returns the URL of the folder containing the log files, or an error.
+- (void)prepareBluetoothLogWithMessage:(NSString * _Nullable)message
+							completion:(void (^)(NSURL * _Nullable preparedFolder, NSError * _Nullable error))completion;
 
 @end
 
