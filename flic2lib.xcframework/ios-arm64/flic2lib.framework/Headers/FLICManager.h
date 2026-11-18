@@ -98,7 +98,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// The completion handler is called on the main queue. Only after a successful completion is it safe to read the contents of the returned folder. If Bluetooth logging
 /// has been disabled using bluetoothLoggingEnabled, then the completion handler will return an error.
 ///
-/// - Parameter message: Additional information to include in the log meta data, for example a comment from the end user.
+/// The recommended approach is to zip the contents of the returned folder and upload the archive to your backend, where it can be examined.
+///
+/// - Parameter message: Additional information to include in the log meta data. The intended use is a comment from the end user describing the issue, which
+///                      makes it easier to examine the log.
 /// - Parameter completion: Returns the URL of the folder containing the log files, or an error.
 - (void)prepareBluetoothLogWithMessage:(NSString * _Nullable)message
 							completion:(void (^)(NSURL * _Nullable preparedFolder, NSError * _Nullable error))completion;
